@@ -1,0 +1,10 @@
+\select@language {italian}
+\contentsline {section}{\numberline {1}Particella in Campo Centrale}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}L'autospazio di $L_z$}{4}{subsection.1.1}
+\contentsline {section}{\numberline {2}Fisica della Materia e della Radiazione}{5}{section.2}
+\contentsline {section}{\numberline {3}Richiamo sui solidi}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Reticolo di Bravais}{7}{subsection.3.1}
+\contentsline {section}{\numberline {4}Teoria elementare della diffrazione}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Reticolo Semplice}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Un esempio pi\IeC {\`u} complesso: reticolo con base}{11}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Un Liquido}{12}{subsection.4.3}

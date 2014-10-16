@@ -1,0 +1,296 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{dsfont}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\input funzioni.sty
+\input funzioni2.sty
+\floatstyle{ruled}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[width=125mm]{caption}
+\usepackage{amsthm}
+\usepackage{algorithm2e}
+\usepackage{algpseudocode}
+\usepackage{empheq}
+\usepackage{tikz}
+
+
+% Dimensione della pagina
+\setlength{\oddsidemargin}{.3in}  % Distance from the left edge -1 inch 
+\setlength{\textwidth}{145mm}     % Normal width of the text
+\setlength{\topmargin}{.25in}     % Distance from top to PAGE'S HEAD -1 inch
+\setlength{\textheight}{225mm}    % Height of the body of page
+\setlength{\headheight}{0mm}      % Height of a box containing the head
+\setlength{\parskip}{0.5mm}         % Extra vertical space before a paragraph
+\setlength{\parindent}{9mm}       % Width of the indentation 
+\linespread{1.12}                 % Line spacing        
+\renewcommand{\floatpagefraction}{.9}
+
+\newtheorem{Teorema}{Teorema}
+
+\begin{document}
+\title{\bf \Huge Stuttura della Materia 1 e 2 }
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------
+\section{Particella in Campo Centrale}
+%----------------------------------------------------------------------------
+L'operatore che descrive il fenomeno sarà dato dalla parte cinetica e dalla parte di potenziale, che dipenderà in un qualche modo da $r$. In particolare 
+\newl{\op{H} = \frac{1}{2m}\sum\op{p} ^2 + U\left(\sqrt{\sum x^2}\right).}
+Definendo l'operatore \textit{Momento Angolare Orbitale} come
+\newl{\op{L} _i = \varepsilon_{ijk}\op{x} _j \op{p} _k}
+che in modo esplicito si scrive come
+\newl{\op{L} _x = y p_z - z p_y \;\; ; \;\;  \op{L} _y = zp_x - xp_z \;\; ; \;\; \op{L} _z = xp_y - yp_x}
+\begin{Teorema}
+	Ogni operatore che può essere scritto nella forma $\ps{\op{v_1} }{\op{v_2} } $ commuta con $\op{L} $.
+\end{Teorema}
+\begin{proof}
+\newl{\left[\op{L}, \op{v} _1\cdot \op{v} _2\right] &=& \sum_k \left[\op{L} _h, \op{v} _{1k} \right]\op{v} _{2k} + \sum_k \op{v} _{1k} \left[\op{L} _h, \op{v} _{2k} \right] = i\hbar\varepsilon_{hkl}\op{v} _{1l} \op{v} _{2k} + i\hbar\varepsilon_{hkl} \op{v} _{1k} \op{v} _{2l} =\nonumber \\ &=&i\hbar(\varepsilon_hkl + \varepsilon_{khl}) \op{v} _{1k} \op{v} _{2k} = 0 }
+\end{proof}
+In virtù di questo, si ottiene il risultato notevole
+\newl{[\op{L} , \op{p} ^2] \;\; , \;\; [\op{L} , \op{v} ^2]}
+Se due operatori essenzialmente autoaggiunti commutano tra loro, allora l'autospazio di uno è l'autospazio dell'altro. \footnote{Perlomeno... credo che dovrebbe essere così...}. In questo modo è possibile notare che $\op{L} $ commuta con l'Hamiltoniana di campo centrale $\op{H} = k \op{p} ^2 + f(\op{r} \cdot \op{r} )$
+\newl{[\op{L} , \op{H} ] = [\op{L}, \op{p} ^2] + [\op{L} , f(\op{r} \cdot \op{r} )] = 0.}
+Per sfuttare il lemma di Shur, si costruisce per praticità l'operatore $\op{L} ^2$ definito come
+\newl{\op{L} \cdot \op{L} = \op{L} _x^2 + \op{L} _y^2 + \op{L} _z^2 = \op{L} ^2 .}
+$\op{L} ^2$ commuta con $\op{L} _z$, quindi posso pensare di decomporre lo spazio di Hilbert negli autospazi di $\op{L} ^2$ e $\op{L} _z$. Seguendo la simmetria del problema riscrivo l'operatore $\op{L} ^2$ in coordinate sferiche
+\newl{\op{L} ^2 = -\hbar^2 \left(\frac{1}{\sin\vartheta} \frac{\partial}{\partial\theta} \sin \vartheta \frac{\partial}{\partial \vartheta} + \frac{1}{\sin^2 \vartheta} \frac{\partial^2}{\partial \varphi ^2}\right) }
+insieme all'operatore laplaciano
+\newl{-\frac{\hbar^2}{2m}\Delta_2 = -\frac{\hbar^2}{2m}\frac{1}{r^2}\frac{\partial}{\partial r} r^2 \frac{\partial}{\partial r} + \frac{1}{2m r^2} \op{L} ^2 }
+\subsection{L'autospazio di $L_z$}
+Sfruttando le simmetrie del problema, posso trovare l'autospazio di $L_z$. Dato che commuta con $L^2$, che a sua volta commuta con l'Hamiltoniano, trovare l'autospazio di $L_z$ equivale trovare uno spazio in cui posso andare a cercare le autofunzioni di $\op{H} $. Presa una $f(r,\vartheta,\varphi)\in L^2(\R^3)$ continua e periodica nella variabile $\varphi$. Risolvo il problema agli autovalori dell'operatore $L_z$ che è definito come $L_z=-i\hbar \partial/\partial\varphi$
+\newl{-i\hbar\frac{\partial}{\partial \varphi} f(r,\vartheta, \varphi) = \lambda f(r,\vartheta, \varphi).}
+Fissando $r$ e $\vartheta$ ottengo un'equazione differenziale nella variabile $\varphi$ 
+\newl{\frac{\partial}{\partial \varphi} \frac{f}{f(\varphi)} = \frac{i\lambda}{\hbar}.}
+La soluzione è immediata
+\newl{\log( f(\varphi) ) = \frac{i\lambda}{\hbar} \varphi \;\;\implicaa\;\; f(\varphi) = A\cdot e^{\frac{i\lambda}{\hbar} \varphi}   .}
+Le autofunzioni di $L_z$ sono quindi del tipo
+\newl{f(r,\vartheta,\varphi) = A(r,\vartheta) e^{\frac{i\lambda}{\hbar}\varphi} .}
+Gli autovalori li ottengo imponendo le condizioni sull'angolo $\varphi$,
+\newl{0\leq\varphi\leq 2\pi \;\;\implicaa \;\; e^{\frac{i\lambda 2\pi}{\hbar}}=1 }
+la condizione su $\lambda$ diventa quindi
+\newl{\lambda = \hbar m\;\;\;\;\; m \in N .}
+Concludendo l'autospazio di $L_z$ è
+\newl{S_m=\left\lbrace\frac{A(r,\vartheta)}{\sqrt{2\pi}}e^{im\varphi}\right\rbrace. }
+Queste autofunzioni generano tutto lo spazio di Hilber e costuituiscono un s.o.n.c.
+La somma ortogonale di tutti gli spazi $S_m$ genera tutto $L^2 (\R^3 )$ 
+\newl{\oplus \sum_mS_m = L^2 (\R^3).}
+In questo modo vale che $\forall f(r,\vartheta,\varphi) \in L^2(\R^3)$ è possibile scriverla sviluppata sulla base di $S_m$
+\newl{f(r,\vartheta,\varphi) = \sum_{-\infty}^{+\infty} \frac{A(r,\vartheta)}{\sqrt{2\pi}} e^{im\varphi}}
+dove le $A(r,\vartheta)$ sono funzioni t.c. $\int_{-\infty}^{+\infty}r^2\,dr\int_0^{2\pi}\sin\vartheta\abs{A(r,\vartheta)} \,d\vartheta<\infty$. Antitrasformando è possibile ricavare in modo formale le $A(r,\vartheta)$
+\newl{A(r,\vartheta) = \int_0 ^{2\pi} \frac{1}{\sqrt{2\pi}} e^{-im\varphi'} f(r,\vartheta,\varphi') \,d\varphi'.}
+La misura che faccio sull'osservabile $f$ può quindi essere vista come una proiezione dalle funzioni di $L^2(\R^3)$ sullo spazio di $L_z$. Questo viene definito come \textit{misura a valore di proiettore} e l'operatore che ne descrive il funzionamento è dato da
+\newl{(\op{\mathds E} _{S_m}^{L_z} f)(r,\vartheta,\varphi) = \frac{A_m(r,\vartheta)}{\sqrt{2\pi}} e^{im\varphi} = \frac{1}{\sqrt{2\pi}}\int_0 ^{2\pi} e^{-im\varphi'} f(r,\vartheta,\varphi') \,d\varphi' .}
+Se $f$ è un autostato di $L_z$ la sua rappresentazione è
+\newl{(\op{L} _z f)(r,\vartheta,\varphi)= \sum_{m=-\infty}^{+\infty} \hbar m A(r,\vartheta) \frac{e^{im\varphi}}{\sqrt{2\pi}} = \sum_{m=-\infty}^{+\infty} \hbar m (\op{\mathds E} _{S_m}^{L_z} f)(r,\vartheta,\varphi)  }
+
+
+\section{Fisica della Materia e della Radiazione}
+Si definisce \textbf{Materia Condensata} un insieme di particelle interagenti. In funzione del numero di particelle, possiamo avere strutture diverse.
+\begin{itemize}
+	\item Nanostrutture $[\text{nm}]$ = caratterizzate da poche particelle interangeti, sul centinaio $(<10^3)$. Ovviamente avendo pochi atomi si hanno sttrutture molto piccole;
+	\item Mesostrutture $[\mu m]$ = caratterizate da un numero di particelle di $\sim  10^4$;
+	\item Strutture macroscopiche $[mm]$ = sono caratterizzate da un $N_A$ di particelle interagenti.
+\end{itemize}
+Lo scopo del fisico è quello di costruire modelli fisici partendo dall'osservazione. L'osservazione di un determinato fenomeno induce una domanda alla quale si cerca di rispondere attraverso la costruzione di un modello fisico. Davanti alla necessità di costruire un modello nasce il grande dilemma: quando usare un modello classico? Quando uno quantistico? La risposta varia di caso in caso. Per esempio la descrizione di una particella intesa come pacchetto d'onda, può cambiare molto in funzione al problema che studiamo. Se ho sovrapposizione ho effetti quantistici che non posso trascurare (per esempio l'interazione di scambio).
+
+Se considero i pacchetti d'onda non sovrapposti in cui $p\gg (\Delta p)$ e  $V/N \gg (\Delta r)^3$ allora posso usare un modello classico. Usando la lunghezza termica di De Broglie
+\newl{\lambda_D=\frac{h}{p}=\frac{h}{\sqrt{2mE_C}} = \left(\frac{h^2}{3mK_BT}\right)^{\frac{1}{2}}}
+posso verificare che 
+\newl{\frac{N}{V}\lambda_D^3 = \frac{N}{V}\left(\frac{h^2}{3mK_BT}\right)^{\frac{3}{2}}\ll 1.}
+La stessa considerazione è possibile farla partendo dal principio di indeterminazione di Heisenberg scritto nella ususale forma
+\newl{\Delta r \cdot \Delta p \geq h.}
+Possiamo quinid ricavare la stessa cosa di prima partendo da
+\newl{\frac{V}{N}p^3 \gg (\Delta r) \cdot (\Delta p) \geq h^3}
+sapendo che $p=(3mK_BT)^{\frac{1}{2}}$ riottengo 
+\newl{\frac{N}{V}\left(\frac{h^2}{3mK_BT}\right)^{\frac{3}{2}}\ll 1.}
+Un sistema può quindi essere modellizzato in modo classico per \textbf{densità} molto alte, \textbf{temperature} molto basse e \textbf{masse} molto piccole. Alcuni esempi sono dati da
+\begin{itemize}
+	\item Gas di idrogeno $[T\sim 0.26 K]$ sotto questa temperatura può essere modellizzato con le leggi classiche della cinetica dei gas;
+	\item Elettroni di conduzione $[T \sim 1.8\cdot 10^5K]$ per modellizzare questo sistema ho necessità di usare modelli quantistici;
+	\item Molti fotoni $(>10^3)$ ho il campo elettromagnetico classico, quindi le equazioni di Maxwell;
+	\item Pochi fotoni $(<10)$ ho la QED (Quantum Elettro Dynamic).
+\end{itemize}
+
+\section{Richiamo sui solidi}
+La materia che si presenta sotto il suo stato di \textit{solido} ha la caratteristica di essere completamente ordinata, gode di simmetria per alcuni angoli particolari e ci sono delle periodicità nella struttura. Sistemi solidi amorfi si conoscono per 0D (così detti \textit{quantum dot} ), 1D e 2D (così detti \textit{quantum well} come per esempio il grafene). Oltre ai sistemi amorfi ci sono i \textit{Quasi Cristalli}. Sono caratterizzati dall'avere simmetrie miste, per esempio parti con celle penatgonali miste a parte con simmetria sferica. Per osservare come la materia è aggregata, quali simmetrie sono presenti ed eventuali correlazioni le osservazioni che si possono fare riguardano le figure di difrazione costruite facendo diffrangere radiazioni differenti. In funzione al passo del reticolo\footnote{E' vera questa cosa? C'è effettivamente una correlazione tra campione che voglio studiare e la relazione che scelgo per studiarlo? Credo proprio di sì.} si possono studiare diferse immagini di diffrazione costruite per esempio con raggi X($1 KeV \sim 10KeV$), con diffrazione di neutroni ($0,1 eV\sim 1 eV$) oppure strutture superficiali, diffrazione di elettroni ($100 eV$). A temperature prossime a quelle dell'ambiente ($T\sim 300K$) i neutroni hanno un loro momento magnetico. In questo modo, vedendo l'interazione tra i netroni e la mataria posso farmi un'idea sulle sue proprietà magretiche. Quindi, in conclusione, se devo studiare le proprietà magnetiche della materia uso neutroni a temperatura prossima a quella ambientale. 
+\subsection{Reticolo di Bravais}
+Un reticolo generico è possibile definirlo come 
+\newl{\vet{R} = n_1 \vet{a} _2   + n_2 \vet{a} _2 + n_3 \vet{a} _3} 
+in cui però i vettori $\vet{a} _i$ non devono essere complanari. Il reticolo a nido d'ape, per esempio, non è un reticolo di Bravais perchè non è un gruppo puntuale.
+\section{Teoria elementare della diffrazione}
+Ho un oggetto da studiare come in fig.$\ref{Diff:1}$.
+\begin{figure}
+	\centering
+	\includegraphics[width=120mm,angle=0,clip=]{IMG/Diff.png}
+	\caption{Prova}
+	\label{Diff:1}
+\end{figure}
+Supponendo $S$ una sorgente puntiforme e continua, la radiazione colpisce l'oggetto nel punto $\vec{r} $ diventando una sorgente di onde sferiche. Lo schermo si trova molto distante dall'oggetto colpito dalla radiazione, quindi $|r'| \gg |r|$. La sorgente manda onde piane quindi
+\newl{A(r)=A_Se^{i[k(r+R)-\omega t]}}
+Voglio evitare lo scattering multiplo. Singola interazione per ogni particella. L'onda interagisce con l'oggetto nel punto $r$ generando onde sferiche che raggiungeranno lo schermo e verranno viste nel punto $P$. Le onde difratte avranno come vettore d'onda $k'$. Quello che vedo nel punto $P$ sarà proporzionale a
+\newl{A_P(r)=\int d^3r A(r)\rho(r)\left(\frac{e^{ik\cdot(r'-r)}}{|r'-r|}\right)}
+dove $\rho(r)$ è la densità elettronica nel punto di interazione. Sviluppando l'espressione del potenziale nel punto $P$ e raggruppando tutti i termini indipendenti da $r$ ottengo
+\newl{A_P(r) = \frac{A_Se^{i(k\cdot R + k'\cdot r' -\omega t)}}{|r'|} \int d^3r\rho(r)e^{-i(k'-k)\cdot r}.}
+$A_P(r')$ è un integrale perchè va inteso come somma di tutte le onde piane generate dal punto $r$ di interazione della radiazione incidente con l'oggetto. A me quello che interessa è l'intensità delle spot che vedo sullo schermo, quindi vado a considerare il modulo quadro
+\newl{I_P(r)= \frac{|A_S|^2}{|r|^2}\left|\int d^3r \rho(r) e^{-i q\cdot r} \right|}
+dove $\vet{q} = \Delta \vet{k} = \vet{k'} - \vet{k}$. Si può notare che $\int d^3r \rho(r) e^{-i q\cdot r}$ è la trasformata di fourire della $\rho(q)$, quindi posso scrivere:
+\newl{I_P(\vet{q}) = \frac{|A_S|^2}{|\vet{r} |^2}\left|\op{\rho} (\vet{q}) \right|}
+Dato che l'obiettivo è quello di ricavare le distribuzioni elettroniche e dato che sullo schermo compare l'immagine della trasformata di fourier delle distribuzioni, a rigor di logica, antitrasformando si dorebbero ottenere le $\rho(r)$. Questo non è possibile perchè l'evidenza sperimentale sullo schermo è data dal modulo quadro della trasfomata di Fourier, quindi mi manca il termine di fare per poter ricavare le distribuzioni nello spazio reale.
+
+Per la trasformata di Fourier vale sempre che: $\Delta q_x \cdot \Delta x \sim \pi$ quindi devo tenere in considerazione il fatto che per ottenere alte risoluzioni spaziali (quindi piccoli $\Delta x$) mi servono grandi momenti $p_x$.
+\subsection{Reticolo Semplice}
+Possiamo applicare la teoria della diffrazione a modelli gradualmente sempre più complessi. Il primo modello che ci si presta ad affrontare è quello di un reticolo semplice. Il reticolo infatti è periodico con gli atomi vincolati nella loro posizione fissa. La distribuzione di carica elettronica posso quindi vederla espansa in serie di Fourier
+\newl{\rho(\vet{r} )= \chi_V(\vet{r}) \sum_{\vet{G}} \rho_{\vet{G}} e^{i\vet{G} \cdot \vet{r}}.}
+Trasformo e ottengo 
+\newl{\op{\rho} (\vet{q})=\sum_{\vet{G}}\int_V \rho_{\vet{G}} e^{-i(\vet{G} - \vet{q} ) \cdot \vet{r}}.}
+Possibili casi:
+\begin{itemize}
+	\item Se $\vet{G} \neq \vet{q}$: $\op{\rho} (\vet{q}) =0$;
+	\item Se $\vet{G} = \vet{q}$ : $\op{\rho} (q) = V\rho_{G } \delta_{G ,q}$.
+\end{itemize}
+Quindi se $\vet{q}  = \vet{G} $ cioè $\vet{G} = \vet{\Delta k} = \vet{k'} - \vet{k}$ ho dei picchi. Altrimenti il termine $G-q$ all'esponente dell'esponenziale complesso all'interno dell'integrale è molto grande. L'integrale di un esponenziale complesso, con argomento molto grande, ha media nulla, quindi ci troviamo nella prima condizione senza picco. La regola:
+\newl{\boxed{\vet{G} = \vet{\Delta k} = \vet{k'} - \vet{k}}} 
+viene chiamata \textbf{\textit{condizione di Von Laue}}. 
+\begin{figure}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			\node[fill=none] (n1) at (-0.25,0) {O};
+			\node (n2) at (4.25,2) {$\vet{k'}$};
+			\node (n3) at (4.25,-2) {$\vet{k}$};
+			\node (n4) at (4.25,0) {$\vet{q} $};
+			\foreach \from/\to in {n1/n2}
+			\draw [->] (0,0) coordinate (a) -- (4,2) ;%node[draw=none,fill=none,font=\scriptsize,midway,below] {text below};
+			\foreach \from/\to in {n1/n3}
+			\draw [->] (0,0) -- (4,-2) coordinate (b)  ;%node[draw=none,fill=none,font=\scriptsize,midway,below] {text below};		
+			\foreach \from/\to in {n3/n2}
+			\draw [->] (4,-2) -- (4,2) coordinate (c) ;%node[draw=none,fill=none,font=\scriptsize,midway,below] {$\vet{q} $ };
+			\draw [->] (0,0) -- (5,0);
+			\draw (1,0) arc (0:30:1);
+			\draw (1,0) arc (0:-30:1);
+			\node[] at (15:1.25)  {$\theta_{1}$};
+			\node[] at (-15:1.25) {$\theta_{2}$};
+		\end{tikzpicture}
+	}
+	\caption{Scattering totalmente elastico.}
+	\label{bragg}
+\end{figure}
+Come è possibile vedere da Fig.\ref{bragg} è possibile dedurre la legge di Bragg in quanto per entrambe lo scattering radiazione-materia è di tipo totalmente elastico. Scrivendo la condiozine di Von Laue ottengo che
+\newl{\vet{G} = \vet{q} = \Delta\vet{k} \implicaa \abs{G} = \abs{\Delta\vet{k}} }
+considerando diffrazione per due piani paralleli:
+\newl{\abs{G} = n\cdot \frac{2\pi}{d_{piani}}.}
+Da Fig.\ref{bragg} si nota che a causa dello scattering completamente elastico si ha che $\theta_1 = \theta_2 = \theta$ quindi  $|\vet{q} | = 2k\sin\theta$. Unendo le due precedenti riscritture del vettore $\vet{G}$ otteniamo la legge di Bragg
+\newl{\boxed{\frac{4\pi\sin\theta}{\lambda} = n\frac{2\pi}{d_{piani}} \implicaa n\lambda = 2d\sin\theta . }}
+Rimane ancora il fatto che se $\vet{q}=\vet{G}$ allora l'integrale fa $\rho_G \cdot V \delta_{\vet{q},\vet{G}} $ quindi l'intesità dell'immagine che vediamo sullo schermo risulta proporzionale a $I(\vet{q}) \sim |\rho_G|^2 V^2 \delta_{\vet{q},\vet{G}}$. Non può essere proporzionale a $V^2$ è fisicamente impossibile in quanto la scrittura non torna dimensionalmente. La questione si risolve capendo che la funzione $\rho_G$ non è una funzione puntuale, ma ha una forma a spot di tipo campana gaussiana con piccole code. Effettuando l'integrale
+\newl{\op{\rho} (\vet{q}) = \sum_G \int_V d^3r \rho_G e^{i(\vet{G}-\vet{q})\vet{r}}} 
+svolgendo l'integrale si arriva ad un risultato che vede $I(\vet{q})\sim V$ che è fisicamente coerente.
+\subsection{Un esempio più complesso: reticolo con base}
+Un esempio più complesso può essere rappresentato dalla caratterizzazione dell'immagine di diffrazione da parte di un cristallo più complesso in cui abbiamo la sua rappresentazione tramite un reticolo e una base atomica. Il modo migliore per separare il problema è visibile in Fig.\ref{base:laue}.
+\begin{figure}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			\draw [black] plot [smooth cycle] coordinates {(-1.5,-2.5) (-1,6) (5,6) (7,6) (7.5,4) (7,3) (6,-2)};
+			\draw [->] (-1.5,-2.5) -- (0,0);
+			\node (n1) at (-1,-1) {$\vet{R_n} $};
+			\node (n2) at (0.25,0.45) {$\vet{r_\alpha} $};
+			\draw [->] (0,0) -- (0.7,0.3);
+			\draw (1,0.3) arc (0:360:0.3);
+			\draw [->] (0.7,0.3) -- (0.7,0.6);
+			\node (n3) at (0.9,0.65) {$\vet{r'} $};
+			\draw [->] (-1.5,-2.5) -- (0.7,0.6);
+			\node (n4) at (0,-1) {$\vet{r}$};
+
+
+			\node[]  at (-3.25,-5) {O};
+			\draw  (0,0) -- (4,0);
+			\draw  (0,1) -- (4,1);	
+			\draw  (0,2) -- (4,2);
+			\draw  (0,3) -- (4,3);
+			\draw  (0,4) -- (4,4);
+
+			\draw  (0,0) -- (0,4);
+			\draw  (1,0) -- (1,4);	
+			\draw  (2,0) -- (2,4);
+			\draw  (3,0) -- (3,4);
+			\draw  (4,0) -- (4,4);
+
+			\draw  (4,4) -- (6,5);
+			\draw  (4,0) -- (6,1);
+			\draw  (0,4) -- (2,5);
+
+			\draw  (2,5) -- (6,5);
+			\draw  (6,5) -- (6,1);
+
+		\end{tikzpicture}
+	}
+	\caption{Sistema di riferimento di un cristallo complesso rappresentato da reticolo e base atomica.}
+	\label{base:laue}
+\end{figure}
+Prendiamo come origine un punto sul bordo del nostro oggetto di forma generica. Il vettore $\vet{R}_n$ identifica la cella cristallina, il vettore $\vet{r}_\alpha$ identifica l'atomo $\alpha-esimo$ della base nella cella ed infine il vettore $\vet{r'}$ identifica la nuvola elettronica intorno all'$\alpha-esimo$ atomo. Posso quindi scrivere che
+\newl{\boxed{\vet{r}=\vet{R}_n + \vet{r}_\alpha + \vet{r'}}.} Ovviamente $\vet{r}$ identifica un punto della nuvola elettronica dei vari $\alpha$ atomi che costituiscono la base della cella cristallina. Nell'integrale entra appunto solo il contributo delle nuvole elettroniche in quanto noi stiamo usando raggi $X$ che interagiscono con le nuvole elettroniche degli atomi. Calcoliamo in questo caso come è fatta l'immagine di diffrazione del cristallo passando sempre per la trasformata di Fourier della distribuzione di carica
+\newl{\op{\rho} (\vet{q}) &=& \int_V d^3r\, \rho(\vet{r})e^{-i\vet{q}\cdot \vet{r}} = \sum_{n_1,n_2,n_3}\sum_{\alpha} \int_Vd^3r'\,\rho_\alpha e^{-i\vet{q}\cdot(\vet{R}_n + \vet{r}_\alpha + \vet{r'})}= \nonumber\\
+			  &=&\sum_{n1,n2,n3} e^{-i\vet{q}\cdot\vet{R}_n} \sum_\alpha e^{-i\vet{q}\vet{r}_\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha(\vet{r}')e^{-i\vet{q}\cdot\vet{r'} }
+}
+in questo modo l'integrale si è ridotto all'integrale sul volume della cella della $\rho(r')$ elettronica del singolo atomo. L'intensità è data sempre dal modulo quadro quindi posso scrivere
+\newl{\boxed{I(\vet{q})=\overbrace{ \abs{\sum_{n1,n2,n3} e^{-i\vet{q}\cdot\vet{R}_n}} ^2 }^{\text{Fattore di Interferenza}} \overbrace{\abs{\sum_\alpha e^{-i\vet{q}\vet{r}_\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha(\vet{r}')e^{-i\vet{q}\cdot\vet{r'} } } ^2 }^{\text{Fattore di Struttura}} }.}
+Il Fattore di interferenza è diverso da zero solo per $\vet{q} = \vet{G}$ quindi lui determina in che posizione avvengono i picchi. Il fattore di struttura, è quella parte che contribuisce all'allargamento del picco e rappresenta la trasformata di Fourier della densità elettronica dell'atomo $\alpha$ sulla cella. In particolare, la parte di trasformata di Fouerier, si chiama \textit{Fattore di Forma Atomico}.
+\begin{figure}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			\draw [->] (-1,0) -- (7,0);
+			\draw [->] (0,-1) -- (0,7);
+			\node (n1) at (7,-0.25) {$\vet{q}$};
+			\node (n2) at (-0.5,7) {$I(\vet{q})$};
+			\node (n3) at (1,-0.25) {$\vet{G_1}$};
+			\node (n4) at (2,-0.25) {$\vet{G_2}$};
+			\node (n5) at (3,-0.25) {$\vet{G_3}$};
+			\node (n6) at (4,-0.25) {$\vet{G_4}$};
+			\node (n7) at (5,-0.25) {$\vet{G_5}$};
+			\node (n8) at (6,-0.25) {$\vet{G_6}$};
+
+			\draw [red] plot [smooth, tension=0.2] coordinates {(0.5,0) (0.7,0.25) (1,4) (1.3,0.25) (1.5,0)};
+			\draw [red] plot [smooth, tension=0.2] coordinates {(1.5,0) (1.7,0.25) (2,4) (2.3,0.25) (2.5,0)};
+			\draw [red] plot [smooth, tension=0.2] coordinates {(2.5,0) (2.7,0.25) (3,4) (3.3,0.25) (3.5,0)};
+			\draw [red] plot [smooth, tension=0.2] coordinates {(3.5,0) (3.7,0.25) (4,4) (4.3,0.25) (4.5,0)};
+			\draw [red] plot [smooth, tension=0.2] coordinates {(4.5,0) (4.7,0.25) (5,4) (5.3,0.25) (5.5,0)};
+			\draw [red] plot [smooth, tension=0.2] coordinates {(5.5,0) (5.7,0.25) (6,4) (6.3,0.25) (6.5,0)};
+
+			\draw [green] plot [smooth, tension=1] coordinates {(-0.5,5) (3.5,5.7) (6.5,5)};
+
+			\draw [green] plot [smooth, tension=0] coordinates {(4,7) (4.6,7)};
+			\draw [red] plot [smooth, tension=0] coordinates {(4,6.5) (4.6,6.5)};
+
+			\node[] at (6,7) {\fontsize{1mm}{1mm}\selectfont Fattore di Struttura};
+			\node[] at (6,6.5){\fontsize{1mm}{1mm}\selectfont Fattore di Interferenza};
+		\end{tikzpicture}
+	}
+	\caption{Fattore di Interferenza e Fattore di Struttura}
+	\label{str:int}
+\end{figure}
+In Fig.\ref{str:int} sono rappresentati i contributi dei fattori di interferenza e struttura. Come è possibile osservare il fattore di interferenza è rappresentato da dei picchi situati in prossimità dei vettori $\vet{G_n}$ e identificano le $N$ celle del reticolo cristallino.
+\subsection{Un Liquido}
+Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un $\vet{R}_n$ e sommo su tutti i vari $\vet{R}_m$. Devo quindi avere una funzione di correlazione spaziale che mi permetta di sapere in che posizione sono i vari $\vet{R}_m$ ripetto al mio punto fisso $\vet{R}_n$. Il fattore di interferenza diventa quindi 
+\newl{T(\vet{q}) &=& \abs{\sum_{n_1,n_2,n_3} e^{-i\vet{q}\cdot\vet{R}_n} } ^2 = \sum_{\vet{R}_m = \vet{R}_n} e^{-i\vet{q}\cdot(R_n-R_m)} + \sum_{\vet{R}_n\neq \vet{R}_m} e^{-i\vet{q}\cdot(R_n-R_m)} = \nonumber\\
+	&=& N + \sum_{R_n}\left(\sum_{R_n\neq R_m} e^{-i\vet{q}\cdot(R_n-R_m)}\right). 
+}
+Estendo al continuo
+\newl{
+	T(\vet{q}) &=& N + N\int d^3r\, e^{-i\vet{q}\cdot(R_n-R_m)}P(R_n-R_m) = \nonumber\\
+			&=& N\left(1+\int d^3r\, e^{-i\vet{q}\cdot(R_n-R_m)}P(R_n-R_m)\right) 
+}
+Dove $P(R_n-R_m)$ è la funzione di correlazione spaziale che mi permette di studiare strutture non perfettamente regolari.
+
+\end{document}
