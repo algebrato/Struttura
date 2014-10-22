@@ -8,3 +8,6 @@
 \contentsline {subsection}{\numberline {4.1}Reticolo Semplice}{9}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Un esempio pi\IeC {\`u} complesso: reticolo con base}{11}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Un Liquido}{12}{subsection.4.3}
+\contentsline {section}{\numberline {5}Elettroni nel potenziale periodico}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}Giustificazione fisica del teorema di Bloch}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Formazione delle bande}{15}{subsection.5.2}

@@ -19,7 +19,7 @@
 \usepackage{algpseudocode}
 \usepackage{empheq}
 \usepackage{tikz}
-
+\usepackage{cancel}
 
 % Dimensione della pagina
 \setlength{\oddsidemargin}{.3in}  % Distance from the left edge -1 inch 
@@ -282,15 +282,74 @@ Il Fattore di interferenza è diverso da zero solo per $\vet{q} = \vet{G}$ quind
 \end{figure}
 In Fig.\ref{str:int} sono rappresentati i contributi dei fattori di interferenza e struttura. Come è possibile osservare il fattore di interferenza è rappresentato da dei picchi situati in prossimità dei vettori $\vet{G_n}$ e identificano le $N$ celle del reticolo cristallino.
 \subsection{Un Liquido}
-Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un $\vet{R}_n$ e sommo su tutti i vari $\vet{R}_m$. Devo quindi avere una funzione di correlazione spaziale che mi permetta di sapere in che posizione sono i vari $\vet{R}_m$ ripetto al mio punto fisso $\vet{R}_n$. Il fattore di interferenza diventa quindi 
-\newl{T(\vet{q}) &=& \abs{\sum_{n_1,n_2,n_3} e^{-i\vet{q}\cdot\vet{R}_n} } ^2 = \sum_{\vet{R}_m = \vet{R}_n} e^{-i\vet{q}\cdot(R_n-R_m)} + \sum_{\vet{R}_n\neq \vet{R}_m} e^{-i\vet{q}\cdot(R_n-R_m)} = \nonumber\\
-	&=& N + \sum_{R_n}\left(\sum_{R_n\neq R_m} e^{-i\vet{q}\cdot(R_n-R_m)}\right). 
-}
+Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un ${\vet R} _n$ e sommo su tutti i vari ${\vet R} _m$. Devo quindi avere una funzione di correlazione spaziale che mi permetta di sapere in che posizione sono i vari ${\vet R} _m$ ripetto al mio punto fisso ${\vet R} _n$. Il fattore di interferenza diventa quindi 
+\newl{T({\vet q}) &=& \abs{\sum_{n_1,n_2,n_3} e^{-i{\vet q} \cdot{\vet R}_n } }^2 = \sum_{{\vet R}_m = {\vet R}_n} e^{-i{\vet q}\cdot({\vet R}_n -{\vet R}_m)}+ \sum_{{\vet R} _n \neq {\vet R} _m } e^{-i{\vet q} \cdot({\vet R} _n- {\vet R} _m)} = \nonumber\\ &=& N + \sum_{{\vet R_n}} \left(\sum_{{\vet R} _n \neq {\vet R} _m}e^{-i{\vet q}(\vet{R} _n - {\vet R} _m)} \right) }
 Estendo al continuo
-\newl{
-	T(\vet{q}) &=& N + N\int d^3r\, e^{-i\vet{q}\cdot(R_n-R_m)}P(R_n-R_m) = \nonumber\\
-			&=& N\left(1+\int d^3r\, e^{-i\vet{q}\cdot(R_n-R_m)}P(R_n-R_m)\right) 
+\newl{T(\vet{q}) &=& N + N\int d^3r\, e^{-i\vet{q}\cdot(R_n-R_m)}P(R_n-R_m) = \nonumber\\
+		&=& N\left(1+\int d^3r\, e^{-i\vet{q}\cdot(R_n-R_m)}P(R_n-R_m)\right) 
 }
 Dove $P(R_n-R_m)$ è la funzione di correlazione spaziale che mi permette di studiare strutture non perfettamente regolari.
+
+\section{Elettroni nel potenziale periodico}
+Il problema agli autovalori che bisogna risolvere per trattare eletroni liberi in un potenziale periodico è il tipico
+\newl{\left[-\frac{\hbar^2}{2m}\nabla^2 +U_e(\vet{r})\right]\psi_n({\vet r}) = E_n \psi_n(\vet{r}),}
+dove si stanno facendo le seguenti approssimazioni:
+\begin{itemize}
+	\item Elettroni sono \textbf{indipendenti};
+\end{itemize}
+In questo modo la funzoine d'onda che descrive il problema è possibile fattorizzarla.
+\begin{itemize}
+	\item Il potenziale è periodico, quindi $U({\vet r}  + {\vet R} )  = U({\vet r}  )$
+\end{itemize}
+Il teorema di Bloch mi dice che per un potenziale periodico la funzoine d'onda è possibile fattorizzarla come una parte di onda piana e una parte periodica
+\newl{\boxed{\psi_{n,\vet{k}}(\vet{r})=\overbrace{e^{i\vet{k}\cdot\vet{r}}}^{\text{Onda Piana}} \overbrace{u_{n,\vet{k}}(\vet{r}) }^{\text{Periodica}}}}
+\subsection{Giustificazione fisica del teorema di Bloch}
+La giustificazione del teorema di Bloch e quindi della forma delle funzioni d'onda dell'elettrone libero all'interno di un cristallo, trova la sua base sulle ipotesi fatte appunto sul reticolo del cristallo stesso. E' tutto periodico quindi mi aspetto che i moduli quadri della funzione d'onda siano periodici con passo quello del reticolo cristallino
+\newl{\abs{\psi(r)} ^2 = \abs{\psi(r+R)} ^2,}
+in questo modo, la funzione d'onda avrà una sua certa parte radiale con un certo coefficiente $C_{\vet k}$ per cui deve valere il fatto che $\abs{C_k} =1$. Un modo molto conveniente che ho di vedere questa cosa è quella di pensare appunto il coefficiente $C_{\vet k}$ dato da un'onda piana, infatti, cercando l'ugualianza tra le parti radiali di $\psi_k(r)$ r $\psi_k(r+R)$, notiamo che:
+\newl{e^{ikr}\left[e^{-ikr} u_{n,k}(r)\right] = e^{ikr}e^{ikR} \left[ e^{-ikr}e^{-ikR}u_{n,k}(r+R)\right]}
+da cui
+\newl{\boxed{u_{n,k}(r) = u_{n,k}(r+R) }.}
+In questo modo si vuole dare una giustificazione molto intuitiva del perchè le funzioni d'onda del teorema di Bloch sono funzioni d'onda sensate che seguono bene le condizioni di periodicità del nostro problema. Le soluzioni dell'hamiltoniana sono in funzione alle condizioni al bordo che scegliamo. In questo caso ha perfettamente senso scegliere delle condizioni al bordo periodiche. La restrizione sui valori di $\vet k$ sarà data da una serie di considerazioni. Partendo dalla periodicità $\psi(r) = \psi(r+L)$ sul reticolo, quindi se $a$ è un vettore del reticolo diretto avrò che $L = Na$. uguagliando le funzioni d'onda
+\newl{e^{ikx} = e^{ik(x+L)} u_k(x+L)} 
+ho come condizione
+\newl{\boxed{kL = n 2\pi\implicaa k=\frac{2\pi}{L}n\,\,\, \text{ dove } \,\,\,n\in\Z }}
+questa appena scritta è la famosa condizione periodica di \textit{\textbf{Born - Von Karman}}. Dal punto di vista dello spazio dei vettori $\vet k$ questo vuol dire che tutto quello che succede nello spazio può essere rimappato nell'intervallo di $k\in\left[-\frac{\pi}{a},\frac{\pi}{a}\right]$ che è appunto la prima zona di Brillouin. Nello spazio $k$ posso verificare facilmente che $k = k'-G$ dove $G$ è un vettore di base del reticolo reciproco
+\newl{\psi_{k'}(x)e^{ik'x}u_{k'}(x) = e^{i(k+G)x}u_{k+G}(x)= e^{ikx}\overbrace{e^{iGx}u_{k+G}(x)}^{\text{Sono periodiche}}= e^{ikx}\op{u_k} (x).} 
+In questo modo abbiamo confermato quanto detto prima. Ongi vettore $k'$ può essere rimappato all'interno della prima zona di Brillouin.
+\subsection{Formazione delle bande}
+Supponiamo di essere in condizione di potenziale debole a media nulla e che valgano le condizioni al bordo elencate precedentemente. Possiamo quindi trattare il problema agli autovalori come particella libera a cui viene successivamente inserito il contributo del potenziale debole in modo perturbativo. Il punto di partenza è banalmente la particella libera
+\newl{\left(-\frac{\hbar^2}{2m}\nabla^2\right)  \psi_k(r) = E \psi_k(r).}
+Con le condizioni al bordo periodiche, l'energia in funzione di $\vet k$ ha la tipica dipendenza quadratica
+\newl{E=\frac{\hbar^2}{2m}k^2.}
+\begin{figure}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			%\draw [help lines] (0,0) grid (2,2);
+			\draw [->] (-5,0) -- (5,0);
+			\draw [->] (0,-5) -- (0,5);
+			\draw (-4,0.3*4^2) parabola bend (0,0) (4, 0.3*4^2);
+			\draw (-2,0.3*4^2) parabola bend (2,0) (6, 0.3*4^2);
+			\draw (-6,0.3*4^2) parabola bend (-2,0) (2, 0.3*4^2);
+
+			\draw (0,0.3*4^2) parabola bend (4,0) (8, 0.3*4^2);
+			\draw (-8,0.3*4^2) parabola bend (-4,0) (0, 0.3*4^2);
+		\end{tikzpicture}
+	}
+	\caption{Ritratto in fase dei momenti di particella libera}
+	\label{str:int}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
