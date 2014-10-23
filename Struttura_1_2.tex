@@ -328,20 +328,23 @@ Con le condizioni al bordo periodiche, l'energia in funzione di $\vet k$ ha la t
 		\begin{tikzpicture}[scale=1,auto=center]
 			%\draw [help lines] (0,0) grid (2,2);
 			\draw [->] (-5,0) -- (5,0);
-			\draw [->] (0,-5) -- (0,5);
+			\draw [->] (0,-2) -- (0,5);
 			\draw (-4,0.3*4^2) parabola bend (0,0) (4, 0.3*4^2);
-			\draw (-2,0.3*4^2) parabola bend (2,0) (6, 0.3*4^2);
-			\draw (-6,0.3*4^2) parabola bend (-2,0) (2, 0.3*4^2);
-
-			\draw (0,0.3*4^2) parabola bend (4,0) (8, 0.3*4^2);
-			\draw (-8,0.3*4^2) parabola bend (-4,0) (0, 0.3*4^2);
+			\draw (-2,0.3*4^2) parabola bend (2,0) (5, 0.3*3^2);
+			\draw (-5,0.3*3^2) parabola bend (-2,0) (2, 0.3*4^2);
+			
+			\draw (0,0.3*4^2) parabola bend (4,0) (5, 0.3*1^2);
+			\draw (-5,0.3*1^2) parabola bend (-4,0) (0, 0.3*4^2);
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (1,0.3)  {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (1,9*0.3)  {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (-1,0.3)  {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (-1,9*0.3)  {};
 		\end{tikzpicture}
 	}
 	\caption{Ritratto in fase dei momenti di particella libera}
 	\label{str:int}
 \end{figure}
 
-Rimodifica
 
 
 
