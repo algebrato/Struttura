@@ -335,15 +335,83 @@ Con le condizioni al bordo periodiche, l'energia in funzione di $\vet k$ ha la t
 			
 			\draw (0,0.3*4^2) parabola bend (4,0) (5, 0.3*1^2);
 			\draw (-5,0.3*1^2) parabola bend (-4,0) (0, 0.3*4^2);
+
+
+			\draw[ultra thick] (-1,0.3) parabola bend (0,0) (1,0.3);
+			\draw[ultra thick] (-1,0.3) parabola bend (0,1.2) (1,9*0.3);	
+
+
 			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (1,0.3)  {};
 			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (1,9*0.3)  {};
 			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (-1,0.3)  {};
 			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (-1,9*0.3)  {};
+
+
+
+			\node[] at (1.25,0.3)  {$1$};
+			\node[] at (1.25,9*0.3)  {$2$};
+			\node[] at (-1.25,0.3)  {$3$};
+			\node[] at (-1.25,9*0.3)  {$4$};
+
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.1cm] at (1,-0) {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.1cm] at (-1,0)  {};
+			\node[] at (1,-0.4) {$\frac{\pi}{a}$};
+			\node[] at (-1,-0.4)  {$-\frac{\pi}{a}$};
+
+			\draw[] (-1,0) -- (-1,5);
+			\draw[] (1,0) -- (1,5);
 		\end{tikzpicture}
 	}
 	\caption{Ritratto in fase dei momenti di particella libera}
-	\label{str:int}
+	\label{Part:Lib}
 \end{figure}
+In Fig.\ref{Part:Lib}, è ben visibile che non vi è separazione tra le bande. \`E possibile passare in modo continuo da una banda all'altra nei punto in cui il vettore d'onda interseca la zona di Brillouin. in questo modo i punti $1,2,3,4$ hanno livelli quasi-degeneri, con energie di bande diverse che risultano molto vicine per lo stesso valore di $\vet k$. Si può passare ora a studiare il modo in cui il potenziale debole $U_e$ agisce sui livelli energetici. Il potenziale è riferito ad un reticolo diretto con una sua certa periodicità, è possibile rappresentarlo in serie di Fourier rispetto ai vettori $\vet q$ del reticolo reciproco 
+\newl{U_e(x) = \sum_q U_q e^{i{\vet q}\cdot {\vet x}}\,\,\,\,\,\,\,\, \left(q=\frac{2\pi}{a}m\right).}
+Se adottiamo la convenzione di settare la scala delle energie sul valor medio del potenziale allora avremo che $U_0=0$, che semplifica in modo essenziale gli sviluppi perturbativi. Riscriviamo l'eq. di Schroedinger con il contributo del potenziale
+\newl{\left[-\frac{\hbar^2}{2m_e}\nabla^2+U_e(x)\right]\psi(x)=E\psi(x)}
+e facciamo alcune considerazioni sulla funzione d'onda. Essa può essere rappresentata sul sistema o.n.c delle onde piane, con opportuni coefficienti $C_k\in\C$
+\newl{\psi(x)=\sum_kC_ke^{ikx}.}
+Inseriamo tutto nell'equazione di Schroedinger e otteniamo il seguente problema agli autovalori
+\newl{\sum_k\left[-\frac{\hbar^2}{2m_e}(-k^2)C_ke^{ikx}\right]+\sum_{q,k}U_qC_ke^{i(q+k)x}=E\sum_kC_ke^{ikx}}.
+Moltiplicando per $e^{ik'x}$ ed integrando tutto, ottengo il seguente sistema per i coefficienti $C_k$
+\newl{\left(\frac{\hbar^2}{2m_e}k^2 -E\right)C_k + \sum_q U_qC_{k-q} =0.}
+Dall'ultima scrittura è possibile notare che il termine di potenziale è responsabile dell'accoppiamento tra i vari coefficienti $C_k$ infatti mette in realazione ogni coefficiente relativo ad un vettore $\vet k$ ad suo rispettivo nelle altre zone di Brillouin (che differenziano appunto di un vettore $\vet q$). Dato che può essere rimappato tutto nella prima zona di Brillouin, questo vuol dire che il termine di potenziale aggiunge accoppiamento tra i vari termini dello sviluppo. Tra i vari $\vet k$ vettori della prima zona di Brillouin immagini di fissarne uno. In corrispondenza avrò autofunzioni e autovalori indicizzati $\vet k$. Le funzioni d'onda dovranno essere la sovrapposizione di tutte le onde piane che distano di un vettore $\vet q'$ perchè come detto prima tutto viene rimappato nella prima zona
+\newl{\psi_k(x)=\sum_{q'}C_{k-q'}e^{i(k-q')x}.}
+Notiamo oltretutto che la somma è solo sui $\vet q'$ quindi possiamo riscrivere la funzione d'onda come
+\newl{\psi(x)=e^{ikx}\sum_{q'}C_{k-q'}e^{-iq'x} = e^{ikx}u_k(x),}
+questa forma è la stessa indicata per funzioni d'onda di elettrone libero in un potenziale cristallino dal teorema di Bloch, possiamo quindi vedere il tutto come una ulteriore prova a favore del teorema di Bloch. Nuovamente, prendo la funzione d'onda appena scritta e la inserisco dentro l'eq. di Schroedinger ottenendo
+\newl{\sum_{q'}\left[\frac{\hbar^2}{2m_e}(k-q')^2C_{k-q'}e^{i(k-q')x}\right]+\sum_{q',q"}U_{q"}C_{k-q'}e^{i(q"+k-q')x}=E_k\sum_kC_{k-q'}e^{i(k-q')x}}
+Sfrutto nuovamente l'ortonormalità delle onde piane e integro su $q"$ in questo modo ottengo, per ogni valore di $\vet k$ un sistema di equazioni accoppiate
+\newl{\left[\frac{\hbar^2}{2m_e}(k-q)^2 -E_k\right]C_{k-q} +\sum_{q'}U_{q'-q}C_{k-q'}=0}
+che una volta risolto fornisce i livelli energetici e i coefficienti dello sviluppo in serie della funzione d'onda. Se pongo $U_q=0$ mi ritrovo nel caso precedente di particella libera
+\newl{E_k,q = E(k-q)=\frac{\hbar^2}{2m_e}(k-q)^2}.
+In questo caso $\vet q$ rappresenta il numero quantico che identifica la banda. Se ${\vet k} \sim {\vet q} /2$ notiamo che siamo in una condizione qusi degenere. Per valori di $\vet k$ lontani da questi punti le bande sono ben separate, il problema è solo in prossimità di questi punti. Per il calcolo della correzione dell'energia per mezzo di un potenziale debole è necessario considerare i due casi in modo separato e non si può effettuare una trattazione perturbativa standard. \`E possibile verificare che nel caso degenere per le due bande $q$ e $q'$ si verifica che 
+\newl{\boxed{\Delta E=\abs{E(k-q)-E(k-q')}  \ll U }}
+quindi la correzione dell'energia è proporzionale a $U$ ed è quindi molto più significativa del caso non degenere in cui $\Delta E\gg U$ e la correzione dell'energia è proporzionale a $U^2$ quindi totalmente trascurabile. Ha quindi senso studiare solo la correzione dell'energia per il caso degenere poichè solo in questo caso si prevedono modifiche consistenti ai livelli energetici.
+Per due bande degeneri generiche $\vet q_1$ e $\vet q_2$, tenendo conto solo dei termini dominanti otteniamo il seguente sistema algebrico
+\newl{\left[E-E_{k,q_1}\right]C_{k-q_1} = U_{q_2-q_1}C_{k-q_1} \nonumber\\
+	\left[E-E_{k,q_2}\right]C_{k-q_2} = U_{q_1-q_2}C_{k-q_2}
+}
+Soluzioni non nulle per i coefficienti dello sviluppo della funzione d'onda si hanno se e solo se il determinante della matrice
+\[ \left| \begin{array}{cc}
+E-E_{k,q_1} & -U_{q_2-q_1}  \\
+-U_{q_1-q_2} & E-E_{k-q_2} \end{array} \right|\]
+
+è nullo. Risolvendo per $E$ e osservando che $U_{q_1-q_2} = U^*_{q_2-q_1}$ (a causa del fatto che il potenziale è una funzione reale), otteniamo che
+\newl{\boxed{E(k)=\frac{E_{k,q_1}+E_{k,q_2}}{2}\pm \frac{1}{2}\sqrt{(E_{k,q_1}-E_{k,q_2})^2 + 4\abs{U_{q_1-q_2}} ^2 }   }.}
+Questo indica che intorno a $(q_1+q_2)/2$ i livelli energetici di elettrone libero sono molto vicini e diventa molto singificativo il contributo del termine di potenziale. I livelli si \textit{respingono} dando vita ad un \textbf{gap di energia}, ovvero ad una zona di energie proibita. Possiamo notare che le correzioni all'energia diventano quindi sensibili quando $\abs{k-q_1} ^2 = \abs{k-q_2} ^2$ cioè quando siamo in una zona di quasi degenerazione. Posso ridefinire ${\vet k'} = \vet k - \vet q_1$ e $\vet q = \vet q_1 - \vet q_2$ in questo modo posso riscrivere la condizione di quasi degenerazione come
+\newl{\abs{\vet k'} = \abs{{\vet k} - {\vet q}} }
+cioè 
+\newl{\boxed{\Delta{\vet k} = {\vet q}}}
+che è la condizione di diffrazione di Von Laue. Quindi si spiega il motivo per il quale le le bande si aprono in prossimità di quei punti, gli elettroni non possono stare in quelle posizioni e vengono diffratti.
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.26)  23 OCT 2014 15:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.1.26)  1 NOV 2014 00:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -891,11 +891,7 @@ Package: cancel 2000/03/12 v2.1 Cancel math terms
 )
 \c@Teorema=\count153
 
-(./Struttura_1_2.aux
-
-LaTeX Warning: Label `str:int' multiply defined.
-
-)
+(./Struttura_1_2.aux)
 \openout1 = `Struttura_1_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -918,7 +914,8 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box48
 Package hyperref Info: Link coloring OFF on input line 37.
- (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1038,13 +1035,18 @@ ples-so
 LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <2.84526> not available
 (Font)              size <5> substituted on input line 279.
 
-[12] [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
- [15] [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
+[12] [13] [14] [15] [16]
+Overfull \hbox (20.12096pt too wide) in alignment at lines 383--383
+ [][][] []
+ []
+
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 423.
+ [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 423.
  (./Struttura_1_2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 358.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 423.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 423.
 Package rerunfilecheck Info: File `Struttura_1_2.out' has not changed.
 (rerunfilecheck)             Checksum: 25D54EEFA512BA7C0995E89922559092;851.
 
@@ -1052,16 +1054,13 @@ Package rerunfilecheck Info: File `Struttura_1_2.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.15474pt have occurred.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 423.
  ) 
 Here is how much of TeX's memory you used:
- 18768 strings out of 493485
- 317007 string characters out of 3143526
- 418810 words of memory out of 3000000
- 21615 multiletter control sequences out of 15000+200000
+ 18790 strings out of 493485
+ 317283 string characters out of 3143526
+ 418808 words of memory out of 3000000
+ 21620 multiletter control sequences out of 15000+200000
  27170 words of font info for 77 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,18n,55p,1593b,690s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1091,10 +1090,10 @@ sr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts
 er/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/
 type1/public/cm-super/sfti1200.pfb>
-Output written on Struttura_1_2.pdf (16 pages, 446145 bytes).
+Output written on Struttura_1_2.pdf (18 pages, 458064 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
- 300 compressed objects within 3 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 109 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
