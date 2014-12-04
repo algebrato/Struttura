@@ -16,3 +16,7 @@
 \contentsline {section}{\numberline {6}Legame Forte - Tight Binding}{20}{section.6}
 \contentsline {subsection}{\numberline {6.1}Alcune considerazioni di carattere generale}{21}{subsection.6.1}
 \contentsline {section}{\numberline {7}Degenerazione degli stati}{21}{section.7}
+\contentsline {subsection}{\numberline {7.1}Degenerazione degli stati in una banda}{24}{subsection.7.1}
+\contentsline {section}{\numberline {8}Esempi di elettrone vincolato}{25}{section.8}
+\contentsline {subsection}{\numberline {8.1}Quantum dot}{25}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Filo quantico}{26}{subsection.8.2}
