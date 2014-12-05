@@ -431,7 +431,7 @@ e i vari componenti sono diversi da zero solo per un discreto insieme di vettori
 \newl{\tilde{V}(G)=\frac{1}{a}\int_{-a/2}^{+a/2} v(x) e^{-iG_nx}dx.}
 L'integrale è calcolato per un singolo termine nel potenziale e in una singola cella unitaria. Al limite termodinamico, quindi per $N\to\infty$ questa cosa è ben definita.
 
-\section{Legame Forte - Tight Binding}
+\subsection{Legame Forte - Tight Binding}
 Bho...
 
 \subsection{Alcune considerazioni di carattere generale}
@@ -517,9 +517,9 @@ dove $S_n(E)$ rappresenta la superficie della corona circolare. Sono superfici a
 Inserendo tutto nella formula precedente si ottiene la scrittura della degenerazione degli stati nelle bande generalizzata al parametro di banda $n$
 \newl{g_n(E)=\frac{V}{(2\pi)^3} \int_{S_n(E)}\frac{dS}{\abs{\nabla E(k)} } .}
 \`E d'obbligo far notare che sulla superficie di Brillouin il gradiente dell'energia è nullo, annullando il denominatore dell'integranda. E' possibile comunque dimostrare che in 2D e in 3D l'integrale continua a convergere.
-\section{Esempi di elettrone vincolato}
+\subsection{Esempi di elettrone vincolato}
 Nella sezione precedente è stato possibile ricavare una forma generale per il calcolo della degenerazione delle bande. Di seguito si applicherà il concetto a diversi tipi di modelli quali \textit{quantum dot} e \textit{quantum well}.
-\subsection{Quantum dot}
+\subsubsection{Quantum dot}
 Il quntum dot, meglio conosciuto come atomo artificiale, è rappresentato da un sistema in cui gli elettroni sono vincolati in dimensioni molto piccole. La condizione di "zero dimensionalità" viene in un qualche modo suggerita dalla trasformata di Fourier e quindi dal principio di indeterminazione di Heisenberg. Se il lato del quantum dot, approssimato ad un cubettino molto piccolo, è $L$ questa sarà la nostra restrizione dimensionale $\Delta x$ a cui sarà associato un limite superiore di $\Delta p \sim \hbar/L$. Basandoci su questioni puramente morali possiamo scrivere il momento dell'elettrone come 
 \newl{p\sim \frac{\hbar}{2L}}
 considerando in questo modo anche la parte negativa di momento. L'energia dell'elettrone sarà quindi
@@ -528,7 +528,7 @@ Le dimensioni tipiche di un quantum dot sono nell'ordine di $L=10\text{nm}$. Usa
 \newl{E_{n_x,n_y,n_z} = \frac{\hbar^2}{2m}(k_x^2+k_y^2+k_z^2)} 
 dove i livelli sono discreti e separati da gap di energie nell'ordine dell'$eV$. C'è degenerazione, lo si nota anche semplicemente osservando che $E_{100} = E_{001}$. Quindi è necessario calcolare $g_{0D}(E)$. In questo caso è molto semplice, dato che le energie sono discrete sarà la somma dell'indice di degenerazione di ogni energia, che indichiamo con $g_j(E_j)$, per una delta di Dirac centrata sul valore dell'energia. Riassumendo il tutto
 \newl{g_{0D}(E) = 2_s \sum_j g_j(E_j) \delta(E-E_j).}
-\subsection{Filo quantico}
+\subsubsection{Filo quantico}
 Il filo quantico è un altro modello utilizzato nella realtà per cui vale la pena valutare la degenerazione degli stati. \`E caratterizzato da $L_x \gg L_y,L_z$, quindi il problema si risolve  separandolo in due parti. Nella direzione $x$ l'elettrone è libero di muoversi, quindi in $x$ le condizioni al contorno, per il problema agli autovalori, saranno di tipo elettrone libero. Nelle direzione $y,z$ si ha invece confinamento, quindi le condizioni al contorno della funzione d'onda saranno diverse.
 \begin{figure}
 	\centering
@@ -570,7 +570,7 @@ ma l'integrale è molto semplice e diventa quindi
 \newl{g_{1D}(E)=2_s\frac{L_x}{\pi}\sqrt{\frac{m}{2\hbar^2}} \sum_j g_j(E_j)\frac{\theta(E_\perp-E_j)}{\sqrt{E-E_\perp}}.}
 Lo stesso ragionamento lo si può estendere in modo molto semplice anche al caso di un sistema di "piano quantico". In questo caso il confinamento è solo su di un asse mentre sugli altri due ho la condizione di elettrone libero. La forma della degenerazione degli stati discende direttamente da quella del filo quantico
 \newl{g_{2D}(E)=2_s\frac{L_xL_y}{2\pi}\frac{m}{\hbar^2}\sum_j\theta(E-E_j)}
-
+\section{Dinamica degli elettroni in una banda}
     
 
 
