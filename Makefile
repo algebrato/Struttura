@@ -10,7 +10,7 @@ BBL = $(NAME:.tex=.bbl)
 CONVERSION = convertbiblio.py
 
 all: $(TEX)
-	pdflatex $(TEX)
+	pdflatex $(TEX) ; rm -rf *.toc *.log *.aux *.out
 
 clean:
 	rm *~ *.toc *.blg *.log *.aux $(NAME).out $(DVI) $(PS) $(BIB)
