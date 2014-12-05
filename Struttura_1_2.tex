@@ -574,9 +574,27 @@ Lo stesso ragionamento lo si può estendere in modo molto semplice anche al caso
 	\centering
 	\fbox{
 		\begin{tikzpicture}[scale=1,auto=center]
-			\draw[->] (0,0) -- (0,5);
-			\draw[->] (0,0) -- (5,0);
+			\draw[->] (0,-0.5) -- (0,5);
+			\draw[->] (-0.5,0) -- (5,0);
+			\node[] at (5.2,4.7) {$g_{3D}$};
+			\node[] at (-0.6,5) {$g(E_k)$};
+			\node[] at (5,-0.25) {$E_k$};
+			%g_3D -> sqrt(E)
 			\draw[blue,domain=0:5] plot (\x,{2*sqrt(\x)});
+			%g_2D -> Cost.
+			\draw[red] (0.2,0) -- (0.2,2*0.44721359549995793928);
+			\draw[red] (0.2,2*0.44721359549995793928) -- (1,2*0.44721359549995793928);
+			\draw[red] (1,2*0.44721359549995793928) --(1,2);
+			\draw[red] (1,2) -- (3,2);
+			\draw[red] (3,2) -- (3,2*1.732);
+			\draw[red] (3,2*1.732) -- (5,2*1.732);
+			%g_1D -> e^{1/2}
+			\draw[green] (0,0) -- (0.5,0);
+			\draw[green] (0.5,0) -- (0.5,5);
+			\draw[green, domain=0.5:1.5] plot (\x,{7.071/sqrt(\x)-5}); 
+			\draw[green] (1.5,{7.071/sqrt(1.5)-5}) -- (1.5,5);
+			\node[] at (5,3.2) {$g_{2D}$};
+			\node[] at (1.2,3) {$g_{1D}$};
 			\foreach \p in {0,1,2,3,4} {
 				\draw (\p,-0.1) -- (\p,0.1);
 				\draw (-0.1,\p) -- (0.1,\p);
@@ -584,7 +602,7 @@ Lo stesso ragionamento lo si può estendere in modo molto semplice anche al caso
 
 		\end{tikzpicture}
 	}
-	\caption{Degenerazione degli stai per vari modelli}
+	\caption{Degenerazione degli stai per varie dimensioni. \`E ben visibile il comportamento della $g_{3D}\sim\sqrt{E}$ della $g_{2D}\sim\text{cost.}$ e della $g_{1D}\sim1/\sqrt{E}$. Per quando riguarda la $g_{0D}$ è banale perchè è costituita da una serie di delta centrate sulle energie degeneri.}
 	\label{DEG:ST}
 \end{figure}
 
@@ -610,9 +628,12 @@ Osservando come è fatta la forma dell'equazione è possibile identificare le va
 \newl{\left(\frac{1}{m^*}\right)_{\alpha,\beta}=\frac{1}{\hbar}\frac{\partial^2 E}{\partial k_\alpha \partial k_\beta }}
 che è strettamente in funzione alla forma della banda. La dinamica quindi è data dalla curvatura della banda. Se sono in una dimensione non ho problemi, se sono in più dimensioni posso avere masse efficaci diverse in funzione alla diversa curvatura della banda nelle varie direzioni. L'ordine di grandezza della massa efficace si aggira intorno a $0.01 m_e < m^* < 0.1 m_e$.
 \subsection{Oscillazioni di Bloch}
+
+
+
 Abbiamo visto che è possibile definire una velocità caratteristica del pacchetto d'onda all'interno del cristallo, associandola alla velocità di gruppo ${\vet v} = (1/\hbar) \partial_kE({\vet k})$. Se agisce una forza esterna sull'elettrone l'equazione del moto è possibile scriverla in forma semiclassica come
 \newl{\boxed{\frac{d{\vet v}}{dt} = \left(\frac{1}{m^*}\right)_{\alpha,\beta}{\vet F} _\beta}}
-spazio $k$ l'elettrone arriva a $\pi/a$ e riparte in modo periodico da $-\pi/a$. Quello che effettivamente succede è che nello spazio reale si ha un'inversione della velocità in prossimità dei punti di diffrazioni, quindi osservo delle oscillazioni, chiamate appunto oscillazioni di Bloch. 
+spazio $k$ l'elettrone arriva a $\pi/a$ e riparte in modo periodico da $-\pi/a$. Quello che effettivamente succede è che nello spazio reale si ha un'inversione della velocità in prossimità dei punti di diffrazioni, quindi osservo delle oscillazioni, chiamate appunto oscillazioni di Bloch.  
 
 
 
