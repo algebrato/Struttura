@@ -517,6 +517,28 @@ dove $S_n(E)$ rappresenta la superficie della corona circolare. Sono superfici a
 Inserendo tutto nella formula precedente si ottiene la scrittura della degenerazione degli stati nelle bande generalizzata al parametro di banda $n$
 \newl{g_n(E)=\frac{V}{(2\pi)^3} \int_{S_n(E)}\frac{dS}{\abs{\nabla E(k)} } .}
 \`E d'obbligo far notare che sulla superficie di Brillouin il gradiente dell'energia è nullo, annullando il denominatore dell'integranda. E' possibile comunque dimostrare che in 2D e in 3D l'integrale continua a convergere.
+\subsection{Singolarità di Van Hove e regola d'oro di Fermi}
+Riprendendo la forma delle degenerazione degli stati per una banda in un cristallo 
+\newl{g_n(E) = \frac{V}{(2\pi)^3} \int_{S_n(E)}\frac{dS}{\abs{\nabla E(k)} } }
+come da nota precedente è opportuno discutere il senso di questo integrale per zone vicine alle superficie della prima zona di Brillouin. Le superfici di energia costante intersecano in modo otogonale la superficie di Brillouin avendo, in quei punti, la condizione $\nabla E(k_{Brillouin}) =0$. I punti che soddisfano questa condizione sono chiamati punti di \textit{\textbf{singolarità di Van Hove.}} In questi punti il denominatore dell'integrale si annulla rendendo quindi obbligatoria una discussione della sua convergenza. Come è stato già detto precedentemente, si può dimostrare che in 2 e 3 dimensioni l'integrale continua a convergere. Direttamente collegato alla degenerazione degli stati è lo spettro di assorbimento otticodel cristallo. La probabilità di emissione è data dalla nota regola d'oro di Fermi
+\newl{W_{if} = \frac{2\pi}{\hbar}\abs{\bra{i} H \ket{f} } ^2 \rho(\hbar\omega_{if} -\hbar\omega) }
+dove con $i-f$ si intendono lo stato di inizio $(i)$ e lo stato di fine $(f)$ e con $W_{if}$ la probabilità di passare da uno all'altro. \`E presente anche una densità $\rho$ che idnetifica il numero di stati. Quindi la probabilità di fare emissione sarà in un qualche modo collegata alla densità di elettroni nella banda a quella determinata energia $\hbar\omega$. Se ne deduce che essendo le singolarità di Van Hove punti di divergenza dell'integrale, quindi punti in cui la funzione $g_n(E)$ è molto piccata, in quei punti è molto più favorita l'emissione di elettroni. Da notare come i punti di singolarità siano in prossimità dei punti di diffrazione idetificati nella teoria di Von Laue. L'elettrone arriva in quella zona di singolarità, particolarmente critico che ha una buona possibilità di essere emesso o difratto.
+
+\begin{center}
+\fbox{
+\begin{tikzpicture}[scale=1,auto=center]
+	\draw[->] (-1,0) -- (5,0);
+	\draw[->] (0,-1) -- (0,5);
+	\node[] at (5,-0.25) {$E$};
+	\node[] at (-0.55,5) {$g_n(E)$};
+	\draw (1,0) parabola bend (1,0) (3, 0.3*3^2);
+	\draw (3, 0.3*3^2) parabola bend (3, 0.3*3^2) (4.5, 0);
+	\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (3,0.3*3^2)  {};
+	\node[] at (3,0.3*3^2+0.25) {$\text{Singolarità di VH}$};
+\end{tikzpicture}
+}
+\end{center}
+
 \subsection{Esempi di elettrone vincolato}
 Nella sezione precedente è stato possibile ricavare una forma generale per il calcolo della degenerazione delle bande. Di seguito si applicherà il concetto a diversi tipi di modelli quali \textit{quantum dot} e \textit{quantum well}.
 \subsubsection{Quantum dot}
@@ -607,8 +629,6 @@ Lo stesso ragionamento lo si può estendere in modo molto semplice anche al caso
 \end{figure}
 
 
-\subsection{Singolarità di Von Hove e regola d'oro di Fermi}
-Bha!!
 \section{Dinamica degli elettroni in una banda}
 Per descrivere la dinamica degli elettroni, in un certo tipo di potenziale, il primo passo è quello di identificare il modo migliore per descrivere l'elettrone stesso. In questo caso, l'approccio migliore è quello usuale, cioè la descrizione dell'elettrone tramite pacchetto d'onda sufficiente locacalizzato. Con sufficientemente localizzato si intende 
 \newl{\psi_{\vet k}({\vet r},t) = \sum_{\vet k} f({\vet k})\exp\left[i\left({\vet k} \cdot {\vet r} - \frac{E({\vet r})}{\hbar}t\right)\right]}
@@ -772,6 +792,8 @@ Come è possibile notare in Fig.~$\ref{PH:AC}$, in corrispondenza dei due divers
 I rami acustici partono da $(0,0)$ e sono funzione crescente di $q$. Intorno a zero il comportamento è in prima approssimazione lineare, il che torna con le relazioni di dispersione lineare del suono nei mezzi, ben conosciuti in fisica calssica, la curva poi satura sui bordi della zona di Brillouin. Il ramo ottico invece, per $q=0$ vale 
 \newl{\omega = \left[2\alpha\left(\frac{1}{M_1}+\frac{1}{M_2}\right)\right]^{1/2}} 
 e descresce molto lentamente nell'avvicinarsi al bordo della zona di Brillouin. La frequenza di questo braccio non varia in modo apprezzabile lungo tutto il range di valori di $q$, infatti solitamente si considera costante. Il range di frequenze, tra la parte alta del ramo acustico e la parte bassa del ramo ottico, rappresenta una zona di frequenze non consentite. In questo range il cristallo non può trasmettere nessun tipo di onda. Il risultato che si ha è quello che ogni onda di frequenza proibita, che interagisce col cristallo, viene fortemente attenuata.
+
+
 
 
 
