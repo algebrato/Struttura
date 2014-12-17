@@ -1,0 +1,27 @@
+\select@language {italian}
+\contentsline {section}{\numberline {1}Particella in Campo Centrale}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}L'autospazio di $L_z$}{4}{subsection.1.1}
+\contentsline {section}{\numberline {2}Fisica della Materia e della Radiazione}{5}{section.2}
+\contentsline {section}{\numberline {3}Richiamo sui solidi}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Reticolo di Bravais}{7}{subsection.3.1}
+\contentsline {section}{\numberline {4}Teoria elementare della diffrazione}{7}{section.4}
+\contentsline {subsection}{\numberline {4.1}Reticolo Semplice}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Un esempio pi\IeC {\`u} complesso: reticolo con base}{10}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Un Liquido}{13}{subsection.4.3}
+\contentsline {section}{\numberline {5}Elettroni nel potenziale periodico}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}Giustificazione fisica del teorema di Bloch}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Formazione delle bande}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Soluzione elettrone libero in un potenziale periodico}{18}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Metodo delle onde piane}{20}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Legame Forte - Tight Binding}{20}{subsection.5.5}
+\contentsline {subsection}{\numberline {5.6}Alcune considerazioni di carattere generale}{20}{subsection.5.6}
+\contentsline {section}{\numberline {6}Degenerazione degli stati}{21}{section.6}
+\contentsline {subsection}{\numberline {6.1}Degenerazione degli stati in una banda}{23}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Singolarit\IeC {\`a} di Van Hove e regola d'oro di Fermi}{25}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Esempi di elettrone vincolato}{26}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Quantum dot}{26}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Filo quantico}{27}{subsubsection.6.3.2}
+\contentsline {section}{\numberline {7}Dinamica degli elettroni in una banda}{28}{section.7}
+\contentsline {subsection}{\numberline {7.1}Oscillazioni di Bloch}{30}{subsection.7.1}
+\contentsline {section}{\numberline {8} Propriet\IeC {\`a} vibrazionali dei solidi}{30}{section.8}
+\contentsline {subsection}{\numberline {8.1}Reticolo monodimensionale a due atomi}{33}{subsection.8.1}
