@@ -374,8 +374,8 @@ Con le condizioni al bordo periodiche, l'energia in funzione di $\vet k$ ha la t
 			\node[] at (1,-0.4) {$\frac{\pi}{a}$};
 			\node[] at (-1,-0.4)  {$-\frac{\pi}{a}$};
 
-			\draw[] (-1,0) -- (-1,5);
-			\draw[] (1,0) -- (1,5);
+			\draw[dashed] (-1,0) -- (-1,5);
+			\draw[dashed] (1,0) -- (1,5);
 		\end{tikzpicture}
 	}
 	\caption{Ritratto in fase dei momenti di particella libera}
@@ -705,7 +705,7 @@ spazio $k$ l'elettrone arriva a $\pi/a$ e riparte in modo periodico da $-\pi/a$.
 \end{figure}
 Sperimentalmente la corrente di Bloch non si vede a causa delle impurità del cristallo. Se fosse visibile, la densità di corrente di Bloch avrebbe una forma tipica delle densità di corrente
 \newl{{\vet J } = -e \int \frac{d^3k}{(2\pi)^3} 2_s {\vet v_k} f({\vet k}) \label{dens:corr}}
-dove $f({\vet k})$ indica la densità di portatori di carica sulla banda. \`E abbastanza intuitivo capire che se $f({\vet k})=1$, cioè se la banda è piena, allora $\vet J = 0$ in quanto il profilo velle velocità sarebbe completo per ogni $\vet k$, integrando tutto nella prima zona di Brillouin, si integra $\vet{v_k}$ che è periodica dispari. Questo fa annullare l'integrale (\ref{dens:corr}). Se la banda è semipiena allora ed è presente una certa forza esterna allora in questo caso si avrebbe ${\vet J} \neq 0$. La forza esterna è data applicata inserendo il materiale in un campo elettrico, da questo fatto ecco giustificata la legge di Ohm
+dove $f({\vet k})$ indica la densità di portatori di carica sulla banda. \`E abbastanza intuitivo capire che se $f({\vet k})=1$, cioè se la banda è piena, allora $\vet J = 0$ in quanto il profilo velle velocità sarebbe completo per ogni $\vet k$, integrando tutto nella prima zona di Brillouin, si integra $\vet{v_k}$ che è periodica dispari. Questo fa annullare l'integrale (\ref{dens:corr}). Se la banda è semipiena, ed è presente una certa forza esterna, allora in questo caso, per un cristallo perfetto, si ha ${\vet J} \neq 0$. La forza esterna è applicata inserendo il materiale in un campo elettrico, da questo fatto ecco giustificata la legge di Ohm
 \newl{\boxed{{\vet J} = \sigma {\vet E}}}
 Un ulteriore caso interessante è quello mostrato in Fig.~\ref{semip:cond} in cui si ha la banda di valenza quasi piena e la banda di conduzione con qualche elettrone.
 \begin{figure}
