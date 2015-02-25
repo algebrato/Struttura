@@ -24,4 +24,4 @@
 \contentsline {section}{\numberline {7}Dinamica degli elettroni in una banda}{28}{section.7}
 \contentsline {subsection}{\numberline {7.1}Oscillazioni di Bloch}{30}{subsection.7.1}
 \contentsline {section}{\numberline {8} Propriet\IeC {\`a} vibrazionali dei solidi}{31}{section.8}
-\contentsline {subsection}{\numberline {8.1}Reticolo monodimensionale a due atomi}{34}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.1}Reticolo monodimensionale a due atomi}{35}{subsection.8.1}
