@@ -13,5 +13,5 @@ all: $(TEX)
 	pdflatex $(TEX) ; rm -rf *.log *.out
 
 clean:
-	rm *~ *.toc *.blg *.log *.aux $(NAME).out $(DVI) $(PS) $(BIB)
+	rm *~ *.toc *.pdf *.blg *.log *.aux $(NAME).out $(DVI) $(PS) $(BIB)
 
