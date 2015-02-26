@@ -52,60 +52,57 @@
 \tableofcontents
 \newpage
 
-%----------------------------------------------------------------------------
-\section{Particella in Campo Centrale}
-%----------------------------------------------------------------------------
-L'operatore che descrive il fenomeno sarà dato dalla parte cinetica e dalla parte di potenziale, che dipenderà in un qualche modo da $r$. In particolare 
-\newl{\op{H} = \frac{1}{2m}\sum\op{p} ^2 + U\left(\sqrt{\sum x^2}\right).}
-Definendo l'operatore \textit{Momento Angolare Orbitale} come
-\newl{\op{L} _i = \varepsilon_{ijk}\op{x} _j \op{p} _k}
-che in modo esplicito si scrive come
-\newl{\op{L} _x = y p_z - z p_y \;\; ; \;\;  \op{L} _y = zp_x - xp_z \;\; ; \;\; \op{L} _z = xp_y - yp_x}
-\begin{Teorema}
-	Ogni operatore che può essere scritto nella forma $\ps{\op{v_1} }{\op{v_2} } $ commuta con $\op{L} $.
-\end{Teorema}
-\begin{proof}
-\newl{\left[\op{L}, \op{v} _1\cdot \op{v} _2\right] &=& \sum_k \left[\op{L} _h, \op{v} _{1k} \right]\op{v} _{2k} + \sum_k \op{v} _{1k} \left[\op{L} _h, \op{v} _{2k} \right] = i\hbar\varepsilon_{hkl}\op{v} _{1l} \op{v} _{2k} + i\hbar\varepsilon_{hkl} \op{v} _{1k} \op{v} _{2l} =\nonumber \\ &=&i\hbar(\varepsilon_hkl + \varepsilon_{khl}) \op{v} _{1k} \op{v} _{2k} = 0 }
-\end{proof}
-In virtù di questo, si ottiene il risultato notevole
-\newl{[\op{L} , \op{p} ^2] \;\; , \;\; [\op{L} , \op{v} ^2]}
-Se due operatori essenzialmente autoaggiunti commutano tra loro, allora l'autospazio di uno è l'autospazio dell'altro. \footnote{Perlomeno... credo che dovrebbe essere così...}. In questo modo è possibile notare che $\op{L} $ commuta con l'Hamiltoniana di campo centrale $\op{H} = k \op{p} ^2 + f(\op{r} \cdot \op{r} )$
-\newl{[\op{L} , \op{H} ] = [\op{L}, \op{p} ^2] + [\op{L} , f(\op{r} \cdot \op{r} )] = 0.}
-Per sfuttare il lemma di Shur, si costruisce per praticità l'operatore $\op{L} ^2$ definito come
-\newl{\op{L} \cdot \op{L} = \op{L} _x^2 + \op{L} _y^2 + \op{L} _z^2 = \op{L} ^2 .}
-$\op{L} ^2$ commuta con $\op{L} _z$, quindi posso pensare di decomporre lo spazio di Hilbert negli autospazi di $\op{L} ^2$ e $\op{L} _z$. Seguendo la simmetria del problema riscrivo l'operatore $\op{L} ^2$ in coordinate sferiche
-\newl{\op{L} ^2 = -\hbar^2 \left(\frac{1}{\sin\vartheta} \frac{\partial}{\partial\theta} \sin \vartheta \frac{\partial}{\partial \vartheta} + \frac{1}{\sin^2 \vartheta} \frac{\partial^2}{\partial \varphi ^2}\right) }
-insieme all'operatore laplaciano
-\newl{-\frac{\hbar^2}{2m}\Delta_2 = -\frac{\hbar^2}{2m}\frac{1}{r^2}\frac{\partial}{\partial r} r^2 \frac{\partial}{\partial r} + \frac{1}{2m r^2} \op{L} ^2 }
-\subsection{L'autospazio di $L_z$}
-Sfruttando le simmetrie del problema, posso trovare l'autospazio di $L_z$. Dato che commuta con $L^2$, che a sua volta commuta con l'Hamiltoniano, trovare l'autospazio di $L_z$ equivale trovare uno spazio in cui posso andare a cercare le autofunzioni di $\op{H} $. Presa una $f(r,\vartheta,\varphi)\in L^2(\R^3)$ continua e periodica nella variabile $\varphi$. Risolvo il problema agli autovalori dell'operatore $L_z$ che è definito come $L_z=-i\hbar \partial/\partial\varphi$
-\newl{-i\hbar\frac{\partial}{\partial \varphi} f(r,\vartheta, \varphi) = \lambda f(r,\vartheta, \varphi).}
-Fissando $r$ e $\vartheta$ ottengo un'equazione differenziale nella variabile $\varphi$ 
-\newl{\frac{\partial}{\partial \varphi} \frac{f}{f(\varphi)} = \frac{i\lambda}{\hbar}.}
-La soluzione è immediata
-\newl{\log( f(\varphi) ) = \frac{i\lambda}{\hbar} \varphi \;\;\implicaa\;\; f(\varphi) = A\cdot e^{\frac{i\lambda}{\hbar} \varphi}   .}
-Le autofunzioni di $L_z$ sono quindi del tipo
-\newl{f(r,\vartheta,\varphi) = A(r,\vartheta) e^{\frac{i\lambda}{\hbar}\varphi} .}
-Gli autovalori li ottengo imponendo le condizioni sull'angolo $\varphi$,
-\newl{0\leq\varphi\leq 2\pi \;\;\implicaa \;\; e^{\frac{i\lambda 2\pi}{\hbar}}=1 }
-la condizione su $\lambda$ diventa quindi
-\newl{\lambda = \hbar m\;\;\;\;\; m \in N .}
-Concludendo l'autospazio di $L_z$ è
-\newl{S_m=\left\lbrace\frac{A(r,\vartheta)}{\sqrt{2\pi}}e^{im\varphi}\right\rbrace. }
-Queste autofunzioni generano tutto lo spazio di Hilber e costuituiscono un s.o.n.c.
-La somma ortogonale di tutti gli spazi $S_m$ genera tutto $L^2 (\R^3 )$ 
-\newl{\oplus \sum_mS_m = L^2 (\R^3).}
-In questo modo vale che $\forall f(r,\vartheta,\varphi) \in L^2(\R^3)$ è possibile scriverla sviluppata sulla base di $S_m$
-\newl{f(r,\vartheta,\varphi) = \sum_{-\infty}^{+\infty} \frac{A(r,\vartheta)}{\sqrt{2\pi}} e^{im\varphi}}
-dove le $A(r,\vartheta)$ sono funzioni t.c. $\int_{-\infty}^{+\infty}r^2\,dr\int_0^{2\pi}\sin\vartheta\abs{A(r,\vartheta)} \,d\vartheta<\infty$. Antitrasformando è possibile ricavare in modo formale le $A(r,\vartheta)$
-\newl{A(r,\vartheta) = \int_0 ^{2\pi} \frac{1}{\sqrt{2\pi}} e^{-im\varphi'} f(r,\vartheta,\varphi') \,d\varphi'.}
-La misura che faccio sull'osservabile $f$ può quindi essere vista come una proiezione dalle funzioni di $L^2(\R^3)$ sullo spazio di $L_z$. Questo viene definito come \textit{misura a valore di proiettore} e l'operatore che ne descrive il funzionamento è dato da
-\newl{(\op{\mathds E} _{S_m}^{L_z} f)(r,\vartheta,\varphi) = \frac{A_m(r,\vartheta)}{\sqrt{2\pi}} e^{im\varphi} = \frac{1}{\sqrt{2\pi}}\int_0 ^{2\pi} e^{-im\varphi'} f(r,\vartheta,\varphi') \,d\varphi' .}
-Se $f$ è un autostato di $L_z$ la sua rappresentazione è
-\newl{(\op{L} _z f)(r,\vartheta,\varphi)= \sum_{m=-\infty}^{+\infty} \hbar m A(r,\vartheta) \frac{e^{im\varphi}}{\sqrt{2\pi}} = \sum_{m=-\infty}^{+\infty} \hbar m (\op{\mathds E} _{S_m}^{L_z} f)(r,\vartheta,\varphi)  }
-
-
-
+%%----------------------------------------------------------------------------
+%\section{Particella in Campo Centrale}
+%%----------------------------------------------------------------------------
+%L'operatore che descrive il fenomeno sarà dato dalla parte cinetica e dalla parte di potenziale, che dipenderà in un qualche modo da $r$. In particolare 
+%\newl{\op{H} = \frac{1}{2m}\sum\op{p} ^2 + U\left(\sqrt{\sum x^2}\right).}
+%Definendo l'operatore \textit{Momento Angolare Orbitale} come
+%\newl{\op{L} _i = \varepsilon_{ijk}\op{x} _j \op{p} _k}
+%che in modo esplicito si scrive come
+%\newl{\op{L} _x = y p_z - z p_y \;\; ; \;\;  \op{L} _y = zp_x - xp_z \;\; ; \;\; \op{L} _z = xp_y - yp_x}
+%\begin{Teorema}
+%	Ogni operatore che può essere scritto nella forma $\ps{\op{v_1} }{\op{v_2} } $ commuta con $\op{L} $.
+%\end{Teorema}
+%\begin{proof}
+%\newl{\left[\op{L}, \op{v} _1\cdot \op{v} _2\right] &=& \sum_k \left[\op{L} _h, \op{v} _{1k} \right]\op{v} _{2k} + \sum_k \op{v} _{1k} \left[\op{L} _h, \op{v} _{2k} \right] = i\hbar\varepsilon_{hkl}\op{v} _{1l} \op{v} _{2k} + i\hbar\varepsilon_{hkl} \op{v} _{1k} \op{v} _{2l} =\nonumber \\ &=&i\hbar(\varepsilon_hkl + \varepsilon_{khl}) \op{v} _{1k} \op{v} _{2k} = 0 }
+%\end{proof}
+%In virtù di questo, si ottiene il risultato notevole
+%\newl{[\op{L} , \op{p} ^2] \;\; , \;\; [\op{L} , \op{v} ^2]}
+%Se due operatori essenzialmente autoaggiunti commutano tra loro, allora l'autospazio di uno è l'autospazio dell'altro. \footnote{Perlomeno... credo che dovrebbe essere così...}. In questo modo è possibile notare che $\op{L} $ commuta con l'Hamiltoniana di campo centrale $\op{H} = k \op{p} ^2 + f(\op{r} \cdot \op{r} )$
+%\newl{[\op{L} , \op{H} ] = [\op{L}, \op{p} ^2] + [\op{L} , f(\op{r} \cdot \op{r} )] = 0.}
+%Per sfuttare il lemma di Shur, si costruisce per praticità l'operatore $\op{L} ^2$ definito come
+%\newl{\op{L} \cdot \op{L} = \op{L} _x^2 + \op{L} _y^2 + \op{L} _z^2 = \op{L} ^2 .}
+%$\op{L} ^2$ commuta con $\op{L} _z$, quindi posso pensare di decomporre lo spazio di Hilbert negli autospazi di $\op{L} ^2$ e $\op{L} _z$. Seguendo la simmetria del problema riscrivo l'operatore $\op{L} ^2$ in coordinate sferiche
+%\newl{\op{L} ^2 = -\hbar^2 \left(\frac{1}{\sin\vartheta} \frac{\partial}{\partial\theta} \sin \vartheta \frac{\partial}{\partial \vartheta} + \frac{1}{\sin^2 \vartheta} \frac{\partial^2}{\partial \varphi ^2}\right) }
+%insieme all'operatore laplaciano
+%\newl{-\frac{\hbar^2}{2m}\Delta_2 = -\frac{\hbar^2}{2m}\frac{1}{r^2}\frac{\partial}{\partial r} r^2 \frac{\partial}{\partial r} + \frac{1}{2m r^2} \op{L} ^2 }
+%\subsection{L'autospazio di $L_z$}
+%Sfruttando le simmetrie del problema, posso trovare l'autospazio di $L_z$. Dato che commuta con $L^2$, che a sua volta commuta con l'Hamiltoniano, trovare l'autospazio di $L_z$ equivale trovare uno spazio in cui posso andare a cercare le autofunzioni di $\op{H} $. Presa una $f(r,\vartheta,\varphi)\in L^2(\R^3)$ continua e periodica nella variabile $\varphi$. Risolvo il problema agli autovalori dell'operatore $L_z$ che è definito come $L_z=-i\hbar \partial/\partial\varphi$
+%\newl{-i\hbar\frac{\partial}{\partial \varphi} f(r,\vartheta, \varphi) = \lambda f(r,\vartheta, \varphi).}
+%Fissando $r$ e $\vartheta$ ottengo un'equazione differenziale nella variabile $\varphi$ 
+%\newl{\frac{\partial}{\partial \varphi} \frac{f}{f(\varphi)} = \frac{i\lambda}{\hbar}.}
+%La soluzione è immediata
+%\newl{\log( f(\varphi) ) = \frac{i\lambda}{\hbar} \varphi \;\;\implicaa\;\; f(\varphi) = A\cdot e^{\frac{i\lambda}{\hbar} \varphi}   .}
+%Le autofunzioni di $L_z$ sono quindi del tipo
+%\newl{f(r,\vartheta,\varphi) = A(r,\vartheta) e^{\frac{i\lambda}{\hbar}\varphi} .}
+%Gli autovalori li ottengo imponendo le condizioni sull'angolo $\varphi$,
+%\newl{0\leq\varphi\leq 2\pi \;\;\implicaa \;\; e^{\frac{i\lambda 2\pi}{\hbar}}=1 }
+%la condizione su $\lambda$ diventa quindi
+%\newl{\lambda = \hbar m\;\;\;\;\; m \in N .}
+%Concludendo l'autospazio di $L_z$ è
+%\newl{S_m=\left\lbrace\frac{A(r,\vartheta)}{\sqrt{2\pi}}e^{im\varphi}\right\rbrace. }
+%Queste autofunzioni generano tutto lo spazio di Hilber e costuituiscono un s.o.n.c.
+%La somma ortogonale di tutti gli spazi $S_m$ genera tutto $L^2 (\R^3 )$ 
+%\newl{\oplus \sum_mS_m = L^2 (\R^3).}
+%In questo modo vale che $\forall f(r,\vartheta,\varphi) \in L^2(\R^3)$ è possibile scriverla sviluppata sulla base di $S_m$
+%\newl{f(r,\vartheta,\varphi) = \sum_{-\infty}^{+\infty} \frac{A(r,\vartheta)}{\sqrt{2\pi}} e^{im\varphi}}
+%dove le $A(r,\vartheta)$ sono funzioni t.c. $\int_{-\infty}^{+\infty}r^2\,dr\int_0^{2\pi}\sin\vartheta\abs{A(r,\vartheta)} \,d\vartheta<\infty$. Antitrasformando è possibile ricavare in modo formale le $A(r,\vartheta)$
+%\newl{A(r,\vartheta) = \int_0 ^{2\pi} \frac{1}{\sqrt{2\pi}} e^{-im\varphi'} f(r,\vartheta,\varphi') \,d\varphi'.}
+%La misura che faccio sull'osservabile $f$ può quindi essere vista come una proiezione dalle funzioni di $L^2(\R^3)$ sullo spazio di $L_z$. Questo viene definito come \textit{misura a valore di proiettore} e l'operatore che ne descrive il funzionamento è dato da
+%\newl{(\op{\mathds E} _{S_m}^{L_z} f)(r,\vartheta,\varphi) = \frac{A_m(r,\vartheta)}{\sqrt{2\pi}} e^{im\varphi} = \frac{1}{\sqrt{2\pi}}\int_0 ^{2\pi} e^{-im\varphi'} f(r,\vartheta,\varphi') \,d\varphi' .}
+%Se $f$ è un autostato di $L_z$ la sua rappresentazione è
+%\newl{(\op{L} _z f)(r,\vartheta,\varphi)= \sum_{m=-\infty}^{+\infty} \hbar m A(r,\vartheta) \frac{e^{im\varphi}}{\sqrt{2\pi}} = \sum_{m=-\infty}^{+\infty} \hbar m (\op{\mathds E} _{S_m}^{L_z} f)(r,\vartheta,\varphi)  }
 \section{Fisica della Materia e della Radiazione}
 Si definisce \textbf{Materia Condensata} un insieme di particelle interagenti. In funzione del numero di particelle, è possibile avere strutture differenti:
 \begin{itemize}
@@ -114,8 +111,34 @@ Si definisce \textbf{Materia Condensata} un insieme di particelle interagenti. I
 	\item Strutture macroscopiche $[mm]$ = sono caratterizzate da un $N_A$ di particelle interagenti.
 \end{itemize}
 Lo scopo del fisico è quello di costruire modelli fisici partendo dall'osservazione. L'osservazione di un determinato fenomeno induce una domanda alla quale si cerca di rispondere attraverso la costruzione di un modello fisico. Davanti a questa necessità nasce il grande dilemma: quando usare un modello classico? Quando uno quantistico? La risposta varia di caso in caso. La descrizione di una particella, intesa come pacchetto d'onda, può cambiare molto in funzione al contesto in cui è inserita infatti se si ha sovrapposizione saranno presenti effetti quantistici che non si possono trascurare (per esempio l'interazione di scambio).
+\subsection{Motivazioni storiche rilevanti}
+In questo caso è necessario introdurre il discorso sulla diffrazione, riprendendo alcuni sviluppi storici della fisica di inizio '900. De Broglie, nella sua tesi di dottorato, postula la duplice natura della materia (corpuscolare ed ondulatoria) associando quindi, ad un certo momento $p$ una lunghezza d'onda $\lambda$. La relazione che unisce le due grandezze è la nota \textit{equazione di De Broglie}
+\newl{\boxed{\lambda_D=\frac{h}{p}=\frac{h}{mv}. }}
+Unendo il tutto con il momento angolare quantizzato di Bohr si ottiene la tanto interessante, quanto oscura, formula
+\newl{\boxed{L = pr = n\frac{h}{\lambda} r  = n\frac{h}{2\pi r}r = n\frac{h}{2\pi} = n\hbar}}
+che nasconde un mondo del tutto inesplorato. In primis, si nota subito la mancata definizione del mezzo oscillante. De Broglie infatti lascia aperta la questione del mezzo che viene perturbato e esce un momento angolare in funzione di multipli interi di $\hbar$, come se le orbite di Bohr fossero occupate da un'onda di lunghezza d'onda di De Broglie. La prima tappa del percorso conoscitivo della materia passa atraverso la verifica dell'ipotesi delle onde di De Broglie. A tal proposito, gli esperimenti di diffrazione di elettroni sono i più gettonati. In modo opportuno si preparano fasci di elettroni che vengono fatti diffrangere su di un cristallo. Uno schermo fluorescente (o un qualsiasi tipo di detector) è posto ad una certa distanza dal cristallo e raccoglie l'immagine diffratta. 
+\begin{figure}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			\draw [->] (0,4) -- (0,0) ;
+			\node[] at (0,4.2)  {$Beam$};
+			\node[] at (1,1.5) {$40eV$};
+			\node[] at (2.2,2.5) {$54eV$};
+			\node[] at (0.7,1) {$\varphi$};
+			\draw [ultra thick] plot [smooth, tension=0.5] coordinates {(0,0) (0.7,0.1)  (1,0.3) (1.3, 0.9) (1.5,3.5) };
+			\draw [ultra thick] plot [smooth, tension=0.5] coordinates {(2.2,1) (2.5,1.6) (2.55,1.78) (2.5,1.8) (2.4,1.8) (2.2,1.75) (1.6, 1.7) (1.7, 4)};
+			\draw (1,0.15) -- (3,2.35);
+			\draw[->] (0,0.9) arc (90:50:2);
 
-Se si considerano i pacchetti d'onda non sovrapposti in cui $p\gg (\Delta p)$ e  $V/N \gg (\Delta r)^3$ allora è possibile usare un modello classico rappresentato dalla lunghezza termica di De Broglie
+		\end{tikzpicture}
+	}
+	\caption{Grafico dell'esperimento di Davisson-Germer. Viene plottata l'intensità degli elettroni scatterati contro l'angoolo di scattering. Per $E=54eV$ si ha $\varphi=50^o$}
+	\label{Davisson}
+\end{figure}
+Come si può notare in Fig.~\ref{Davisson}, per un'energia di $54eV$ si ha un picco di elettroni scatterati per $\phi=50^o$. Questo fenomeno lo si spiega solo pensando alla materia in modo ondulatorio, in quando, per la legge di Bragg, avrò scattering solo quando all'energia del fascio corrisponderà una lunghezza d'onda comparabile con quella del size del reticolo, che nel nostro caso è identificato dal passo del reticolo cristallino.
+\subsection{Pacchetto d'onda}
+Con la precedente premessa, il modo migliore per descrivere gli elettroni è attraverso  pacchetti d'onda non sovrapposti in cui $p\gg (\Delta p)$ e  $V/N \gg (\Delta r)^3$. In questo modo  è possibile usare un modello semi-classico rappresentato, come detto precedentemente, dalla lunghezza termica di De Broglie
 \newl{\lambda_D=\frac{h}{p}=\frac{h}{\sqrt{2mE_C}} = \left(\frac{h^2}{3mK_BT}\right)^{\frac{1}{2}}}
 con cui è possibile verificare che 
 \newl{\frac{N}{V}\lambda_D^3 = \frac{N}{V}\left(\frac{h^2}{3mK_BT}\right)^{\frac{3}{2}}\ll 1.}
