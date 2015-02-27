@@ -1002,6 +1002,20 @@ in presenza di campo magnetico, è risaputo che $p_i$  trasforma attraverso tras
 da cui si può dedurre che l'eventuale valore medio dell'osservabile $M$ con $H=0$, è uguale a quello per $H\neq0$ perchè il contributo del campo magnetico sparisce. Quindi ho che $\forall H$ 
 la magnetizzazione di un sistema è sempre zero. Affermazione totalmente falsa, l'evidenza macroscopica del ferromagnetismo e delle transizioni di fase sono banali. Si conclude che un medello di meccanica statistica classica, non dice nulla riguardo i fenomeni magnetici. I fenomeni di ordinamento spontaneo sono fenomeni miscroscopici che vanno trattati in modo quantistico, infatti per prima cosa $\left[p,A\right]\neq 0$ ed in più va introdotto il concetto di dipolo magnetico intrinseco puramente quantistico, legato allo spin
 \newl{\op{\mu_s} = g_s\frac{e}{2mc}\op{S} = -2\mu_B \op{S} \,\,\,,\,\,\,\op{S} _z=\pm\frac{\hbar}{2} }
+\subsection{Hamiltoniana di Interazione Magnetica}
+Come detto nel precedente paragrafo, il ferromagnetismo ed i fenomeni di ordinamento scpontaneo sono puramente quantistici, dunque il primo passo consiste nello scrivere l'Hamiltoniana del sistema in studio. Per un sistema di un elettrone immerso in un campo magnetico, si ha 
+\newl{\op{H} = \frac{1}{2m}\left(\op{p} -\frac{e}{c}A(\op{r} )\right)^2.}
+Per avere invarianza dei campi uso una gauge di Coulomb quindi con $\nabla\cdot{\vet A} =0$, che mi permette di scrivere il potenziale vettore e il campo come 
+\newl{{\vet A} = \frac{1}{2} {\vet H} \times \vet{r}\,\,\, \implicaa\,\,\, {\vet H = \bf{\nabla} \times {\vet A} }}
+in più, nella gauge di Coulomb ho che $\left[p,A\right]=0$. Riscrivendo l'Hamiltoniana di partenza diventa
+\newl{\op{H} = \frac{\op{p} ^2}{2m} + \frac{e^2}{8mc^2}({\vet H} \times {\vet r})^2 - \frac{e}{2mc} \op{p} \cdot ({\vet H} \times {\vet r}) }
+Supponendo che il campo magnetico sia diretto solo lungo l'asse $\op{z} $ e usando le seguenti relazioni vettoriali
+\newl{
+	({\vet H}\times {\vet r})^2 &=& H^2r^2 -({\vet H}\times {\vet r})^2 = H^2(x^2+y^2) \nonumber\\
+	p\cdot({\vet H}\times {\vet r}) &=& {\vet H}\cdot {\vet r}\times {\vet p} = {\vet H}\cdot {\vet L} = H_z L_z
+}
+la parte cinetica dell'Hamiltoniana diventa 
+\newl{H_c = \frac{p^2}{2m} + \frac{e^2}{8mc^2} H^2(x^2+y^2) -\frac{e}{2mc}L_zH}
 
 
 
