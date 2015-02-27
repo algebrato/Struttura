@@ -133,7 +133,7 @@ che nasconde un mondo del tutto inesplorato. In primis, si nota subito la mancat
 
 		\end{tikzpicture}
 	}
-	\caption{Grafico dell'esperimento di Davisson-Germer. Viene plottata l'intensità degli elettroni scatterati contro l'angoolo di scattering. Per $E=54eV$ si ha $\varphi=50^o$}
+	\caption{Grafico dell'esperimento di Davisson-Germer. Viene plottata l'intensità degli elettroni scatterati contro l'angolo di scattering. Per $E=54eV$ si ha $\varphi=50^o$}
 	\label{Davisson}
 \end{figure}
 Come si può notare in Fig.~\ref{Davisson}, per un'energia di $54eV$ si ha un picco di elettroni scatterati per $\phi=50^o$. Questo fenomeno lo si spiega solo pensando alla materia in modo ondulatorio, in quando, per la legge di Bragg, avrò scattering solo quando all'energia del fascio corrisponderà una lunghezza d'onda comparabile con quella del size del reticolo, che nel nostro caso è identificato dal passo del reticolo cristallino.
@@ -940,9 +940,68 @@ I rami acustici partono da $(0,0)$ e sono funzione crescente di $q$. Intorno a z
 \newl{\omega = \left[2\alpha\left(\frac{1}{M_1}+\frac{1}{M_2}\right)\right]^{1/2}} 
 e descresce molto lentamente nell'avvicinarsi al bordo della zona di Brillouin. La frequenza di questo braccio non varia in modo apprezzabile lungo tutto il range di valori di $q$, infatti solitamente si considera costante. Il range di frequenze, tra la parte alta del ramo acustico e la parte bassa del ramo ottico, rappresenta una zona di frequenze non consentite. In questo range il cristallo non può trasmettere nessun tipo di onda. Il risultato che si ha è quello che ogni onda di frequenza proibita, che interagisce col cristallo, viene fortemente attenuata.
 
-
-
-
+\section{Magnetismo nella Materia}
+L'obiettivo del seguente capitolo è quello di introdurre una serie di proprietà di origine magnetica, quindi parleremo di \textit{Magnetismo nella materia}. A differenza degli aspetti macroscopici studiabili con i mezzi dell'elettrodinamica classica, ci si concentrerà sugli aspetti magnetici microscopici della materia e il loro collegamento col le variabili termodinamiche. Lo studio della materia sotto questo punto di vista ha permesso lo sviluppo di concetti quali: \textit{ordinamento spontaneo}, \textit{transione di fase} e \textit{approssimazione di campo medio}.
+Partendo inizialmente dallo studio di paramagnetismo e diamagnetismo sarà possibile introdurre il concetto di \textit{approssimazione di particelle indipendneti} e successivamente passare allo studio delle \textit{correlazioni tra particelle in siti differenti} e quindi avere i mezzi di interpretazione del ferromagnetismo nella materia. Un possibile punto di partenza del discorso è sicuramente il teorema di Bohr - Van Leeuwen che afferma che la magnetizzazione nella materia ${\vet M}$ è sempre nulla. Nonostante questo sono evidenti i dipoli così come sono evidenti i fenomeni di ordinamento magnetico. Si inizi col definire la nomenclatura che verrà usata, per esempio tutto verrà scritto in unità c.g.s. In questo modo il campo di induzione magnetica è definito come
+\newl{\boxed{{\vet B} = {\vet H} + 4\pi{\vet M}}}
+dove con ${\vet M}$ si vuole identificare il vettore magnetizzazione che non è altro che il vettore di momento di dipolo di ogni singolo atomo, mediato sul volume, quindi una cosa del tipo
+\newl{{\vet M} = \frac{{\vet \mu}}{V}.} 
+Definisco la suscettività magnetica $\chi_M$ come 
+\newl{\chi_M = \left(\frac{\partial M}{\partial H}\right)_{H=0}}
+considerando in modo approssimato una relazione lineare tra $\vet M$ ed $\vet H$ e possibile scrivere che $M = \chi_M H$. \`E possibile riconoscere, in funzione al valore di $\chi$ diversi comportamenti della materia:
+\begin{itemize}
+	\item[1.] \textbf{Diamagnetismo}: caratterizzato da $\chi<0$, il sistema tende a "rifiutare" il campo applicato. Esempio: precessioni di Larmor;
+	\item[2.] \textbf{Paramagnetismo}: caratterizzato da $\chi>0$, in questo caso se gli  atomi hanno un loro momento magnetico intrinseco, tendono ad allinearlo in direzione del campo;
+	\item[3.] \textbf{Ferromagnetismo}: caratterizzato da fenomeni particolari quali \textit{magnetizzazione spontanea} e \textit{ordinamento}. I dipoli magnetici tendono ad orientarsi spontaneamente. In qeusto caso non vale più l'approssimazione lineare $M = \chi_M H$, in quanto il sistema sarà caratterizzato da transizioni di fase e in generale, da comportamenti abbastanza peculiari.
+\end{itemize}
+C'è un legame molto forte tra questi fenomeni e la temeperatura, quindi è opportuno fare una trattazione termidinamica. Si parte dall'enunciazione del primo principio:
+\newl{dU = dQ - dW.}
+Il lavoro per un gnereico sistema immerso in un campo magnetico sarà dato, appunto, in parte da lavoro magnetico, una perte di lavoro meccanico e una parte di assorbimento dovuta all'eventuale scambio di particelle, indicanzo con $\zeta$ il potenziale chimico, 
+\newl{dW = \mu\cdot dH + PdV - \zeta dN}
+\begin{figure}
+	\usetikzlibrary{arrows}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			\newcommand{\midarrow}{\tikz \draw[-triangle 90] (0,0) -- +(.1,0);}
+			\draw[->] (0,-1) -- (0,5);
+			\draw[->] (-1,0) -- (5,0);
+			\node[] at (-0.2,-0.2) {$O$};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (3,3)  {};
+			\draw (1,1) -- node {\midarrow} (2,1);
+		\end{tikzpicture}
+	}
+	\caption{Forze in gioco}
+	\label{Lorenz}
+\end{figure}
+Differenziando l'espressione dell'energia libera si ottiene che
+\newl{dF = dU -d(TS) = -SdT -PdV +\zeta dN -\mu\cdot dH} 
+e si ottengono tutte le relative grandezze in funzione di $F$ a $T$ $V$ ed $N$ fissati,
+\newl{M = -\frac{1}{V}\left(\frac{\partial F}{\partial H}\right)_{T,V,N}\,\,\,\,\,,\,\,\,\,\,\chi = -\frac{1}{V}\left(\frac{\partial^2 F}{\partial H ^2}\right)_{T,V,N} .}
+In meccanica statistica la funzione di partizione posso ottenerla anche dalla funzione di partizione canonica, che somma su tutti gli stati microscopici
+\newl{F = -k_BT\log Z \,\,\,\,,\,\,\,\, Z= \sum_{stati} e^{-H/k_BT}}
+dove $k_B$ è la costante di Boltzmann e H è la classica Hamiltoniana di sistema. In alcuni casi è comodo scegliere il potenziale chimico come una rilevante variabile termodinamica, da cui si ottiene il potenziale \textbf{Gran Canonico}
+\newl{\Omega = F -\zeta N = \Omega(T,V,\zeta,H)} 
+a cui è associata una funzione di partizione gran canonica
+\newl{Z_{\Omega}= \sum_{stati,particelle} e^{(\zeta N -H)/k_BT}}
+dove la somma è appunto condotta su tutti gli stati e su tutte le particelle del sistema. Differenziando ottengo
+\newl{d\Omega = dF -d(\zeta N) = -SdT -PdV -Nd\zeta - \mu\cdot dH}
+da cui si derivano ancora le varibili osservabili del sistema
+\newl{M = -\frac{1}{V}\left(\frac{\partial \Omega}{\partial H}\right)_{T,V,\zeta} \,\,\,,\,\,\, N =-\left(\frac{\partial \Omega}{\partial \mu}\right)_{T,V,H}}
+Differenziando l'energia libera in funzione al gran potenziale canonico
+\newl{\left(\frac{\partial F}{\partial H}\right)_N = \left(\frac{\partial(\Omega+\zeta N)}{\partial H}\right) = \left(\frac{\partial \Omega}{\partial H}\right)_\zeta + \frac{\partial \Omega}{\partial \zeta}\frac{\partial \zeta}{\partial H} + N \frac{\partial \mu}{\partial H}}
+Come visto precedentemente la magnetizzazione è definita come una funzione di $\zeta$, quindi per ottenere la suscettività magnetica in funzione al numero di particelle si deve sempre partire dalla scrittura del gran potenziale canonico, rimaneggiarlo, ottenendo che
+\newl{\chi = \left(\frac{\partial M(\zeta_{H,N}, H)}{\partial H}\right)_N = \frac{\partial M(\zeta,H)}{\partial H} + \frac{\partial M(\zeta,H)}{\partial \zeta}\frac{\partial \zeta}{\partial H}.}
+Nella maggior parte dei casi, il potenziale chimico ha una dipendenza quadratica dal modulo del campo magnetico, quindi possiamo considerare $(\partial \zeta / \partial H) \sim 0$ e la suscettività data direttamente dalla formula lineare
+\newl{\chi = \left(\frac{\partial M}{\partial H}\right)_{H=0} = -\frac{1}{V} \left(\frac{\partial^2\Omega}{\partial H^2}\right)_\zeta.}
+\subsection{Teorema di Bohr - Van Leeuwen}
+Viene ripresa la tesi del teorema BVL e ampliata nei concetti. Come detto precedentemente, dal punto di vista della meccanica statistica classica, non sono ponderati i fenomeni magnetici nella materia, indipendenetemente da T e dall' {\vet H} applicato. Questo lo si può mostrare in modo semplice prendendo il valore medio di un'osservabile generica $F(r_i,p_i)$
+\newl{\langle F \rangle = \frac{\int d^3r_i d^3p_i F(r_i,p_i) e^{-H(r_i,p_i)/k_BT}}{\left[\int d^3r_i d^3p_i e^{H(r_i,p_i)/k_BT}\right]} }
+in presenza di campo magnetico, è risaputo che $p_i$  trasforma attraverso trasformazioni minimali $p_i \to p_i -(e/c)A(r_i) = p'_i$ mentre $r_i$ non cambia. Riscrivendo l'integrale di prima, la parte di potenziale vettore sparisce, perchè dipende solo dagli $r_i$ quindi ottengo che:
+\newl{\langle F \rangle_{\text{senza A}}=\langle F \rangle_{\text{con A}}}
+da cui si può dedurre che l'eventuale valore medio dell'osservabile $M$ con $H=0$, è uguale a quello per $H\neq0$ perchè il contributo del campo magnetico sparisce. Quindi ho che $\forall H$ 
+la magnetizzazione di un sistema è sempre zero. Affermazione totalmente falsa, l'evidenza macroscopica del ferromagnetismo e delle transizioni di fase sono banali. Si conclude che un medello di meccanica statistica classica, non dice nulla riguardo i fenomeni magnetici. I fenomeni di ordinamento spontaneo sono fenomeni miscroscopici che vanno trattati in modo quantistico, infatti per prima cosa $\left[p,A\right]\neq 0$ ed in più va introdotto il concetto di dipolo magnetico intrinseco puramente quantistico, legato allo spin
+\newl{\op{\mu_s} = g_s\frac{e}{2mc}\op{S} = -2\mu_B \op{S} \,\,\,,\,\,\,\op{S} _z=\pm\frac{\hbar}{2} }
 
 
 
