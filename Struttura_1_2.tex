@@ -1016,6 +1016,23 @@ Supponendo che il campo magnetico sia diretto solo lungo l'asse $\op{z} $ e usan
 }
 la parte cinetica dell'Hamiltoniana diventa 
 \newl{H_c = \frac{p^2}{2m} + \frac{e^2}{8mc^2} H^2(x^2+y^2) -\frac{e}{2mc}L_zH}
+il termine quadrato è dovuto al moto nel piano $x-y$, il termine lineare ha la forma di una energia di interazione tra il campo $\vet H $ e il momento di dipolo magnetico $\mu_l$ associato all'elettrone in orbita. In questo modo è ben distinguibile il comportamento paramagnetico, infatti considerando $l=L/\hbar$ ottengo
+\newl{\mu_l = -\frac{\abs{e} \hbar }{2m}l = -\mu_B l}
+che permette di scrivere l'Hamiltoniana di interazione 
+\newl{H_{int} = -\mu_l H = +\mu_B l_z H = -\frac{e}{2mc}L_z H}
+inserendo anche i contributi di interazione con campo elettrico, interazione del campo con lo spin e l'interazione spin-orbita ottengo l'Hamiltoniana totale di un sistema immerso in un campo elettromagnetico, definendo $\omega_c = (eH)/(mc)$ la omega di ciclotrone si ottiene
+\newl{\op{H} = \frac{\op{p} ^2 }{2m}  + e\varphi(r)  + \frac{m}{8}\omega_c(x^2-y^2) + \mu_B l_z H + 2\mu_B S_z\cdot H +\xi(r) \op{L} \cdot \op{S}   }
+le parti elettostatiche e di spin-orbita sono state aggiunte perchè l'elettrone è all'inteno di un atomo, quindi è soggetto anche a questo tipo di interazioni. \`E possibile ora discutere sui termini presente nell'Hamiltonianao. Il primo termine è quello cinetico, il secondo è quello di interazione con il potenziale elttrostatico, il terzo rappresenta lo sviluppo al prim'ordine dell'interazione col campo magnetico, il quarto rappresenta lo sviluppo al second'ordine sempre dell'interazione col campo magnetico, in quinto rappresenta l'interazione dello spin col campo magnetico ed infine si ha l'interazione spin-orbita. \`E possibile notare che \newl{\left[\frac{m}{8}\omega_c^2 (x^2-y^2) \right]  > 0}
+quindi è un contributo repulsivo dimagnetico. Dal punto di vista delle grandezze fisiche, però ha un contributo di $\sim 10^{-10}eV$ che molto più piccolo del contributo dei termini quattro e cinque, che si aggirano sui $\sim 10^{-4}eV$ che rappresentano il contributo paramagnetico. Anche lo spin-orbita è di questo ordine di grandezza, $\sim 10^{-2}eV \to 10^{-4}eV$.
+Poichè le energie dei livelli elettronici sono nell'ordine dell'$eV$ per eccitare un elettrone sarebbe necessario un campo magnetico gigantesco. In sostanza non è possibile eccitare gli elettroni tramite campi magnetici, quindi tutti gli effetti che sono legati all'interazione magnetica avvengono tutti nel ground state.
+\subsection{Materiali Isolanti}
+I materiali isolanti sono caratterizzati da atomi le cui bande sono piene. I numeri quantici utili per studiare questo tipo di sistemi sono $L,S,J$ totali, cioè $L=\sum_i l_i$ ecc... Dato lo stato $\psi_{r,s,j,j_z}$ il contributo paramagnetico è dato da
+\newl{ \bra{J,J_z} L_z+2S_z \ket{J,J_z} = \mu_B Hg_LJ_z }
+che è l'effetto Zeeman. Quindi per questi materiali la parte di Hamiltoniana di interazione sarà
+\newl{\op{H} _{par} = \mu_B Hg_L\op{J} _z .}
+Di notevole interesse è notare il fatto che l'intesità della correzione all'energia col contributo paramagnetico è nell'ordine di $10^4eV <k_BT$ ! Quindi sul sistema entrano in gioco anche le fluttuazioni dovute alla temperatura, che essendo dello stesso ordine di grandezza, non possono essere trascurate. \`E necessario quindi effettuare una trattazione del problema utilizzando i metodi della meccanica statistica.
+
+
 
 
 
