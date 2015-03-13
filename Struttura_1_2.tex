@@ -1030,7 +1030,46 @@ I materiali isolanti sono caratterizzati da atomi le cui bande sono piene. I num
 \newl{ \bra{J,J_z} L_z+2S_z \ket{J,J_z} = \mu_B Hg_LJ_z }
 che è l'effetto Zeeman. Quindi per questi materiali la parte di Hamiltoniana di interazione sarà
 \newl{\op{H} _{par} = \mu_B Hg_L\op{J} _z .}
-Di notevole interesse è notare il fatto che l'intesità della correzione all'energia col contributo paramagnetico è nell'ordine di $10^4eV <k_BT$ ! Quindi sul sistema entrano in gioco anche le fluttuazioni dovute alla temperatura, che essendo dello stesso ordine di grandezza, non possono essere trascurate. \`E necessario quindi effettuare una trattazione del problema utilizzando i metodi della meccanica statistica.
+Di notevole interesse è notare il fatto che l'intesità della correzione all'energia col contributo paramagnetico è nell'ordine di $10^4eV <k_BT$ ! Quindi sul sistema entrano in gioco anche le fluttuazioni dovute alla temperatura, che essendo dello stesso ordine di grandezza, non possono essere trascurate. \`E necessario quindi effettuare una trattazione del problema utilizzando i metodi della meccanica statistica. Come notato, si ha che $k_BT\sim10^{-2}eV \gg E_M$ quindi è necessaria una trattazione statistica. Il primo passo è quello del calcolo della funzione di partizione
+\newl{Z=\sum_{stati}e^{-\frac{H}{k_BT}} = \sum_{-J}^{+J} e^{-\frac{\mu_B H g_L J_z}{k_BT}}}
+ponendo $\gamma = (g_L \mu_B H) / (k_B T)$ e $J_z = n-J$ la funzione di partizione diventa
+\newl{Z = e^{\gamma J} \sum_{n=0}^{2J}e^{-\gamma n} } 
+che è molto facile sommare in quanto è una geometrica 
+\newl{Z = e^{\gamma J} \frac{1-e^{-\gamma(2J+1)}}{1-e^{-\gamma}} = \frac{\sinh[\gamma(J+1/2)]}{\sinh(\gamma/2)}}
+avendo a disposizione la funzione di partizione è possibile quindi passare alla determinazione di tutte le altre variabili termodinamiche del sistema. Di particolare interesse in questo capitolo è la determinazione della magnetizzazione
+\newl{M = -\frac{N}{V}\frac{\partial}{\partial H}\left(-k_B T \ln Z\right) = \frac{Nk_BT}{V} \frac{1}{Z} \frac{\partial Z}{\partial \gamma} \frac{\partial \gamma}{\partial H}}
+facendo i conti si arriva all'espressione della magnetizzazione in funzione alla funzione di Brillouin
+\newl{M = \frac{N}{V}g_L \mu_B J \mathcal{B}_J\left(\frac{g_L\mu_BJH}{k_BT}\right)}
+dove la funzione di Brillouin è una funzione adimensionale data da
+\newl{\mathcal{B}_J = \frac{2J+1}{2J} \coth\left(x\frac{2J+1}{2J}\right)- \frac{1}{2J}\coth\left(\frac{x}{2J}\right)}
+a temperatura ambiente l'energia magnetica è sempre più piccola dell'energia termica $(\mu_B H \ll k_BT \to x\ll 1)$ quindi è possibile espandere la $\coth(x)$ come  
+\newl{\coth(x) = \frac{1}{x} + \frac{x}{3} + \cdots}
+in questo modo si ottiene una espressione lineare per $M$
+\newl{M = \frac{N}{V} \frac{g_L^2 \mu_B^2 J(J+1)}{3k_BT} H}
+Infine si raggiunge l'espressione della suscettività paramagnetica di \textbf{Curie} in cui è visibile la dipendenza dall'inverso della temperatura
+\newl{\chi_{para} = \frac{N}{V} \frac{(g_L \mu_B)^2 J(J+1)}{3k_B T}.}
+Questo suggerisce che l'atomo può essere trattato come se avesse un suo proprio momento magnetico classico. La legge funziona molto bene per quegli ossidi che hanno la shell $f$ semipiena, mentre per le transizioni nei metalli funziona solo se sono verificate le condizioni $L=0$ e $J=S$. Per temperature molto basse e campi magnetici molto intensi il limite si inverte e si ha
+\newl{x\to1 \,\,\,\, \coth(x)\to 1,}
+e allo stesso modo si ha che la funzione di Brillouin tende ad $1$, $\mathcal{B}_J \sim 1$ e la magnetizzazione non dipende più da $H$ e si ottiene una magnetizzazione di saturazione
+\newl{M=\frac{N}{V}g_L \mu_B J}
+Se $J=0$, ho che si annulla tutto, quindi devo passare al secondo ordine perturbativo attraverso la teoria di \textbf{Van Vleck}. Se $J=L=S=0$ allora tutti gli oggetti hanno suscettività diamagnetica. Sperimentalmente si osserva che per ioni con shell $f$ semipiena e $J\neq0$ l'accordo con la teoria è molto buono. Per gli elementi di transizione (shell $d$) la teoria non funziona per nulla. Per i casi in cui $J=0$ i il primo ordine perturbativo è nullo 
+\newl{\bra{\psi}\mu_BH(L_z+2S_z)\ket{\psi} = \mu_BHg_s J_z =0,}
+devo usare il secondo ordine pertubativo rappresentato dalle oscillazioni di Van Vleck.
+
+\textbf{Alcune cose sul quencing orbitale}
+
+\subsection{Magnetismo nei Metalli}
+Nei metalli, i fenomeni di interazione con il campo elettromangetico sono dovuti per lo più dalla risposta degli elettroni liberi nelle bande di conduzione, al campo applicato. Gli effetti di magnetizzazione nei metalli sono caratterizzati da due coportamenti indipendenti:
+\begin{itemize}
+	\item Paramagnetismo di Pauli;
+	\item Diamagnetismo di Landau.
+\end{itemize}
+Gli elettroni nelle bande dei metalli hanno notevoli gradi di libertà quindi l'idea di trattare gli elettroni come un gas è ragionevole e da risultati consistenti. In qeuesta verrà calcolata la suscettività paramegnetica di Pauli per un gas di elettroni. La derivazione può avvenire per vai statistica o per via variazionale, qui di seguito sarà argomentata la via statistica.
+Consideriamo l'ambientazione del problema in un sistema \textbf{gran canonico}, in questo modo la funzione di partizione sarà quella gran canonica data da
+\newl{Z_\Omega = \prod_{k_x,k_y,k_z,s_z} \left(1+e^{(\mu-E(k,s_z))/k_BT}\right) }
+
+
+
 
 
 
