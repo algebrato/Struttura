@@ -1,0 +1,153 @@
+\section{Elettroni nel potenziale periodico}
+Il problema agli autovalori che bisogna risolvere per trattare eletroni liberi in un potenziale periodico è il tipico
+\newl{\left[-\frac{\hbar^2}{2m}\nabla^2 +U_e({\vet r})\right]\psi_n({\vet r}) = E_n \psi_n({\vet r}),}
+dove si stanno facendo le seguenti approssimazioni:
+\begin{itemize}
+	\item Elettroni \textbf{indipendenti};
+\end{itemize}
+In questo modo la funzoine d'onda che descrive il problema è possibile fattorizzarla.
+\begin{itemize}
+	\item Il potenziale è periodico, quindi $U({\vet r}  + {\vet R} )  = U({\vet r}  )$
+\end{itemize}
+Il teorema di Bloch mi dice che per un potenziale periodico la funzoine d'onda è possibile fattorizzarla come una parte di onda piana e una parte periodica
+\newl{\boxed{\psi_{n,\vet{k}}(\vet{r})=\overbrace{e^{i\vet{k}\cdot\vet{r}}}^{\text{Onda Piana}} \overbrace{u_{n,\vet{k}}(\vet{r}) }^{\text{Periodica}}}}
+\subsection{Giustificazione fisica del teorema di Bloch}
+La giustificazione del teorema di Bloch e quindi della forma delle funzioni d'onda dell'elettrone libero all'interno di un cristallo, trova la sua base sulle ipotesi fatte appunto sul reticolo del cristallo stesso. E' tutto periodico quindi mi aspetto che i moduli quadri della funzione d'onda siano periodici con passo quello del reticolo cristallino
+\newl{\abs{\psi(r)} ^2 = \abs{\psi(r+R)} ^2,}
+in questo modo, la funzione d'onda avrà una sua certa parte radiale con un certo coefficiente $C_{\vet k}$ per cui deve valere il fatto che $\abs{C_k} =1$. Un modo molto conveniente che ho di vedere questa cosa è quella di pensare appunto il coefficiente $C_{\vet k}$ dato da un'onda piana, infatti, cercando l'ugualianza tra le parti radiali di $\psi_k(r)$ r $\psi_k(r+R)$, notiamo che:
+\newl{e^{ikr}\left[e^{-ikr} u_{n,k}(r)\right] = e^{ikr}e^{ikR} \left[ e^{-ikr}e^{-ikR}u_{n,k}(r+R)\right]}
+da cui
+\newl{\boxed{u_{n,k}(r) = u_{n,k}(r+R) }.}
+In questo modo si vuole dare una giustificazione molto intuitiva del perchè le funzioni d'onda del teorema di Bloch sono funzioni d'onda sensate che seguono bene le condizioni di periodicità del nostro problema. Le soluzioni dell'hamiltoniana sono in funzione alle condizioni al bordo che scegliamo. In questo caso ha perfettamente senso scegliere delle condizioni al bordo periodiche. La restrizione sui valori di $\vet k$ sarà data da una serie di considerazioni. Partendo dalla periodicità $\psi(r) = \psi(r+L)$ sul reticolo, quindi se $a$ è un vettore del reticolo diretto si ha che $L = Na$. uguagliando le funzioni d'onda
+\newl{e^{ikx} = e^{ik(x+L)} u_k(x+L)} 
+ho come condizione
+\newl{\boxed{kL = n 2\pi\implicaa k=\frac{2\pi}{L}n\,\,\, \text{ dove } \,\,\,n\in\Z }}
+questa appena scritta è la famosa condizione periodica di \textit{\textbf{Born - Von Karman}}. Dal punto di vista dello spazio dei vettori $\vet k$ questo vuol dire che tutto quello che succede nello spazio può essere rimappato nell'intervallo di $k\in\left[-\frac{\pi}{a},\frac{\pi}{a}\right]$ che è appunto la prima zona di Brillouin. Nello spazio $k$ posso verificare facilmente che $k = k'-G$ dove $G$ è un vettore di base del reticolo reciproco
+\newl{\psi_{k'}(x)e^{ik'x}u_{k'}(x) = e^{i(k+G)x}u_{k+G}(x)= e^{ikx}\overbrace{e^{iGx}u_{k+G}(x)}^{\text{Sono periodiche}}= e^{ikx}\op{u_k} (x).} 
+In questo modo abbiamo confermato quanto detto prima. Ongi vettore $k'$ può essere rimappato all'interno della prima zona di Brillouin.
+\subsection{Formazione delle bande}
+Supponiamo di essere in condizione di potenziale debole a media nulla e che valgano le condizioni al bordo elencate precedentemente. Possiamo quindi trattare il problema agli autovalori come particella libera a cui viene successivamente inserito il contributo del potenziale debole in modo perturbativo. Il punto di partenza è banalmente la particella libera
+\newl{\left(-\frac{\hbar^2}{2m}\nabla^2\right)  \psi_k(r) = E \psi_k(r).}
+Con le condizioni al bordo periodiche, l'energia in funzione di $\vet k$ ha la tipica dipendenza quadratica
+\newl{E=\frac{\hbar^2}{2m}k^2.}
+\begin{figure}
+	\centering
+	\fbox{
+		\begin{tikzpicture}[scale=1,auto=center]
+			%\draw [help lines] (0,0) grid (2,2);
+			\draw [->] (-5,0) -- (5,0);
+			\draw [->] (0,-2) -- (0,5);
+			\draw (-4,0.3*4^2) parabola bend (0,0) (4, 0.3*4^2);
+			\draw (-2,0.3*4^2) parabola bend (2,0) (5, 0.3*3^2);
+			\draw (-5,0.3*3^2) parabola bend (-2,0) (2, 0.3*4^2);
+			
+			\draw (0,0.3*4^2) parabola bend (4,0) (5, 0.3*1^2);
+			\draw (-5,0.3*1^2) parabola bend (-4,0) (0, 0.3*4^2);
+			\draw[domain=-1:1, ultra thick] plot (\x,{0.3*(\x)^2+1.2*\x+1.2});
+			\draw[domain=-1:1, ultra thick]  plot (\x,{0.3*(-\x)^2+1.2*(-\x)+1.2} );
+			\draw[domain=-1:0, ultra thick]  plot (\x,{0.3*(\x+2)^2+1.2*(\x+2)+1.2} );
+			\draw[domain=0:1, ultra thick]  plot (\x,{0.3*((-\x)+2)^2+1.2*((-\x)+2)+1.2} );
+
+			\draw[ultra thick] (-1,0.3) parabola bend (0,0) (1,0.3);
+			\draw[ultra thick] parabola (-1,0.3) (1,9*0.3);	
+
+
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (1,0.3)  {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (1,9*0.3)  {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (-1,0.3)  {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.2cm] at (-1,9*0.3)  {};
+
+
+
+			\node[] at (1.25,0.3)  {$1$};
+			\node[] at (1.25,9*0.3)  {$2$};
+			\node[] at (-1.25,0.3)  {$3$};
+			\node[] at (-1.25,9*0.3)  {$4$};
+
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.1cm] at (1,-0) {};
+			\node[fill,thick,circle, inner sep=0pt, minimum size=0.1cm] at (-1,0)  {};
+			\node[] at (1,-0.4) {$\frac{\pi}{a}$};
+			\node[] at (-1,-0.4)  {$-\frac{\pi}{a}$};
+
+			\draw[dashed] (-1,0) -- (-1,5);
+			\draw[dashed] (1,0) -- (1,5);
+		\end{tikzpicture}
+	}
+	\caption{Ritratto in fase dei momenti di particella libera}
+	\label{Part:Lib}
+\end{figure}
+In Fig.\ref{Part:Lib}, è ben visibile che non vi è separazione tra le bande. \`E possibile passare in modo continuo da una banda all'altra nei punto in cui il vettore d'onda interseca la zona di Brillouin. in questo modo i punti $1,2,3,4$ hanno livelli quasi-degeneri, con energie di bande diverse che risultano molto vicine per lo stesso valore di $\vet k$. Si può passare ora a studiare il modo in cui il potenziale debole $U_e$ agisce sui livelli energetici. Il potenziale è riferito ad un reticolo diretto con una sua certa periodicità, è possibile rappresentarlo in serie di Fourier rispetto ai vettori $\vet q$ del reticolo reciproco 
+\newl{U_e(x) = \sum_q U_q e^{i{\vet q}\cdot {\vet x}}\,\,\,\,\,\,\,\, \left(q=\frac{2\pi}{a}m\right).}
+Adottando la convenzione di fissare la scala delle energie sul valor medio del potenziale allora si ottiene che $U_0=0$. Questo semplifica in modo essenziale gli sviluppi perturbativi. Riscrivendo l'equazione di Schroedinger con il contributo del potenziale
+\newl{\left[-\frac{\hbar^2}{2m_e}\nabla^2+U_e(x)\right]\psi(x)=E\psi(x).}
+A questo punto è necessario fare alcune considerazioni sulla funzione d'onda: essa può essere rappresentata sul sistema o.n.c delle onde piane, con opportuni coefficienti $C_k\in\C$
+\newl{\psi(x)=\sum_kC_ke^{ikx}.}
+Inserendo la funzione d'onda nell'equazione di Schroedinger appena scritta si ottiene il seguente problema agli autovalori
+\newl{\sum_k\left[-\frac{\hbar^2}{2m_e}(-k^2)C_ke^{ikx}\right]+\sum_{q,k}U_qC_ke^{i(q+k)x}=E\sum_kC_ke^{ikx}}.
+Moltiplicando per $e^{ik'x}$ ed integrando, si ottiene il seguente sistema per i coefficienti $C_k$
+\newl{\left(\frac{\hbar^2}{2m_e}k^2 -E\right)C_k + \sum_q U_qC_{k-q} =0.}
+Dall'ultima scrittura è possibile notare che il termine di potenziale è responsabile dell'accoppiamento tra i vari coefficienti $C_k$ infatti mette in realazione ogni coefficiente relativo ad un vettore $\vet k$ ad suo rispettivo nelle altre zone di Brillouin (che differenziano appunto di un vettore $\vet q$). Dato che può essere rimappato tutto nella prima zona di Brillouin, questo vuol dire che il termine di potenziale aggiunge accoppiamento tra i vari termini dello sviluppo. Tra i vari $\vet k$ vettori della prima zona di Brillouin si immagini di fissarne uno. In corrispondenza si avranno autofunzioni e autovalori indicizzati $\vet k$. Le funzioni d'onda dovranno essere la sovrapposizione di tutte le onde piane che distano di un vettore $\vet q'$ perchè come detto prima tutto viene rimappato nella prima zona
+\newl{\psi_k(x)=\sum_{q'}C_{k-q'}e^{i(k-q')x}.}
+Si noti che la somma è solo sui $\vet q'$ quindi è possibile riscrivere la funzione d'onda come
+\newl{\psi(x)=e^{ikx}\sum_{q'}C_{k-q'}e^{-iq'x} = e^{ikx}u_k(x),}
+questa forma è la stessa indicata per funzioni d'onda di elettrone libero in un potenziale cristallino dal teorema di Bloch. Questo fatto, con una certa forzatura, è possibile interpretarlo comeun'ulteriore prova a favore del teorema di Bloch. Prendendo la funzione d'onda appena scritta e usandola nell'equazione di Schroedinger si ottiene
+\newl{\sum_{q'}\left[\frac{\hbar^2}{2m_e}(k-q')^2C_{k-q'}e^{i(k-q')x}\right]+\sum_{q',q"}U_{q"}C_{k-q'}e^{i(q"+k-q')x}=E_k\sum_kC_{k-q'}e^{i(k-q')x}}
+Sfruttando nuovamente l'ortonormalità delle onde piane e integrando su $q"$ si ottiene, per ogni valore di $\vet k$, un sistema di equazioni accoppiate
+\newl{\left[\frac{\hbar^2}{2m_e}(k-q)^2 -E_k\right]C_{k-q} +\sum_{q'}U_{q'-q}C_{k-q'}=0}
+che una volta risolto fornisce i livelli energetici e i coefficienti dello sviluppo in serie della funzione d'onda. Ponendo $U_q=0$ si ritorna al caso precedente di particella libera
+\newl{E_k,q = E(k-q)=\frac{\hbar^2}{2m_e}(k-q)^2}.
+In questo caso $\vet q$ rappresenta il numero quantico che identifica la banda. Se ${\vet k} \sim {\vet q} /2$ si è in una condizione quasi degenere. Per valori di $\vet k$ lontani da questi punti le bande sono ben separate, il problema è solo in prossimità di questi punti. Per il calcolo della correzione dell'energia per mezzo di un potenziale debole è necessario considerare i due casi in modo separato e non si può effettuare una trattazione perturbativa standard. \`E possibile verificare che nel caso degenere per le due bande $q$ e $q'$ si ha 
+\newl{\boxed{\Delta E=\abs{E(k-q)-E(k-q')}  \ll U .}}
+Essendo la correzione dell'energia proporzionale a $U$  è quindi molto più significativa del caso non degenere in cui $\Delta E\gg U$ e la correzione di energia è proporzionale a $U^2$ quindi totalmente trascurabile. Ha quindi senso studiare solo la correzione dell'energia per il caso degenere poichè solo in questo caso si prevedono modifiche consistenti ai livelli energetici.
+Per due bande degeneri generiche $\vet q_1$ e $\vet q_2$, tenendo conto solo dei termini dominanti si ottiene il seguente sistema algebrico
+\newl{\left[E-E_{k,q_1}\right]C_{k-q_1} = U_{q_2-q_1}C_{k-q_1} \nonumber\\
+	\left[E-E_{k,q_2}\right]C_{k-q_2} = U_{q_1-q_2}C_{k-q_2}
+}
+Soluzioni non nulle per i coefficienti dello sviluppo della funzione d'onda si hanno se si annulla il determinante della matrice
+\[ \left| \begin{array}{cc}
+E-E_{k,q_1} & -U_{q_2-q_1}  \\
+-U_{q_1-q_2} & E-E_{k-q_2} \end{array} \right|.\]
+Risolvendo per $E$ e osservando che $U_{q_1-q_2} = U^*_{q_2-q_1}$ (a causa del fatto che il potenziale è una funzione reale), si ottiene la correzione all'energia
+\newl{\boxed{E(k)=\frac{E_{k,q_1}+E_{k,q_2}}{2}\pm \frac{1}{2}\sqrt{(E_{k,q_1}-E_{k,q_2})^2 + 4\abs{U_{q_1-q_2}} ^2 }   }.}
+Questo indica che intorno a $(q_1+q_2)/2$ i livelli energetici di elettrone libero sono molto vicini e diventa molto singificativo il contributo del termine di potenziale. I livelli si \textit{respingono} dando vita ad un \textbf{gap di energia}, ovvero ad una zona di energie proibita. Possiamo notare che le correzioni all'energia diventano quindi sensibili quando $\abs{k-q_1} ^2 = \abs{k-q_2} ^2$ cioè quando siamo in una zona di quasi degenerazione. Posso ridefinire ${\vet k'} = \vet k - \vet q_1$ e $\vet q = \vet q_1 - \vet q_2$ in questo modo posso riscrivere la condizione di quasi degenerazione come
+\newl{\abs{\vet k'} = \abs{{\vet k} - {\vet q}} }
+cioè 
+\newl{\boxed{\Delta{\vet k} = {\vet q}}}
+che è la condizione di diffrazione di Von Laue. Quindi si spiega il motivo per il quale le bande si aprono in prossimità di quei punti, gli elettroni non possono stare in quelle posizioni e vengono diffratti.
+\subsection{Soluzione elettrone libero in un potenziale periodico}
+Nel paragrafo precedente sono stati elencati una serie di riusltati sulla formazione dei gap energetici in corrispondenza dei punti di quasi degenerazione. E' stato possibile verificare che la correzione all'energia è sensibile solo in questi punti. Lontano dai punti di quasi degenerazione la correzione all'energia diventa di ordine $O(N^2)$ quindi totalmente trascurabile. Per completare il concetto viene presentata, in modo più formale, la correzione agli autovalori per un elettrone libero in un potenziale periodico debole. Si consideri un potenziale realistico del tipo
+\newl{V(x)=\sum_n v(x-na).
+\label{PER:POT}}
+La prima osservazione che è possibile fare è che il teorema di Bloch ci permette di separare, per ogni valore di $k$, il problema in due parti indipendenti. Si inizi col sostituire nell'equazione di Schrodinger la funzione d'onda di elettrone libero data dal teorema di Bloch
+\newl{\left[-\frac{\hbar^2}{2m_e}\nabla^2 +V(x)\right]e^{ikx}u_k(x) = Ee^{ikx}u_k(x),}
+in questo modo otteniamo un'equazione per la parte periodica
+\newl{\left[\frac{\hbar^2}{2m_e}\left(k^2-2ik\frac{d}{dx}-\frac{d^2}{dx^2}\right)+V(x)-E\right]u_k(x)=0}
+che in generale ha un'infinita di soluzioni ortogonali tra loro e sono del tipo
+\newl{\int_{-L/2}^{+L/2}dx\,u^*_{k,n}(x)u_{k-m}(x) = \delta_{nm}N\int_{-a/2}^{+a/2}dx\,u^*_{k,n}(x)u_{k',m}(x).}
+L'integrale è condotto su tutto il cristallo sfruttando la periodicità della funzione $u_k(x)$. L'integrale da $-L/2$ a $+L/2$ è stato quindi ricondotto alla sola cella unitaria.
+Questo fatto è di interesse perchè mostra come è fatta la soluzione per quel tipo di problema e mette in luce che per valori di $k$ diversi, le soluzioni sono ortogonali tra loro. Riprendiamo gli stessi conti per una funzione d'onda di Bloch e sommiamo sempre su tutti i $k$ del reticolo
+\newl{\int_{-L/2}^{+L/2} \psi^*_{k,n}(x)\psi_{k',n}(x)\,dx &=& \int_{-L/2}^{+L/2} e^{i(k'-k)x}u^*_{k,n}(x)u_{k',n}(x)\,dx \\
+&=& \left(\sum_p e^{ip(k'-k)a}\right)\int_{-a/2}^{+a/2}e^{i(k'-k)x}u^*_{k,n}(x)u_{k',n}(x)\,dx ,	\nonumber}
+i vettori p sono su tutto il reticolo e l'integrale è diverso da zero solo se $k$ e $k'$ coincidono, in questo modo si ha che
+\newl{\sum_p e^{ip(k'-k)a} = N\delta_{k,k'}.}
+In effetti non si può dire nulla sull'ortogonalità delle parti periodiche per diversi valori di $k$. L'unica cosa che si può dire è che per lo stesso valore di $k$, stati d'onda  di Bloch sono ortogonali.\footnote{Molto oscuro...}
+\subsection{Metodo delle onde piane}
+Il problema dell'elettrone libero in un potenziale periodico è possibile trattarlo in modo numerico. Dato il potenziale periodico, un approccio particolarmente efficace è quello di usare una base di onde piane, in particolar modo se il potenziale è periodico. \`E possibile definire a priori la forma di queste onde piane. Possiamo sfruttare la periodicità del reticolo e il teorema di Bloch che fissato un $k$, forniscono una forma particolare di base di onde piane
+\newl{b_{n,k}(x)=\frac{1}{\sqrt{L}}e^{i(k+G_n)x}\,\,\,\, , \,\,\,\,\,\,\,G_n=\frac{2\pi}{a}n 
+\label{BASE:BLOCH}}
+la giusta base deve essere quindi del tipo $\exp(ikx)$ come stati di Bloch con vettori di Bloch $k$. Per un potenziale periodico come quello in formula \ref{PER:POT} abbiamo che la trasformata di Fourier è data da
+\newl{\tilde{V}(G)=\frac{1}{L}\int_{-L/2}^{+L/2}V(x)e^{iGx}dx = \frac{1}{L}\left( \sum_p e^{ipGa} \right)\int_{-a/2}^{+a/2}v(x)e^{-iGx}dx }
+e i vari componenti sono diversi da zero solo per un discreto insieme di vettori $G$, infatti il fattore $\sum_pe^{ipGa}$ è zero eccetto quando $Ga$ è un multiplo di $2\pi$, dove i $G_n$ sono quelli definiti in \ref{BASE:BLOCH}. In questo modo è possibile trovare
+\newl{\tilde{V}(G)=\frac{1}{a}\int_{-a/2}^{+a/2} v(x) e^{-iG_nx}dx.}
+L'integrale è calcolato per un singolo termine nel potenziale e in una singola cella unitaria. Al limite termodinamico, quindi per $N\to\infty$ questa cosa è ben definita.
+
+\subsection{Legame Forte - Tight Binding}
+Bho...
+
+\subsection{Alcune considerazioni di carattere generale}
+Risolvendo il problema degli elettroni liberi in potenziale periodico cristallino è stato possibile studiare il modo in cui si vengono a formare le bande di energia all'interno di un cristallo e e gli stati assunti dagli eletroni. In questo paragrafo si vuole mettere in risalto l'importanza di tutti i concetti precedentemente presentati e collegarli insieme per capire il modo in cui effettivamemente vengono usati in fisica. L'obiettivo principale è sempre quello di essere in grado, attraverso opportuni esperimenti, di determinare la struttura cristallina e le proprietà quantistiche del materiale in studio. Come visto precedentemente, il reticolo cristallino può essere ricostruito tramite diffrazione di Von Laue. Il teorema di Bloch, insieme alla soluzione del modello di elettrone libero in potenziale debole periodico, aggiunge l'informazione che i punti di diffrazione, trovati con la legge di Von Laue, sono punti di quasi-degenerazione per l'energia in cui l'elettrone potrebbe, in modo continuo, passare da una banda all'altra. Inserendo in modo perturbativo il contributo del potenziale è stato possibile vedere che si vengono a creare delle zone di energie non permesse. Quello che ci può dare un'idea concrete della forma della banda sono le superfici ad energia costante. Consideriamo quelle zone in cui il gradiente dell'energia è nullo e andaimo a studiarne la geometria
+\newl{\nabla E(k) =0 \implicaa \frac{\hbar^2}{2m_e}\left(k^2-\left(\frac{q_1+q_2}{2}\right)^2\right)=0}
+che è nulla in 
+\newl{\boxed{k=\frac{q_1+q_2}{2}}.}
+Questi valori di $k$ sono quelli che delimitano la Prima zona di Brillouin, quindi le superfici ad energia costante raggiungono la prima zona di brillouin con $\nabla E =0$ cioè sono normali alla superficie della zona.
+
