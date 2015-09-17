@@ -14,7 +14,7 @@ considerando in modo approssimato una relazione lineare tra $\vet M$ ed $\vet H$
 \end{itemize}
 C'è un legame molto forte tra questi fenomeni e la temeperatura, quindi è opportuno fare una trattazione termidinamica. Si parte dall'enunciazione del primo principio:
 \newl{dU = dQ - dW.}
-Il lavoro per un gnereico sistema immerso in un campo magnetico sarà dato, appunto, in parte da lavoro magnetico, una perte di lavoro meccanico e una parte di assorbimento dovuta all'eventuale scambio di particelle, indicanzo con $\zeta$ il potenziale chimico, 
+Il lavoro per un genereico sistema immerso in un campo magnetico sarà dato, appunto, in parte da lavoro magnetico, una perte di lavoro meccanico e una parte di assorbimento dovuta all'eventuale scambio di particelle, indicando con $\zeta$ il potenziale chimico, 
 \newl{dW = \mu\cdot dH + PdV - \zeta dN}
 \begin{figure}
 	\usetikzlibrary{arrows}
@@ -36,7 +36,7 @@ Differenziando l'espressione dell'energia libera si ottiene che
 \newl{dF = dU -d(TS) = -SdT -PdV +\zeta dN -\mu\cdot dH} 
 e si ottengono tutte le relative grandezze in funzione di $F$ a $T$ $V$ ed $N$ fissati,
 \newl{M = -\frac{1}{V}\left(\frac{\partial F}{\partial H}\right)_{T,V,N}\,\,\,\,\,,\,\,\,\,\,\chi = -\frac{1}{V}\left(\frac{\partial^2 F}{\partial H ^2}\right)_{T,V,N} .}
-In meccanica statistica la funzione di partizione posso ottenerla anche dalla funzione di partizione canonica, che somma su tutti gli stati microscopici
+In meccanica statistica la funzione di partizione posso ottenerla anche dalla funzione di partizione canonica, che somma su tutti gli stati microscopici[\textbf{frase senza senso!!!}]
 \newl{F = -k_BT\log Z \,\,\,\,,\,\,\,\, Z= \sum_{stati} e^{-H/k_BT}}
 dove $k_B$ è la costante di Boltzmann e H è la classica Hamiltoniana di sistema. In alcuni casi è comodo scegliere il potenziale chimico come una rilevante variabile termodinamica, da cui si ottiene il potenziale \textbf{Gran Canonico}
 \newl{\Omega = F -\zeta N = \Omega(T,V,\zeta,H)} 
@@ -50,7 +50,7 @@ Differenziando l'energia libera in funzione al gran potenziale canonico
 \newl{\left(\frac{\partial F}{\partial H}\right)_N = \left(\frac{\partial(\Omega+\zeta N)}{\partial H}\right) = \left(\frac{\partial \Omega}{\partial H}\right)_\zeta + \frac{\partial \Omega}{\partial \zeta}\frac{\partial \zeta}{\partial H} + N \frac{\partial \mu}{\partial H}}
 Come visto precedentemente la magnetizzazione è definita come una funzione di $\zeta$, quindi per ottenere la suscettività magnetica in funzione al numero di particelle si deve sempre partire dalla scrittura del gran potenziale canonico, rimaneggiarlo, ottenendo che
 \newl{\chi = \left(\frac{\partial M(\zeta_{H,N}, H)}{\partial H}\right)_N = \frac{\partial M(\zeta,H)}{\partial H} + \frac{\partial M(\zeta,H)}{\partial \zeta}\frac{\partial \zeta}{\partial H}.}
-Nella maggior parte dei casi, il potenziale chimico ha una dipendenza quadratica dal modulo del campo magnetico, quindi possiamo considerare $(\partial \zeta / \partial H) \sim 0$ e la suscettività data direttamente dalla formula lineare
+Nella maggior parte dei casi, il potenziale chimico ha una dipendenza quadratica dal modulo del campo magnetico, quindi possiamo considerare $(\partial \zeta / \partial H) \sim 0$ e la suscettività data direttamente dalla formula
 \newl{\chi = \left(\frac{\partial M}{\partial H}\right)_{H=0} = -\frac{1}{V} \left(\frac{\partial^2\Omega}{\partial H^2}\right)_\zeta.}
 \subsection{Teorema di Bohr - Van Leeuwen}
 Viene ripresa la tesi del teorema BVL e ampliata nei concetti. Come detto precedentemente, dal punto di vista della meccanica statistica classica, non sono ponderati i fenomeni magnetici nella materia, indipendenetemente da T e dall' {\vet H} applicato. Questo lo si può mostrare in modo semplice prendendo il valore medio di un'osservabile generica $F(r_i,p_i)$
@@ -83,7 +83,7 @@ inserendo anche i contributi di interazione con campo elettrico, interazione del
 le parti elettostatiche e di spin-orbita sono state aggiunte perchè l'elettrone è all'inteno di un atomo, quindi è soggetto anche a questo tipo di interazioni. \`E possibile ora discutere sui termini presente nell'Hamiltonianao. Il primo termine è quello cinetico, il secondo è quello di interazione con il potenziale elttrostatico, il terzo rappresenta lo sviluppo al prim'ordine dell'interazione col campo magnetico, il quarto rappresenta lo sviluppo al second'ordine sempre dell'interazione col campo magnetico, in quinto rappresenta l'interazione dello spin col campo magnetico ed infine si ha l'interazione spin-orbita. \`E possibile notare che \newl{\left[\frac{m}{8}\omega_c^2 (x^2-y^2) \right]  > 0}
 quindi è un contributo repulsivo dimagnetico. Dal punto di vista delle grandezze fisiche, però ha un contributo di $\sim 10^{-10}eV$ che molto più piccolo del contributo dei termini quattro e cinque, che si aggirano sui $\sim 10^{-4}eV$ che rappresentano il contributo paramagnetico. Anche lo spin-orbita è di questo ordine di grandezza, $\sim 10^{-2}eV \to 10^{-4}eV$.
 Poichè le energie dei livelli elettronici sono nell'ordine dell'$eV$ per eccitare un elettrone sarebbe necessario un campo magnetico gigantesco. In sostanza non è possibile eccitare gli elettroni tramite campi magnetici, quindi tutti gli effetti che sono legati all'interazione magnetica avvengono tutti nel ground state.
-\subsection{Materiali Isolanti}
+\subsection{Materiali Isolanti - Legge di Curie}
 I materiali isolanti sono caratterizzati da atomi le cui bande sono piene. I numeri quantici utili per studiare questo tipo di sistemi sono $L,S,J$ totali, cioè $L=\sum_i l_i$ ecc... Dato lo stato $\psi_{r,s,j,j_z}$ il contributo paramagnetico è dato da
 \newl{ \bra{J,J_z} L_z+2S_z \ket{J,J_z} = \mu_B Hg_LJ_z }
 che è l'effetto Zeeman. Quindi per questi materiali la parte di Hamiltoniana di interazione sarà
@@ -109,10 +109,19 @@ Infine si raggiunge l'espressione della suscettività paramagnetica di \textbf{C
 Questo suggerisce che l'atomo può essere trattato come se avesse un suo proprio momento magnetico classico. La legge funziona molto bene per quegli ossidi che hanno la shell $f$ semipiena, mentre per le transizioni nei metalli funziona solo se sono verificate le condizioni $L=0$ e $J=S$. Per temperature molto basse e campi magnetici molto intensi il limite si inverte e si ha
 \newl{x\to1 \,\,\,\, \coth(x)\to 1,}
 e allo stesso modo si ha che la funzione di Brillouin tende ad $1$, $\mathcal{B}_J \sim 1$ e la magnetizzazione non dipende più da $H$ e si ottiene una magnetizzazione di saturazione
-\newl{M=\frac{N}{V}g_L \mu_B J}
-Se $J=0$, ho che si annulla tutto, quindi devo passare al secondo ordine perturbativo attraverso la teoria di \textbf{Van Vleck}. Se $J=L=S=0$ allora tutti gli oggetti hanno suscettività diamagnetica. Sperimentalmente si osserva che per ioni con shell $f$ semipiena e $J\neq0$ l'accordo con la teoria è molto buono. Per gli elementi di transizione (shell $d$) la teoria non funziona per nulla. Per i casi in cui $J=0$ i il primo ordine perturbativo è nullo 
-\newl{\bra{\psi}\mu_BH(L_z+2S_z)\ket{\psi} = \mu_BHg_s J_z =0,}
-devo usare il secondo ordine pertubativo rappresentato dalle oscillazioni di Van Vleck.
+\newl{M=\frac{N}{V}g_L \mu_B J .}
+Questa formula si interpreta facilmente dicendo che si raggiunge una situzione di saturazione, in cui tutti i momenti di dipolo di intensit\`a $g_L \mu_B J$ sono perfettamente allineati col campo $H$. Per alte temperature l'energia termica \`e molto pi\`u grande e i dipoli sono diretti equamente in tutte le possibili direzioni. Una stima numerica della magnetizzazione di saturazione, per una data densit\`a, che possiamo fissare a $N/V\sim 10^{22} atom/cm^{3}$, si aggira circa su $M\sim10^2 G = 10^{-2}T$. In pratica questo valore non viene mai raggiunto nei mezzi paramagnetici a temperatura ambiente, ma solo nei materiale ferromagnetici, infatti il paramagnetismo [\`e il piu grande effetto magnetico][ma che stai a d\`i?], ma la sua magnetizzazione e la sua suscettivit\`a magnetica hanno valori numerici molto piccoli, per esempio, per un campo di $H=1T$ si ottiene una $M\sim 1G$ e una $\chi \sim 10^{-4}$, giustificando l'assunsione che $B\sim H$.
+
+Per quanto riguarda la scarsa valit\`a della legge di Curie per gli elementi di transizione della tavola periodica, in particolare gli atomi con una shell $d$ incompleta, questi atomi sono caratterizzare dall'avere orbitali molto estesi spazialmente anche oltre al raggio atomico. Questa particolarit\`a in una struttura cristallina potrebbe portare gli atomi ad interagire, via interazione Coulombiana con altri elettroni o ioni. Questa interazione potrebbe essere pi\`u intensa dell'interazione Spin-Orbita, in questo modo l'originale degenerazione sull'orbitale $d$ viene rotta. 
+
+
+
+
+
+
+%Se $J=0$, ho che si annulla tutto, quindi devo passare al secondo ordine perturbativo attraverso la teoria di \textbf{Van Vleck}. Se $J=L=S=0$ allora tutti gli oggetti hanno suscettività diamagnetica. Sperimentalmente si osserva che per ioni con shell $f$ semipiena e $J\neq0$ l'accordo con la teoria è molto buono. Per gli elementi di transizione (shell $d$) la teoria non funziona per nulla. Per i casi in cui $J=0$ i il primo ordine perturbativo è nullo 
+%\newl{\bra{\psi} \mu_BH(L_z+2S_z) \ket{\psi} = \mu_BHg_s J_z =0,}
+%devo usare il secondo ordine pertubativo rappresentato dalle oscillazioni di Van Vleck.
 
 \textbf{Alcune cose sul quencing orbitale}
 
@@ -133,4 +142,6 @@ statistica. Consideriamo l'ambientazione del problema in un sistema \textbf{gran
 canonico}, in questo modo la funzione di partizione sarà quella gran canonica data da
 \newl{Z_\Omega = \prod_{k_x,k_y,k_z,s_z} \left(1+e^{(\mu-E(k,s_z))/k_BT}\right). }
 La produttoria è svolta su tutti i singoli stati degli elettroni con vettor d'onda 
-$\vet{k} = \left(k_x,k_y,k_z\right)$ e spin $s_z$ aventi energia $E(\vet{k} ,s_z)$. 
+$\vet{k} = \left(k_x,k_y,k_z\right)$ e spin $s_z$ aventi energia $E(\vet{k} ,s_z)$.
+
+
