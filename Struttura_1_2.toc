@@ -30,4 +30,9 @@
 \contentsline {subsection}{\numberline {8.1}Teorema di Bohr - Van Leeuwen}{39}{subsection.8.1}
 \contentsline {subsection}{\numberline {8.2}Hamiltoniana di Interazione Magnetica}{40}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Materiali Isolanti - Legge di Curie}{42}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Gas di Elettroni Liberi - I Metalli}{44}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.4}Elementi con $J=0$ e $L = S \not =0$}{44}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Elementi con $J = L = S = 0$}{45}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Riassunto sugli elementi di transizione}{45}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}Gas di Elettroni Liberi - Paramagnetismo di Pauli}{46}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}Gas di Elettroni Liberi - Diamagnetismo di Landau}{48}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}Fenomeni di Ordinamento Magnetico - Ferromagnetico}{50}{subsection.8.9}

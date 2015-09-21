@@ -112,36 +112,91 @@ e allo stesso modo si ha che la funzione di Brillouin tende ad $1$, $\mathcal{B}
 \newl{M=\frac{N}{V}g_L \mu_B J .}
 Questa formula si interpreta facilmente dicendo che si raggiunge una situzione di saturazione, in cui tutti i momenti di dipolo di intensit\`a $g_L \mu_B J$ sono perfettamente allineati col campo $H$. Per alte temperature l'energia termica \`e molto pi\`u grande e i dipoli sono diretti equamente in tutte le possibili direzioni. Una stima numerica della magnetizzazione di saturazione, per una data densit\`a, che possiamo fissare a $N/V\sim 10^{22} atom/cm^{3}$, si aggira circa su $M\sim10^2 G = 10^{-2}T$. In pratica questo valore non viene mai raggiunto nei mezzi paramagnetici a temperatura ambiente, ma solo nei materiale ferromagnetici, infatti il paramagnetismo [\`e il piu grande effetto magnetico][ma che stai a d\`i?], ma la sua magnetizzazione e la sua suscettivit\`a magnetica hanno valori numerici molto piccoli, per esempio, per un campo di $H=1T$ si ottiene una $M\sim 1G$ e una $\chi \sim 10^{-4}$, giustificando l'assunsione che $B\sim H$.
 
-Per quanto riguarda la scarsa valit\`a della legge di Curie per gli elementi di transizione della tavola periodica, in particolare gli atomi con una shell $d$ incompleta, questi atomi sono caratterizzare dall'avere orbitali molto estesi spazialmente anche oltre al raggio atomico. Questa particolarit\`a in una struttura cristallina potrebbe portare gli atomi ad interagire, via interazione Coulombiana con altri elettroni o ioni. Questa interazione potrebbe essere pi\`u intensa dell'interazione Spin-Orbita, in questo modo l'originale degenerazione sull'orbitale $d$ viene rotta. 
+Per quanto riguarda la scarsa valit\`a della legge di Curie per gli elementi di transizione della tavola periodica, in particolare gli atomi con una shell $d$ incompleta, questi atomi sono caratterizzare dall'avere orbitali molto estesi spazialmente anche oltre al raggio atomico. Questa particolarit\`a in una struttura cristallina potrebbe portare gli atomi ad interagire, via interazione Coulombiana con altri elettroni o ioni. Questa interazione potrebbe essere pi\`u intensa dell'interazione Spin-Orbita, in questo modo l'originale degenerazione sull'orbitale $d$ viene rotta.
+Solitamente si considera una combinazione lineare di orbitali , corrispondenti gli stati nuovi con energie diverse (Crystal Field Splitting).In queste situazioni il momento angolare $L$ compie precessioni complicate all'interno del campo cristallino e la sua proiezione $L_z$ non \`e una costante del moto del sistema, quindi non \`e per nulla un buon numero quantico. Il valore di aspettazione delle proiezioni di $L$, tuttavia, sono $\langle L_x \rangle = \langle L_y \rangle = \langle L_z \rangle = 0$, risultato conosciuto come \textbf{Quenching del momento angolare orbitale}.
+In pratica, per questo tipo di atomi in stato \textit{condensato} hanno $L=0$ e la legge di Curie \`e valida. Differente \`e il caso di per atomi in cui \`e presente la shell $f$ completa, ma gli stessi orbitali $f$ sono ben confinati spazialmente all'interno dell'atomo. I primi $4f$ orbitali iniziano ad essere riempiti dagli elettroni dopo il completamento dell'orbbitale $6s$ che \`e MOLTO ESTERNO. il Crystal field splitting \`e piccolo rispetto all'interazione all'accoppiamneto spin-orbita e le propriet\`a magnetiche dell'atomo sono molto simili a quelle di un sistema isolato. La legge di Curie rimane comunque valida in quanto il campo cristallino potrebbe originare piccole anisotropie magnetiche che conferiscono ai dipoli magnetici un orientamento preferenziale.
+Casi speciali sono rappresentati dai cos\`i detti elementi di transizione. Possiamo identificare due diversi tipi:
+\begin{itemize}
+	\item Elementi con $J=0$ e $L = S \neq 0$;
+	\item Elementi con $J = L = S = 0$.
+\end{itemize}
+\subsection{Elementi con $J=0$ e $L = S \neq 0$}
+Questa situazione si verifica quando l'ultima shell ha un elettrone in meno per essere completata a met\`a. Un esempio diretto di questo fatto \`e lo ione di Europio $\text{Eu}^{3+}$ a bassa temperatura. Il contributo alla magnetizzazione al prim'ordine, usando l'Hamiltoniana effettiva \`e esattamente uguale a zero, quindi ci si appella al second'ordine perturbativo facendo diventare il contributo energetico
+\newl{ \Delta E = - \sum_{n\neq0}\frac{ \left|  \bra{0} \mu_BH(L_z+2S_z) \ket{n} \right| ^2   }{E_n - E_0} }
+dove $n$ rappresenta la collezione di numeri quantici particolarmente adatti dello stato eccitato del sistema. $\bra{0} $ rappresente il ground state e $\ket{n} $ rappresenta la funzione d'onda associata allo stato imperturbato di energia $E_n$. Da questa variazione di energia, proporzionale ad $H^2$ \`e possibile mettere in luce piccolissime suscettivit\`a paramagnetiche, praticamente indipendenti dalla temperatura. Questo fenomeno \`e conosciuto come \textbf{paramagnetismo di Van Vleck}. Queste oscillazioni sono molto difficili da osservare in quanto sono dello stesso ordine del contributo diamagnetico, che solitamente li maschera.
+\subsection{Elementi con $J = L = S = 0$}
+Sono tutti gli atomi con shell esterna completa. Questo \`e il caso in cui si studia il diamagnetismo. Il contributo magnetico all'energia \`e rappresentato solo dalla parte quadratica dell'Hamiltoniana effettiva. Il valore di aspettazione sul ground state \`e
+\newl{\Delta E = \frac{m}{8} \omega^2_C  \bra{0} \sum_i(x_i^2 + y_i^2) \ket{0}    }
+dove la somma \`e svolta su tutti gli $Z$ elettroni dell'atomo. Sfruttando la simmetria sferica del sistema, $x_i^2 = y_i^2 = z_i^2 = r_i^2 / 3$  \`e possibile riscrivere il contributo magnetico all'energia come 
+\newl{\Delta E = \frac{e^2H^2}{12 m c^2} \bra{0} \sum_i r_i^2 \ket{0}  ,}
+e la suscettivit\`a magnetica risulta
+\newl{\chi_{dia} = -\frac{N}{V} \frac{e^2}{6mc^2} \bra{0} \sum_i r_i^2 \ket{0}  .}
+Questo tipo di diamagnetismo \`e visibile nei gas nobili ed \`e l'esatto analogo classico del diamagnetismo di Larmor, dovuto al moto orbitale di particelle cariche. 
+\subsection{Riassunto sugli elementi di transizione}
+Riassumendo, se $J=0$,si ha che si annulla tutto, quindi devo passare al secondo ordine perturbativo attraverso la teoria di \textbf{Van Vleck}. Se $J=L=S=0$ allora tutti gli oggetti hanno suscettività diamagnetica. Sperimentalmente si osserva che per ioni con shell $f$ semipiena e $J\neq0$ l'accordo con la teoria è molto buono. Per gli elementi di transizione (shell $d$) la teoria non funziona per nulla. Per i casi in cui $J=0$ i il primo ordine perturbativo è nullo [\textbf{Non \`e vero !! Verificare....}]
+\newl{\bra{\psi} \mu_BH(L_z+2S_z) \ket{\psi} = \mu_BHg_s J_z =0,}
+devo usare il secondo ordine pertubativo rappresentato dalle oscillazioni di Van Vleck.
 
 
-
-
-
-
-%Se $J=0$, ho che si annulla tutto, quindi devo passare al secondo ordine perturbativo attraverso la teoria di \textbf{Van Vleck}. Se $J=L=S=0$ allora tutti gli oggetti hanno suscettività diamagnetica. Sperimentalmente si osserva che per ioni con shell $f$ semipiena e $J\neq0$ l'accordo con la teoria è molto buono. Per gli elementi di transizione (shell $d$) la teoria non funziona per nulla. Per i casi in cui $J=0$ i il primo ordine perturbativo è nullo 
-%\newl{\bra{\psi} \mu_BH(L_z+2S_z) \ket{\psi} = \mu_BHg_s J_z =0,}
-%devo usare il secondo ordine pertubativo rappresentato dalle oscillazioni di Van Vleck.
-
-\textbf{Alcune cose sul quencing orbitale}
-
-\subsection{Gas di Elettroni Liberi - I Metalli}
+\subsection{Gas di Elettroni Liberi - Paramagnetismo di Pauli}
 Nei metalli, i fenomeni di interazione con il campo elettromangetico sono dovuti per lo più dalla risposta degli elettroni liberi nelle bande di conduzione, al campo applicato. Gli effetti di magnetizzazione nei metalli sono caratterizzati da due coportamenti indipendenti:
 \begin{itemize}
-	\item Paramagnetismo di Pauli;
-	\item Diamagnetismo di Landau
+	\item Paramagnetismo di Pauli $\to$ dovuto all'allineamento dei dipoli magnetici col campo $\vet{H}$;
+	\item Diamagnetismo di Landau $\to$ il secondo dovuto alla quantizzazione del moto degli elettroni immersi in un campo magnetico;
 \end{itemize}
-il primo dovuto all'allineamento dei dipoli magnetici col campo $\vet{H} $, il secondo 
-dovuto alla quantizzazione del moto degli elettroni immersi in un campo magnetico, 
-così come descritto dall'hamiltoniama di interazione magnetica. Gli elettroni nelle 
-bande dei metalli hanno notevoli gradi di libertà quindi l'idea di trattare gli 
-elettroni come un gas è ragionevole e da risultati consistenti. Si calcolerà la 
-suscettività paramegnetica di Pauli per un gas di elettroni. La derivazione può avvenire 
-per vai statistica o per via variazionale, qui di seguito sarà argomentata la via 
-statistica. Consideriamo l'ambientazione del problema in un sistema \textbf{gran 
-canonico}, in questo modo la funzione di partizione sarà quella gran canonica data da
+Gli elettroni nelle bande dei metalli hanno notevoli gradi di libertà quindi l'idea di trattare gli elettroni come un gas è ragionevole e d\`a risultati consistenti. Si calcolerà la suscettività paramegnetica di Pauli per un gas di elettroni. La derivazione può avvenire per vai statistica o per via variazionale, qui di seguito sarà argomentata la via statistica. Consideriamo l'ambientazione del problema in un sistema \textbf{gran canonico}. L'Hamiltioniana di riferimento \`e 
+\newl{H=\frac{1}{2m^*} \left({\vet p} - \frac{e}{c}{\vet A} \right)^2 + 2\mu_BS_zH  }
+con la parte cinetica data dall'interazione col campo magnetico e la seconda parte che rappresenta il termine paramegnetico di Pauli. La funzione di partizione, per particelle fermioniche, sarà quella gran canonica data da
 \newl{Z_\Omega = \prod_{k_x,k_y,k_z,s_z} \left(1+e^{(\mu-E(k,s_z))/k_BT}\right). }
 La produttoria è svolta su tutti i singoli stati degli elettroni con vettor d'onda 
 $\vet{k} = \left(k_x,k_y,k_z\right)$ e spin $s_z$ aventi energia $E(\vet{k} ,s_z)$.
+In assenza di campo magnetico, l'energia \`e quella di particella libera $E_0(k) = \hbar^2k^2/2m (k^2=k_x^2+k_y^2+k_z^2)$ per ogni proiezione dello spin lungo l'asse $z$. All'equilibrio termico met\`a degli spin saranno up e met\`a down. La funzione di partizione sar\`a $Z_0$, il potenziale gran canonico sar\`a $\Omega_0(\mu)$ dove $\mu$ rappresenta un adeguato potenziale chimico.
+In presenza di campo magnetico $H$, l'energia si modificher\`a avendo in pi\`u il termine di interazione magnetica $-{\vet \mu_s} \cdot {\vet H} $, in particolare (all'equilibrio termico) gli elettroni con spin up, daranno un contributo all'energia pari $+\mu_BH$ mentre quelli con spin down $-\mu_BH$. L'energia degli stati sar\`a quindi 
+\newl{E_{up/down} = E_0 \pm \mu_B H}
+La funzione di partizione gran canonico ora dipender\`a dal campo magnetico. Pu\`o essere scritta separando le due famiglie di stati presenti
+\newl{Z_{\Omega}(H) = \prod_{k_{up}} \left(1+e^{(\mu-\mu_BH-E_0(k))/k_BT} \right)\cdot \prod_{k_{down}} \left(1+e^{(\mu+\mu_BH-E_0(k))/k_BT} \right).}
+Dalla differenza tra $Z_{\Omega} (H)$ e $Z_0$ la funzione di partizione gran canonica, alla fine, risulta dipendente solo dai due stati
+\newl{\Omega(\mu,H) = \frac{1}{2}\Omega_0(\mu-\mu_BH) + \frac{1}{2}\Omega_0(\mu+\mu_BH).}
+Il termine $\mu_BH \ll \mu$ (negli ordine di parecchi eV), quindi possiamo espandere la formula precedente in $\mu_BH$ ottenendo
+\newl{\Omega(\mu,H) \sim \Omega_0(\mu) + \frac{1}{2}\mu^2_BH^2 \left.\frac{\partial^2\Omega}{\partial\mu^2}\right|_{H=0} }
+dato che $N = - (\partial\Omega / \partial\mu)$ possiamo usarla nella formula della suscettivit\`a 
+\newl{\chi_{pauli}= -\frac{1}{V} \frac{\partial^2\Omega}{\partial H^2} = \frac{1}{V} \mu_B^2 \left(\frac{\partial N}{\partial \mu}\right)_{T,V}  }
+Per un sistema di fermioni posso facilmente calcolare $N$ come 
+\newl{N = \int_0^{+\infty}dE\,g_{3D}(E)\left(1+e^{\frac{E-\mu}{k_BT}}\right)^{-1} = \int_0^{E_F}dE\,g_{3D}(E) = \frac{2}{3}\frac{V}{2\pi^2}\left(\frac{2m}{\hbar^2}\right)^{\frac{5}{2}}E_F^{\frac{3}{2}}}
+in questo modo \`e possibile scrivere la sucettivit\`a di Pauli come
+\newl{\chi_{pauli}=\frac{3}{2}\frac{N}{V}\frac{\mu_B^2}{E_F}  = \frac{3}{2}\frac{N}{V}\frac{\mu_B^2}{k_BT} .}
+\textbf{N.B.} = $\chi_{pauli} \sim \frac{\chi_{para}}{100}$, questo \`e legato al principio di indeterminazione di Pauli. Considerando le sfere di fermi, solo gli elettroni vicini alle superfici possono riallineare lo spin, quelli interni non possono perch\'e gli stati con spin "dritto" sono gi\`a occupati. Solo una piccola parte di elettroni puo' cambiare segno. Al limite di $T \gg T_F$ si ritorna alla legge di Curie. [Capire bene perch\`e...]. 
+\subsection{Gas di Elettroni Liberi - Diamagnetismo di Landau}
+In questa sezione studieremo gli effetti che un campo mangetico ha sul moto libero degli elettroni nella banda di conduzione, indipendentemente dal loro spin. Fin'ora \`e stato visto che per il limite di temperatura molto bassa ($k_BT\ll\hbar\omega_C$) il tutto veniva spiegato con l'effetto di De Haas - Van Alphen. Ora verr\`a tolta questa condizione e si attaccher\`a il problema del magnetismo dell'orbitale elettronico per TUTTE le temperature, usando sempre i metodi della termodinamica e della meccanica statistica. I livelli energetici del sistema vengono dati dalla teoria di Landau, e sono quelli di un oscillatore armonico bidimensionale di frequenza angolare $\omega_C$ pi\`u un contributo di particella libera lungo l'asse $z$
+\newl{E_n(k_z) = \frac{\hbar^2k_z^2}{2m} + \hbar\omega_C\left(n+\frac{1}{2}\right), }
+mentre ogni levello ha una degenerazione data da 
+\newl{N_d = \frac{|e|AH}{\pi\hbar c} = \frac{mA}{\pi \hbar^2}\cdot \hbar\omega_C}
+dove $A$ rappresenza la superficie del campione [trasversale?? a cosa??]. La funzione di gran partizione diventa quindi
+\newl{Z_\Omega = \prod_{k_x,k_y,k_z,s_z}\left[1+e^{\frac{\mu-E_n(k_z)}{k_BT}}\right].}
+Per semplicit\`a introduciamo il parametro $\mu_z$ definito come 
+\newl{\mu_z =  \mu - \frac{\hbar^2k_z^2}{2m}} 
+e riscriviamo il gran potenziale come $\Omega = -k_BT\ln Z_\Omega = \sum_{k_z} \Omega'_z$ nella forma di una somma su di un due-dimensionale potenziale definito per un certo valore fisso di $k_z$ dove i vari $\Omega'_z$ sono definiti come 
+\newl{\Omega'_z &=& -k_BT \sum_{k_x, k_y, s_z} \ln\left[1+e^{\frac{\mu_z-E_n}{k_BT}}\right] = \nonumber  \\
+		&=& -N_dk_BT\sum_{n=0}^{+\infty} \ln\left[1+e^{\frac{\mu_z-E_n}{k_BT}}\right],}
+dove $E_n=\hbar\omega_C(n+1/2)$ ed \`e stata introdotta la degenerazione degli stati perch\`e questo numero era stato esattamente calcolato come numero totale di stati elettronici permessi sulla superficie piana $A$ ad un fissato $n$. La dipendenza dal potenziale bidimensionale da $H$ \`e introdotta dalla frequenza di ciclotrone $\omega_C$ presente in $E_n$ e anche dal potenziale chimico, in cui, in realt\`a sarebbe un $\mu=\mu(H)$. Nella formula sopra la somma sulla tripla $\{k_x, k_y, s_z\}$ pu\`o essere pensata come somma su tutti i livelli energetici e su tutte le degenerazioni. Le degenerazioni le conosco dalla teoria di Landau. La somma scritta sopra si potr\`a notare che \`e possibile scriverla come integrali di termini oscillanti. Per ottenere dei risultati \`e necessario riscrivere la somma infinita come un integrale facile da calcolare. L'appossimazione che viene fatta \`e quella di ussare uno sviluppo in serie. La parte di particella libera non dipende dal campo H, la prima parte \`e la funzione di gran partizione per la particella libera in assenza di campo magnetico, solo la parte di oscillatore armonico conetiene una dipendenza da H quindi la parte di gran potenziale dovuta alla presenza di campo magnetico diventa
+\newl{\Delta\Omega(H) = \sum_{k_z} \frac{mA\omega_C^2}{24\pi} \frac{1}{1+e^{\frac{-\mu_z}{k_BT}}}.}
+In questo modo modo \`e possibile scrivere la funzione di partizione gran canonica e arrivare a calcolare la suscettivit\`a magnetica che risulta essere
+\newl{\chi_L = -\frac{e^2}{12m\pi^2c^2}k_F = -\frac{1}{3}\frac{g_{3D}(E_F)}{V}\mu_B^2 = -\frac{1}{2} \frac{N}{V} \frac{\mu_B^2}{E_F}}
+SI OSSERVI che la formula per la suscettivit\`a diamagnetica di Landau, ricorda molto quella paramagnetica di Pauli, in particolare il legame tra le due scritture \`e 
+\newl{\boxed{\chi_L = -\frac{1}{3} \chi_P }}
+dunque entrambi gli effetti concorrono con lo stesso ordine di grandezza alla risposta magnetica del gas di elettroni liberi che, in conclusione, \`e il modello pi\`u semplice per rappresentare la risposta magnetica dei metalli.
+
+In questi sistemi il relativo peso del diamagnetismo contro il comportamento paramagnetico \`e fisso ad un $1/3$, ma esistono sistemi con un rapporto differente tra le due scuscettivit\`a. Si consideri un semiconduttore dopato (DS), in questo caso \`e presente un relativo minor numero di elettroni (o buche) nelle bande o vicini al comportamento di particella libera con massa effettiva $m^*$. La dipendenza della suscettivit\`a dalla massa segue dal fatto che nella $\chi_P$ \`e presente la densit\`a degli stati che $\partial N/\partial\mu=g_{3D}(E_F)\propto m$, in questo modo la suscettivit\`a paramegnetica scala come $\chi_P^{DS} = (m^*/m)\chi_P^{free}$.
+
+Al contrario, nella $\chi_L$ la massa entra attraverso i livelli energetici di Landau che sono definiti da $E_n = \hbar\omega_C\left(n+\frac{1}{2}\right) \propto 1/m$, infatti il gran potenziale e $\chi_L$, sono inversamente proporzionali a $m$. Da queste osservazioni, nel caso di semiconduttori dopati, si ha che $\chi_L^{DS} = (m/m^*) \chi_L^{free}$.
+
+In conclusione, per semiconduttori dopati, il rapporto tra le due suscettivit\`a risulta essere
+\newl{\boxed{\frac{|\chi_L^{DS}|}{\chi_P^{DS}} = \frac{1}{3}\left(\frac{m}{m^*}\right)^2 ,}}
+dato che tipicamente $m^* \sim 0.1m$ si ha che il comportamento diamagnetico diventa dominante rispetto a quello paramagnetico, e pu\`o essere direttamente misurato comparando il campione dopato con una non dopato.
+\subsection{Fenomeni di Ordinamento Magnetico - Ferromagnetico}
+
+
+
+ 
 
 
