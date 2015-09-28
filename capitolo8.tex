@@ -252,6 +252,52 @@ Quando $T < T_C$ magnetizzazione e suscettivit\`a possono essere ricavate dai ri
 \newl{ M \propto (T_C -T)^{\beta},}
 dove $\beta \sim 0.3$. La suscettivit\`a, avvicinandosi a $T_C$, diverge con la legge di potenza
 \newl{\chi \propto  |T-T_C|^{\gamma}}
+con $\gamma \sim  -1.3$. Una teoria microscopica della transizione da uno stato magnetizzato a uno non magnetizzato deve essere un grado di giustificare questi comportamenti divergenti. Nel caso della teoria in approssimazione di campo medio, sviluppata nella precedente sezione, \`e possibile calcolare questi \textit{esponenti critici} in modo semplice. Si consideri lo stato ordinato in cui $T < T_C$. La magnetizzazione \`e data da 
+\newl{M = M_0 \mathcal{B} _S \left(\frac{g\mu_B S}{k_BT} (H_0+wM)\right)}
+con $H_0=0$. \`E stato trovato che nel limite in cui $T\to T_C^-$ la magnetizzazione sparisce, in accordo con la funzione di Brillouin. Quindi possiamo espandere la funzione di Brillouin in un intorno di $T_C$ arrivando a scrivere che 
+\newl{M \propto (T_C - T)^{1/2}.}
+Quindi, in approssimazione di campo medio, la magnetizzazione, decresce avvicinandosi a $T_C$ con una legge di potenza, con esponente critico $1/2$.
+
+In generale, anche in presenza di un campo magnetico esterno, il materiale continua a presentare un comportamento ferromagnetico per  $T<T_C$ e completamente paramegnetico per $T>T_C$.
+Vicino alla temperatura critica, la magnetizzazione in questo caso \`e pi\`u piccola di $M_0$ perch\`e $\mu_BH_0 \ll k_BT$ come discusso precedentemente, quindi abbiamo nuovamente la possibilit\`a di espandere la formula della magnetizzazione, prendendo solo il primo termine dello sviluppo si arriva a scrivere
+\newl{M = \frac{C}{T-T_C} H_0 ,}
+dove $C$ \`e una costante. Ricavando l'equazione per la suscettivit\`a magnetica otteniamo la \textbf{Legge di Curie-Weiss}
+\newl{\chi = C \cdot (T-T_C)^{-1}}
+chiamata cos\`i a causa del fatto che viene appunto derivata dall'estensione della legge di Curie per i materiali ferromagnetici. Vicino a $T_C$ la suscettivit\`a diverge con una legge di potenza, con esponente critico pari a $-1$. 
+
+In conclusione la teoria di campo medio per i fenomeni magnetici produce due esponenti critici pari a $\beta = 0.5$ e $\gamma=-1$, per un comportamento vicino alla temperatura critica. Questi valori sono apprezzabilmente differenti da quelli misurati in modo sperimentale. I valori misurati mostrano che la magnetizzazione descresce pi\`u rapidamente e la suscettivit\`a magnetica diverge pi\`u rapidamente, man mano che ci si approccia alla temperatura critica. Le discrepanze della trattazione a campo medio con i dati sperimentali, nell'intorno della temperatura critica, vanno cercate nel completo annullamento delle correlazioni tra spin nella teoria di campo medio. Queste correlazioni diventano importanti quando la dinamica di un sistema \`e determinata dalla piccole fluttuazioni che ha, in prossimit\`a della temperatura critica.
+
+La teoria di campo medio fornisce comunque dei risultati utili, soprattutto per piccoli campi magnetici. In questi casi, \`e sempre possibile usare l'espansione di prima, ma troncata al terzo ordine. In questo modo ho che la magnetizzazione segue una legge di potenza
+\newl{M \propto H_0^\delta}
+con $\delta=1/3$. [Vedere il grafico a pag Mag-34.]
+\subsection{Onde di Spin}
+Come mostrato nella sezione precedente, la trattazione del ferromagnetismo in approssimazione di campo medio, per $T\to T_C$ perde di validit\`a. Un approccio pi\`u raffinato che permette di ottenere un modello pi\`u generale, \`e quello in cui si tiene conto del contributo energetico di ogni spin e delle varie correlazioni. In altre parole, per una corretta valutazione statistica della funzione di partizione, si rende necessaria la conoscenza dello spettro delle energia del sistema nel suo ground state. \`E necessario introdurre una teoria quantistica elementare dell'eccitazione per sistemi di spin. Il punto di partenza \`e l'Hamiltoniana di Heisenberg
+\newl{\op{H} _S = \frac{1}{2}\sum_{<i,j>}J_{i,j}\op{S} _i \cdot \op{S} _j -g\mu_B{\vet H_0} \cdot \sum_j\op{S} _j .}
+Assumiamo che \textit{gli effetti dell'interazione di scambio}, siano sensibili solo tra spin primi vicini, con una costante di accoppiamento uguale e positiva per gli spin di tutto il reticolo $J_{i,j} = J > 0$ per tutti gli $i,j$. In un cristallo di $N$ spin \textit{uguali}, con numero quantico di spin $S$, in cui ogni spin abbia un numero di primi vicini pari a $z$ quindi il numero di termini della somma \`e $Nz$. Il \textit{ground state} del sistema si realizza quando tutti gli spin sono allineati lungo l'asse $z$, quindi il singolo autovalore sar\`a $\left\langle S_{j,z} \right\rangle  = m_j = S$ e la corrispondende funzione d'onda sar\`a  $\ket{NS} = \prod_j \ket{S,m_j=S}  $ . Questa funzione d'onda, proprio per come \`e stata costruita, ha un autostato di energia
+\newl{E_0 = -g\mu_B H_0 NS - \frac{Nz}{2}JS^2. }
+Definisco gli operatori di innalzamento e abbassamento del mio sistema di spin come
+\newl{\op{S} _j ^\pm = S_{jx}\pm i S_{jy}}
+cone le loro regole di commutazione $[S_i^+,S_i^-] = 2S_{iz}\delta_{i,j}$ e $[S_{iz},S_j^\pm] = \pm S_j^\pm\delta_{i,j}$.
+Sostituisco nell'Hamiltoniana di Heisenberg gli operatori appena definiti
+\newl{\op{H} _S = \frac{J}{2} \sum_{<i,j>} \left[S_{i,z} S_{j,z} + S_i^-S_j^+\right] - g\mu_BH_0\sum_j S_{j,z}  \label{HAM:HEI:OP}}
+Una \textbf{teoria elementare dell'eccitazione} consiste nello studiare la transizione da uno stato completamente allineato, in cui solo uno spin compie un completo rovesciamento, facendo passare $m_j=S$ a $m_j = S-1$. La variazione di energia causata da un singolo spin flip \`e di
+\newl{\Delta E = E_1 - E_0 = g\mu_BH_0 + zJS}
+\`E semplice verificare che l'esatta variazione di energia arriva considerando solo i termini sulla diagonale nell'Hamiltoniana (\ref{HAM:HEI:OP}). 
+Per trovare la funzione d'onda di tutti gli stati eccitati potrei usare l'operatore di abbassamento in questo modo
+\newl{\ket{\psi_j} = S_j^- \ket{NS} = \sqrt{2S} \ket{m_j = S-1} \cdot \prod_{i\neq j} \ket{m_i = S} ,  }
+ma questa funzione d'onda non \`e autostato dell'Hamiltoniana totale. Ho dei termini fuori diagonale che  danno un contributo
+\newl{S_i^- S_j^+ \ket{\psi_k} = 2S\delta _{j,k} \psi_i ,}
+dove l'eccitazione \`e trasferita sui primi vicini al sito $i-esimo$ e non abbiamo una equazione agli autostati da risolvere. L'operazione, ripetuta per l'Hamiltoniana di Heisenberg, corrisponde a scambiare le interazioni tra gli spin. Questo suggerisce un comportamento peculiare, grazie alla propriet\`a di \textit{spin indistinguibili}, una singola eccitazione \`e totalmente delocalizzata e non possiamo restringerla ad uno spin ben localizzato, si ha quindi la probabilit\`a di avere eccitazione in ogni posizione del reticolo, non solo in una posizione ben localizzata.
+Per trovare i corretti autostati dell'Hamiltoniana, come appena visto, \`e necessario costruire una funzione d'onda, come combinazione lineare di stati eccitati. Con $R_n$ si identifica la posizione dello spin nel reticolo, mentre $R_n+\delta$ rappresenta tutti i primi vicini, con $\delta$ che pu\`o variare di volta in volta in funzione alla geometria del cristallo.
+Verifico che \`e un effettivo autostato inserendolo nell'Hamiltoniana di partenza. In questo modo, ottengo una serie di autostati di energia
+\newl{E_{k} = E_0 + zJS + g\mu_BH_0 - JS\sum_{\delta} e^{i k\cdot \delta} = \hbar \omega_{k_0} \label{DISP:EN}}
+questa relazione di dispersione rappresenta lo spettro delle \textit{onde di spin}.
+
+L'eccitazione non \`e localizzata, ma se la vado a calcolare ottengo
+\newl{\bra{\psi_k} S_{R_nx} S_{R_mx} + S_{R_ny} S_{R_my} \ket{\psi_k} = \frac{2S}{N} \cos [k\cdot (R_n-R_m)] }
+quindi una correlazione sinusoidale infatti $<S_{iz}> = S - 1/N$, risultato che conferma nuovamente che il flip anche solo di uno spin si distribuisce su tutto il reticolo, mentre $<S_{ix}> =0$.
+
+Ricordando quanto detto inizialmente, l'eccitazione non pu\`o essere locale, ma si propaga su tutto il reticolo e lo fa tramite la legge di dispersione (\ref{DISP:EN}) che rappresenta l'elementare eccitazione di un sistema di spin. L'idea molto potente \`e quella di applicare lo stesso formalismo usato per trattare le vibrazioni di reticolo, anche alle onde di spin. Nella teoria delle vibrazioni reticolari, i punti reticolari condividono le oscillazioni termiche organizzandosi in un moto armonico comune con una sua ben nota relazione di dispersione. Nel presente cristallo di spin l'eccitazione magnetica, dovuta al singolo disallineamento di uno spin, viene condivisa da tutti gli spin del reticolo. \`E quindi possibile mostrare che la componenete trasversa dei vettori di spin $S_{j,x}$ e $S_{j,y}$ della funzione d'onda $\ket{\psi_k} $, tra i vari spin primi vicini, differisce solo per un fattore di fase costante, esattamente come succede per le oscillazioni di reticolo.
 
 
 
