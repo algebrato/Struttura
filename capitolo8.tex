@@ -310,8 +310,14 @@ Per concentrarsi sullo studio delle onde di spin si consideri un gas di magnoni 
 da cui si ottiene una relazione di dispersione quadratica
 \newl{\hbar\omega_k = g\mu_BH_0 + \mathcal{D}\cdot k^2}
 dove, per esempio, la costante $\mathcal{D}$ per un semplice cristallo cubico \`e uguale alla costante $a$ del reticolo. La forma quadratica \`e quella tipica della particella libera. In assenza di campo magnetico esterno si ha dunque un \textit{gas di magnoni liberi non interagenti} in cui sono molto popolati gli stati a lunghezza d'onda lunga, con energia vicina a quella di ground state. L'esistenza di questo tipo di interazione aumenta la decrescita della magnetizzazione (all'aumentare di $T$) rispetto ai risultati trovati con la teoria di campo medio (cio\`e si ha una decrescita maggiore rispetto alla funzione di Brillouin), perch\`e l'attivazione termica delle onde di spin abbassa complessivamente la magnetizzazione. 
-In questo contesto, la statistica del gas di magnoni liberi \`e quella di un \textit{gas di bosoni} con potenziale chimico nullo perch\`e il numero di magnoni non \`e fissato, come succede per i fotoni e i fononi. La densit\`a degli stati \`e quella di un sistema $3D$ di particelle liberi non interagenti con energia $E\propto k^2$ e $g_{3D} \propto \sqrt{E}$. Ora \`e possibile passare a calcolare la variazione di magnetizzazione spontanea come funzione della temperatura. Per ogni eccitazione $(S\to S-1)$ la magnetizzazione descresce di una quantit\`a pari a $g\mu_B/V$
-
+In questo contesto, la statistica del gas di magnoni liberi \`e quella di un \textit{gas di bosoni} con potenziale chimico nullo perch\`e il numero di magnoni non \`e fissato, come succede per i fotoni e i fononi. La densit\`a degli stati \`e quella di un sistema $3D$ di particelle liberi non interagenti con energia $E\propto k^2$ e $g_{3D} \propto \sqrt{E}$. Ora \`e possibile passare a calcolare la variazione di magnetizzazione spontanea come funzione della temperatura. Per ogni eccitazione $(S\to S-1)$ la magnetizzazione descresce di una quantit\`a pari a $g\mu_B/V$, rispetto alla magnetizzazione di saturazione $M_0= (N/V)g\mu_B S$ la variazione \`e 
+\newl{\frac{\Delta M}{M_0} = \frac{M_0-M}{M_0} = \frac{1}{NS} \sum_kn_k}
+dove $n_k$ \`e il numero di occupazione media dello stato con $k$. Sommando su tutti i possibili stati, la somma diventa un integrale e usando la distribuzione di Bose-Einstein come funzione di densit\`a di occupazioni degli stati (i magnoni, come detto precedentemente sono dei "quasi-bosoni") \`e possibile rivalutare la variazione di magnetizzazione rispetto alla magnetizzazione di saturazione
+\newl{\frac{\Delta M}{M_0} \propto \int_0^{+\infty}\, dE\,g_{3D}(E) \frac{1}{e^{e/K_BT} - 1 } = \int_0^{+\infty}\, d\omega \, \frac{\sqrt{\hbar\omega}}{e^{\hbar\omega/k_BT} -1} \sim (k_BT)^{3/2}.   } 
+Come si pu\`o notare, quindi, a basse temperature, la magnetizzazione decresce con una legge di potenza di $T^{3/2}$ in particolare
+\newl{\boxed{M(T) = M_0 (1-cT^{3/2}), }}
+dove $c$ \`e una costante. Questo comportamento \`e confermato sperimentalmente. A questo punto l'energia totale del gas di magnoni liberi non interagenti \`e facile calcolarla
+\newl{E \propto \sum_k \Delta E_k n_k \propto \int_0^{+\infty}\, d\omega \, \frac{\hbar \omega (\hbar \omega)^{1/2}}{e^{\hbar\omega/K_BT} - 1} \propto (k_BT)^{5/2}}
 
 
 
