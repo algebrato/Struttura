@@ -24,19 +24,21 @@
 \contentsline {subsubsection}{\numberline {5.3.2}Filo quantico}{26}{subsubsection.5.3.2}
 \contentsline {section}{\numberline {6}Dinamica degli elettroni in una banda}{28}{section.6}
 \contentsline {subsection}{\numberline {6.1}Oscillazioni di Bloch}{30}{subsection.6.1}
-\contentsline {section}{\numberline {7} Propriet\IeC {\`a} vibrazionali dei solidi}{32}{section.7}
-\contentsline {subsection}{\numberline {7.1}Reticolo monodimensionale a due atomi}{34}{subsection.7.1}
-\contentsline {section}{\numberline {8}Magnetismo nella Materia}{36}{section.8}
-\contentsline {subsection}{\numberline {8.1}Teorema di Bohr - Van Leeuwen}{39}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Hamiltoniana di Interazione Magnetica}{40}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Materiali Isolanti - Legge di Curie}{42}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Elementi con $J=0$ e $L = S \not =0$}{44}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}Elementi con $J = L = S = 0$}{45}{subsection.8.5}
-\contentsline {subsection}{\numberline {8.6}Riassunto sugli elementi di transizione}{45}{subsection.8.6}
-\contentsline {subsection}{\numberline {8.7}Gas di Elettroni Liberi - Paramagnetismo di Pauli}{46}{subsection.8.7}
-\contentsline {subsection}{\numberline {8.8}Gas di Elettroni Liberi - Diamagnetismo di Landau}{48}{subsection.8.8}
-\contentsline {subsection}{\numberline {8.9}Fenomeni di Ordinamento Magnetico - Ferromagnetico}{50}{subsection.8.9}
-\contentsline {subsection}{\numberline {8.10}Modello di Ordinamento Magnetico di Heisenberg}{51}{subsection.8.10}
-\contentsline {subsection}{\numberline {8.11}Teoria di Campo Medio del Ferromagnetismo}{53}{subsection.8.11}
-\contentsline {subsection}{\numberline {8.12}Transizioni di Fase - Ferromagnetismo}{56}{subsection.8.12}
-\contentsline {subsection}{\numberline {8.13}Onde di Spin}{58}{subsection.8.13}
+\contentsline {subsection}{\numberline {6.2}Comportamenti oscillatori nei metalli}{32}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Teoria semiclassica per elettroni di Bloch in campo magnetico uniforme}{33}{subsection.6.3}
+\contentsline {section}{\numberline {7} Propriet\IeC {\`a} vibrazionali dei solidi}{34}{section.7}
+\contentsline {subsection}{\numberline {7.1}Reticolo monodimensionale a due atomi}{36}{subsection.7.1}
+\contentsline {section}{\numberline {8}Magnetismo nella Materia}{38}{section.8}
+\contentsline {subsection}{\numberline {8.1}Teorema di Bohr - Van Leeuwen}{41}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Hamiltoniana di Interazione Magnetica}{42}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Materiali Isolanti - Legge di Curie}{44}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Elementi con $J=0$ e $L = S \not =0$}{46}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Elementi con $J = L = S = 0$}{47}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Riassunto sugli elementi di transizione}{47}{subsection.8.6}
+\contentsline {subsection}{\numberline {8.7}Gas di Elettroni Liberi - Paramagnetismo di Pauli}{48}{subsection.8.7}
+\contentsline {subsection}{\numberline {8.8}Gas di Elettroni Liberi - Diamagnetismo di Landau}{50}{subsection.8.8}
+\contentsline {subsection}{\numberline {8.9}Fenomeni di Ordinamento Magnetico - Ferromagnetico}{52}{subsection.8.9}
+\contentsline {subsection}{\numberline {8.10}Modello di Ordinamento Magnetico di Heisenberg}{53}{subsection.8.10}
+\contentsline {subsection}{\numberline {8.11}Teoria di Campo Medio del Ferromagnetismo}{55}{subsection.8.11}
+\contentsline {subsection}{\numberline {8.12}Transizioni di Fase - Ferromagnetismo}{58}{subsection.8.12}
+\contentsline {subsection}{\numberline {8.13}Onde di Spin}{60}{subsection.8.13}
