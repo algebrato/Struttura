@@ -7,7 +7,7 @@ La lunghezza tipica su cui è scalato il problema, per quanto riguarda ${\vet k}
 \newl{\boxed{\langle v \rangle = \frac{d\omega}{dk}=\frac{1}{\hbar}\frac{\partial E(k)}{\partial k}}}
 Se abbiamo definito una velocità per il pacchetto d'onda allora possiamo dire che c'è una corrente che caratterizza il mezzo, la cui dentistà è
 \newl{J=-e\int \frac{d^3k}{(2\pi)^3}2_s v(k)f(k)}
-Se all'elettrone applico una forza, facendolo uscire dallo stato di equilibrio posso scrivere
+Se all'elettrone applico una forza, facendolo uscire dallo stato di equilibrio \`e possibile scrivere
 \newl{dE = F dl = F \cdot v dt = F_\alpha v_\alpha dt }
 La forza che agisce sul singolo elettrone sarà del tipo
 \newl{F_\alpha = \hbar \frac{dK_\alpha}{dt}.}
@@ -15,7 +15,7 @@ In approssimazione semiclassica, l'equazione di newton per il singolo elettrone 
 \newl{\frac{dv_\alpha}{dt} = \frac{1}{\hbar} \frac{\partial}{\partial t}\left(\frac{\partial E}{\partial k}\right) = \frac{1}{\hbar}\frac{\partial^2E}{\partial k_\alpha \partial k_\beta} \frac{\partial k_\beta}{dt}}
 Osservando come è fatta la forma dell'equazione è possibile identificare le varie parti dell'equazione di newton e quindi definire una massa efficacie come 
 \newl{\left(\frac{1}{m^*}\right)_{\alpha,\beta}=\frac{1}{\hbar}\frac{\partial^2 E}{\partial k_\alpha \partial k_\beta }}
-che è strettamente in funzione alla forma della banda. La dinamica quindi è data dalla curvatura della banda. Se sono in una dimensione non ho problemi, se sono in più dimensioni posso avere masse efficaci diverse in funzione alla diversa curvatura della banda nelle varie direzioni. L'ordine di grandezza della massa efficace si aggira intorno a $0.01 m_e < m^* < 0.1 m_e$.
+che è strettamente in funzione alla forma della banda. La dinamica quindi è data dalla curvatura della banda. Se sono in una dimensione non ho problemi, se sono in più dimensioni \`e possibile avere masse efficaci diverse in funzione alla diversa curvatura della banda nelle varie direzioni. L'ordine di grandezza della massa efficace si aggira intorno a $0.01 m_e < m^* < 0.1 m_e$.
 \subsection{Oscillazioni di Bloch}
 
 
@@ -129,12 +129,41 @@ Gli esperimenti che indagano l'effetto di De Haas - Van Alphen, sono spesso cara
 Si consideri inizialmente una descrizione semiclassica della dinamica degli elettroni nelle bande energetiche. Gli elettroni sono rappresentati da pacchetti d'onda, come combinazione lineare di stati Bloch, piccati intorno ad un ben definito vettor d'onda $k$ e di una larghezza in modo tale che il pacchetto d'onda risulti distribuito su pi\`u celle del reticolo cristallino. La risposta all'applicazione di un campo elettrico o magnetico, che varia molto lentamente rispetto alla lunghezza del pacchetto d'onda da considerarlo constante in zone piccole del reticolo, \`e data da due equazioni della dinamica che collegano la velocit\`a dell'elettrone alla curvatura della banda energetica
 \newl{\frac{\partial r}{\partial t} &=& v(k) = \frac{1}{\hbar} \frac{\partial E(k)}{\partial k}\\  
 \hbar\frac{\partial k }{\partial t} &=& \frac{e}{c} v(k)\times H }
-da cui segue immediatamente che l'energia $E(k)$ e la componente  del vettore d'onda $k$ parallelo alla direzione del campo magnetico, sono entrambe costanti del moto. Gli elettroni si muovono quindi lungo curve nello spazio $k$ (del reticolo reciproco) date dall'intersezione tra le superfici ad energia costante e i piani perpendicolari ad H. In particolare \`e possibile notare che si hanno orbite chiuse e orbite aperte in funzione alla geometria della superficie ad energia costante. In una teoria semiclassica la distribuzione delle orbite e dei livelli energetici \`e un quasi continuo e riflette la geometria delle superfici ad energia costante (questo non \`e totalmente vero in una teoria completamente quantistica).
+da cui segue immediatamente che l'energia $E(k)$ e la componente  del vettore d'onda $k$ parallelo alla direzione del campo magnetico, sono entrambe costanti del moto. Gli elettroni si muovono quindi lungo curve nello spazio $k$ (del reticolo reciproco) date dall'intersezione tra le superfici ad energia costante e i piani perpendicolari ad H. In particolare \`e possibile notare che si hanno orbite chiuse (non si \`e arrivati ancora al bordo della zona di Brillouin) e orbite aperte (\`e stata toccata la zona di Brillouin) in funzione alla geometria della superficie ad energia costante. In una teoria semiclassica la distribuzione delle orbite e dei livelli energetici \`e un quasi continuo e riflette la geometria delle superfici ad energia costante (questo non \`e totalmente vero in una teoria completamente quantistica).
 
 Un importante risultato circa il moto di elettroni di Bloch in un campo magnetico che sar\`a molto utile \`e una \textit{relazione tra il periodo di un orbita chiusa e il cambiamento dell'area planare racchiusa dall'orbita, in fiunzione all'energia}. Partendo dall'equazione precedente scritta coi moduli
 \newl{\abs{\frac{\partial k}{\partial t} } = \frac{|e|H}{\hbar^2c}\abs{\left(\frac{\partial E(k)}{\partial k}\right)_\perp }  }
 dove $(\partial E(k)/ \partial k)_\perp$ \`e la componente del gradiente dell'energia perpendicolare al campo, in alre parole la sua proiezione sul piano dell'orbita. Il periodo di un orbita pu\`o essere determinato come 
 \newl{T=\oint\,dt = \oint\frac{dk}{|\partial k / \partial t|} = \frac{\hbar^2c}{|e|H} \oint \frac{dk}{|(\partial E(k)/\partial k)_\perp|}}
-dove  $dk$ rappresenta la quantit\`a di di una piccola orbita nello spazio $k$ e si sta integrando intorno ad un orbita chiusa. Se si vanno a considerare le orbite prime vicine, con differenza di energia $\Delta E = E_2-E_1$, 
+dove  $dk$ rappresenta la quantit\`a di di una piccola orbita nello spazio $k$ e si sta integrando intorno ad un orbita chiusa. Se si vanno a considerare le orbite prime vicine, con differenza di energia $\Delta E = E_2-E_1$ piccola, La regione nel piano $k_x-k_y$ \`e una fascia di larghezza $\Delta(k)$, dove 
+\newl{\Delta E = \abs{\left(\frac{\partial E(k)}{\partial k}\right)_\perp } \Delta(k)}
+in cui il gradiente dell'energia \`e perpendicolare alla superficie ad energia costante e quindi, la sua proiezione \`e perpendicolare all'orbita. In questo modo il periodo pu\`o essere scritto come
+\newl{T=\frac{\hbar^2 c}{\abs{e} H} \frac{1}{\Delta E} \oint\Delta (k) \,dk.}
+L'integrale nell'ultima equazione rappresenta l'area tra le due orbite nello spazio $k$, definendo quest'area $\Delta A$, si arriva quindi alla fondamentale relazione
+\newl{\boxed{T= \frac{\hbar^2 c}{\abs{e} H} \frac{\Delta A}{\Delta E}},}
+in cui si mette in collegamento il periodo orbitale con la geometria della superficie ad energia costante nello spazio $k$. Nel limite della dinamica di elettroni liberi in banda, approssimazione valida per molti metalli, le superfici ad energia costante sono sfere e le orbite sono quindi circolari. Considerando l'energia dell'elettrone libero come $E(k) = \hbar^2 k^2 / 2 m $ l'area delle orbite nel pinao $k_x-k_y$ \`e $A=\pi k^2$, dato che in questo caso ha senso ricondursi al limite semiclassico, dal principio di corrispondenza di Bohr, deduco che
+\newl{T=\frac{2\pi}{\omega_C}\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\, \omega_C = \frac{\abs{e} H}{mc}. \label{CICLOTR:OM}}
+In questo modo \`e possibile mettere in relazione la variazione di area trasversale nello spazio $k$ tra orbite adiagenti (tubi di landau adiacenti) e il campo magnetico applicato
+\newl{\boxed{\Delta A = \frac{2\pi \abs{e} H}{\hbar c} }.}
+La $\omega_C$, definita in (\ref{CICLOTR:OM}), \`e la fondamentale \textbf{frequenza di ciclotrone}. Assomiglia molto alla $\omega$  classica per un elettrone in moto in campo magnetico, rappresentato, per\`o questa volta, nello spazio reale. 
+Nella situazione in studio ora, l'energia ha una dipendenza quasi-parabolica dal vettore d'onda $k$, in questo modo le particelle cariche si comportano come particelle libere con frequenza
+\newl{\boxed{\omega_C = \frac{\abs{e} H}{m^*c}},}
+in cui $m^*$ rappresenta la \textbf{massa effettiva di ciclotrone}. La massa, quindi, pu\`o dipendere dalla direzione del campo magnetico applicato, che \`e collegato alla curvatura della superficie $E(k)$ e quindi in relazione con il tensore di massa efficace della banda.
+\subsection{Livelli energetici di Landau}
+Si vuole descrivere ora una trattazione quantistica dei livelli energetici di un sistema di elettroni liberi immersi in un campo magnetico costante. L'energia dei livelli di un sistema di particelle cariche immerse in un campo magnetico uniforme sono ovviamente diversi da quelli di particella libera. Si \`e particolarmente interssati all'energia dei livelli e alla loro distribuzione  nel sistema di elettroni in un metallo. Il primo approccio "geniale" \`e quello dei \textit{Livelli di Landau}.
+
+L'Hamiltoniana del sistema \`e
+\newl{\op{H} = \frac{1}{2m}\left(\op{p} -\frac{e}{c}A \right)^2 + e\phi - \mu\cdot H, }
+dove $\op{p} $ \`e l'operatore momento dell'elettrone, $A=A(r)$ \`e il potenziale vettore del campo magnetico $H$. Siamo interessati ai livelli energetici di un gas di elettroni liberi in un campo \textbf{magnetostatico}, quindi $\phi=0$. Selezioniamo un campo magnetico diretto solo lungo l'asse $z$ quindi ${\vet H} =H\op{z} $ di modulo $H$. In generale l'operatore momento non commuta con il potenziale vettore infatti si ha che $[\op{p}, A] = -i\hbar\nabla\cdot A$, per\`o si pu\`o scegliere un potenziale vettore, costruito in modo tale che commuti con due componenti di $\op{p} $, che \`e $A = \left(A_x = -H\op{y}   ,A_y=0 ,A_z=0 \right)$, da cui si ottiene facilmente il campo magnetico desiderato (solo lungo l'asse $z$ con modulo $H$). In questo modo l'Hamiltoniana \`e possibile scriverla in modo decisamente pi\`u semplice
+\newl{\op{H} = \frac{1}{2m} \left(\op{p} _x + \frac{eH}{c}\op{y} \right)^2 + \frac{\op{p} _y^2}{2m} + \frac{\op{p} _z^2 }{2m} -\mu_z H }
+Dato che $[H,s_z]=0$ e dato che il problema \`e tutto concentrato sull'asse $z$ l'ultima parte dell'Hamiltoniana \`e possibile sostituirla direttamente son il suo relativo autovalore
+\newl{E_{spin}= \pm \mu_B H = \pm \frac{1}{2} \hbar \omega_C}
+cio\`e il contributo energetico di uno spin parallelo o antiparallelo al campo magnetico. Questo contributo energetico diventa rilevante solo se c'\`e un cambiamento nella distribuzione degli spin degli elettroni, come succede nel caso del paramegnetismo di Pauli, dove si hanno valori di suscettivit\`a magnetica piccoli e positivi. 
+
+Escludendo quindi il contributo dello spin, l'equazione di Schroedinger per la funzione d'onda elettronica, nello spazio reale, \`e data da
+\newl{\frac{1}{2m}\left[\left(\op{p} _x +\frac{eH}{c}\op{y}\right)^2 + \op{p} _y^2 + \op{p} _z ^2\right]\psi }
+
+
+
 
 
