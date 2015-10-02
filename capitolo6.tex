@@ -173,6 +173,21 @@ che \`e praticamente l'equazione di Schroedinger per un oscillatore armonico mon
 \newl{E_n - \frac{p_z^2}{2m} = \hbar\omega_C\left(n+\frac{1}{2}\right)}
 dove $n$ \`e intero e rappresenta il numero quantico riferito al corrispondente \textbf{Livello di Landau}, per un elettrone in moto in un campo magnetico uniforme. Riscrivendo meglio la relazione precedente
 \newl\boxed{{E_{n_L}(p_z) = \hbar\omega_C\left( n_L + \frac{1}{2}  \right) + \frac{p_z^2}{2m}.}}
+I livelli energetici hanno quindi una struttura semplice, una parte longitudinale data dal contributo di moto libero con momento $p_z$ parallelo al campo magnetico e una parte trasversa data dai livelli dell'oscillatore armonico. \`E importartante sottolineare l'interpretazione data a $y_0$ come la posizione del centro della traiettoria classica sull'asse $y$, determinato dalla costante del moto $p_x$, che assume il ruolo di indice di degenerazione. Infatti, in cinematica, una traiettoria circolare con velocit\`a angolare $\omega_C$ e centro in $(x_0,y_0)$ \`e descritta dalle formule
+\newl{y(t) - y_0 = \frac{1}{\omega_C}v_x(t)\,\,\,\,\,\,\,\, x(t)-x_0 = - \frac{1}{\omega_C}v_y(t),}
+che usando le relazioni quantistiche $mv_i = p_i -(e/c)A_i$ con $A=(-Hy,0,0)$ si ha che
+\newl{y_0 &=& -\frac{cp_x}{eH} \label{REL:YZER}\\
+	x_0 &=& \frac{cp_y}{eH}+x.\label{REL:XZER}}
+La relazione (\ref{REL:YZER}) non \`e altro che la definizione dichiarata precedentemente di $y_0$, la seconda relazione vuole definire il centro della traiettoria sull'asse $x$.=m in fatti \`e possibile verificare che $[x_0,H]=0$ quindi $x_0$ pu\`o avere un valore ben noto. Il problema \`e che $x_0$ non commuta con $y_0$ e quindi le coordinate del centro della traiettoria non possono essere note allo stesso tempo, a causa del principio di indeterminazione.
+
+In conclusione la "traiettoria quantistica" di un elettrone \`e caratterizzata da $p_z$ che ne determina il moto  lungo l'asse $z$ e da $p_x$ che determina il centro della traiettoria sull'asse $y$, mentre la cordinata $x$ rimane indeterminata. Queste considerazioni sono essenziali per determinare la \textbf{degenerazione dei livelli energetici di Landau} che \`e il vantaggio principale della formulazione del problema da parte di Landau.
+
+Se gli elettroni sono confinati in un piano di area $A_0= L_xL_y$, proprio l'area fisica del campione, con assegnata una ben specifica energia $E_{n_L}$ (Senza perdere di generalit\`a possiamo considerare che $p_z=0$) il momento costante $p=\hbar k_x$ cessa di essere continuo e deve assumere valori discreti che sono dati dalle condizioni al contorno periodiche di Bohr-Von Karman. Il numero di possibili stati con vettor d'onda tra $k_x$ e $k_x+\Delta k_x$ \`e $\Delta n_x = \Delta k_x \cdot L_x/(2\pi)$ quindi il numero possibile di valori per l'impulso nell'intervallo $\Delta p_x$ \`e uguale a $\Delta p_x \cdot L_x/(2\pi\hbar)$. Gli stati permessi sono solo quelli con il centro $y_0$ della traiettoria classica che giace sulla superficie $A_0$. Dall'equazione (\ref{REL:YZER}), si ha che $\Delta p_x = \Delta y_0 \cdot \abs{e} H/ c$ e dato che $y_0$ varia in un range compreso tra $0$ e $L_y$ si pu\`o concludere che il \textit{numero di stati degeneri sul piano di area $L_xL_y$} (quindi $\forall k_z$) \`e
+\newl{\boxed{N_d = 2 \frac{\abs{e} }{2\pi\hbar c} A_0 H.}}
+
+
+
+
 
 
 
