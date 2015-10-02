@@ -149,6 +149,7 @@ La $\omega_C$, definita in (\ref{CICLOTR:OM}), \`e la fondamentale \textbf{frequ
 Nella situazione in studio ora, l'energia ha una dipendenza quasi-parabolica dal vettore d'onda $k$, in questo modo le particelle cariche si comportano come particelle libere con frequenza
 \newl{\boxed{\omega_C = \frac{\abs{e} H}{m^*c}},}
 in cui $m^*$ rappresenta la \textbf{massa effettiva di ciclotrone}. La massa, quindi, pu\`o dipendere dalla direzione del campo magnetico applicato, che \`e collegato alla curvatura della superficie $E(k)$ e quindi in relazione con il tensore di massa efficace della banda.
+Per campi magnetici nell'orgine di alcuni $KG$, la tipica frequenza di ciclotrone \`e nelle microonde. Per un campo magnetico di $1T$ e massa e carica dell'elettrone risulta $\omega_C=1.76\cdot10^{11} rad/s$ corrispondente alla lunghezz d'onda di $1.07cm$
 \subsection{Livelli energetici di Landau}
 Si vuole descrivere ora una trattazione quantistica dei livelli energetici di un sistema di elettroni liberi immersi in un campo magnetico costante. L'energia dei livelli di un sistema di particelle cariche immerse in un campo magnetico uniforme sono ovviamente diversi da quelli di particella libera. Si \`e particolarmente interssati all'energia dei livelli e alla loro distribuzione  nel sistema di elettroni in un metallo. Il primo approccio "geniale" \`e quello dei \textit{Livelli di Landau}.
 
@@ -161,7 +162,17 @@ Dato che $[H,s_z]=0$ e dato che il problema \`e tutto concentrato sull'asse $z$ 
 cio\`e il contributo energetico di uno spin parallelo o antiparallelo al campo magnetico. Questo contributo energetico diventa rilevante solo se c'\`e un cambiamento nella distribuzione degli spin degli elettroni, come succede nel caso del paramegnetismo di Pauli, dove si hanno valori di suscettivit\`a magnetica piccoli e positivi. 
 
 Escludendo quindi il contributo dello spin, l'equazione di Schroedinger per la funzione d'onda elettronica, nello spazio reale, \`e data da
-\newl{\frac{1}{2m}\left[\left(\op{p} _x +\frac{eH}{c}\op{y}\right)^2 + \op{p} _y^2 + \op{p} _z ^2\right]\psi }
+\newl{\frac{1}{2m}\left[\left(\op{p} _x +\frac{eH}{c}\op{y} \right)^2 + \op{p} _y^2 + \op{p} _z ^2\right]\psi = E\psi. \label{SH:LAND}}
+Le compomenti dell'operatore momento, $\op{p} _x$ e $\op{p} _y$ commutano con l'Hamiltoniana e quindi sono costanti del moto. I loro autovalori possono assumere \textit{a priori} valori da $-\infty$ a $+\infty$ senza limitazioni, come per esempio nel modello della particella libera, in cui la funzione d'onda \`e data da onde piane. In particolare, ricordando la relazione di come trasforma il momento in presenza di campi elettromagnetici $m{\vet v} = {\vet p} - (e/c){\vet A} $, si ha che $v_z = p_z/m$ e quindi risulta che la componente $z$ della velocit\`a risulta non quantizzata, mentre le altre componenti della velocit\`a possono essere determinate dagli autovalori dell'energia. Una soluzione per l'equazione (\ref{SH:LAND}) pu\`o essere la seguente ansatz
+\newl{\psi(x,y,z) = \exp[i(xp_x+zp_z)/\hbar]\chi(y),}
+dove $p_x$ e $p_y$ sono gli autovalori dell'operatore momento. Sostituendo tutto nell'Hamiltoniana, compresa la definizione dell'operatore $p_y=-i\hbar (\partial / \partial y)$, \`e quindi possibile scrivere
+\newl{- \frac{\hbar^2}{2m} \frac{d^2\chi}{dy^2} + \left[ \frac{1}{2m}(p_x^2 + p_z^2) + yp_x \frac{eH}{mc} + y^2 \frac{e^2H^2}{2mc^2} \right]\chi = E \chi.  }
+Introducendo la frequenza di ciclotrone ed introducendo il parametro $y_0 = -cp_x/(eH)$ si ottiene in conclusione il seguente problema agli autovalori
+\newl{\left[ -\frac{\hbar^2}{2m} \frac{d^2}{dy^2} + \frac{m}{2}\omega_C^2(y-y_0)^2 \right]\chi(y) = \left(E-\frac{p_z^2}{2m}\right)\chi(y),}
+che \`e praticamente l'equazione di Schroedinger per un oscillatore armonico monodimensionale, con $\omega = \omega_C$, centrato in $y_0$. La funzione d'onda e gli autovalori dell'energia, a questo punto, sono ben noti
+\newl{E_n - \frac{p_z^2}{2m} = \hbar\omega_C\left(n+\frac{1}{2}\right)}
+dove $n$ \`e intero e rappresenta il numero quantico riferito al corrispondente \textbf{Livello di Landau}, per un elettrone in moto in un campo magnetico uniforme. Riscrivendo meglio la relazione precedente
+\newl\boxed{{E_{n_L}(p_z) = \hbar\omega_C\left( n_L + \frac{1}{2}  \right) + \frac{p_z^2}{2m}.}}
 
 
 
