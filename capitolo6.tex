@@ -174,7 +174,7 @@ che \`e praticamente l'equazione di Schroedinger per un oscillatore armonico mon
 dove $n$ \`e intero e rappresenta il numero quantico riferito al corrispondente \textbf{Livello di Landau}, per un elettrone in moto in un campo magnetico uniforme. Riscrivendo meglio la relazione precedente
 \newl\boxed{{E_{n_L}(p_z) = \hbar\omega_C\left( n_L + \frac{1}{2}  \right) + \frac{p_z^2}{2m}.}}
 I livelli energetici hanno quindi una struttura semplice, una parte longitudinale data dal contributo di moto libero con momento $p_z$ parallelo al campo magnetico e una parte trasversa data dai livelli dell'oscillatore armonico. \`E importartante sottolineare l'interpretazione data a $y_0$ come la posizione del centro della traiettoria classica sull'asse $y$, determinato dalla costante del moto $p_x$, che assume il ruolo di indice di degenerazione. Infatti, in cinematica, una traiettoria circolare con velocit\`a angolare $\omega_C$ e centro in $(x_0,y_0)$ \`e descritta dalle formule
-\newl{y(t) - y_0 = \frac{1}{\omega_C}v_x(t)\,\,\,\,\,\,\,\, x(t)-x_0 = - \frac{1}{\omega_C}v_y(t),}
+\newl{y(t) - y_0 = \frac{1}{\omega_C}v_x(t)\,\,\,\,;\,\,\,\, x(t)-x_0 = - \frac{1}{\omega_C}v_y(t),}
 che usando le relazioni quantistiche $mv_i = p_i -(e/c)A_i$ con $A=(-Hy,0,0)$ si ha che
 \newl{y_0 &=& -\frac{cp_x}{eH} \label{REL:YZER}\\
 	x_0 &=& \frac{cp_y}{eH}+x.\label{REL:XZER}}
@@ -212,6 +212,14 @@ che \`e proprio $N_d$, cio\`e la degenerazione degli stati di Landau. In altre p
 	\label{G2D:MAG}
 \end{figure}
 \subsection{Tubi di Landau e oscillazioni di De Haas-Van Alphen}
+La modifica dei livelli energetici in campo mangetico, provoca grandi cambiamenti anche all'energia totale del sistema $E_T$, che ha come sonseguenza, un grande cambiamento nel comportamento macroscopico del sistema. Una osservabile che \`e interessante studiare perch\`e ha dei cambiamenti macroscopici non indifferenti \`e la magnetizzazione per unit\`a di volume che \`e possibile definire come 
+\newl{M = \frac{1}{V} \frac{\partial E_T}{\partial H}.}
+In questo contesto sar\`a possibile parlare di \textbf{\textit{ oscillazioni di De Haas - Van Alphen}}, il cui loro periodo \`e inversamente proporzionale all'intensit\`a del campo magnetico. In questa sezione verr\`a presentato tutto l'impianto teorico alla base di questo effetto, la cui derivazione teorica la si deve ad L.Onsager.
+
+Si consideri un sistema di elettroni. Nel caso di dimensionalit\`a 2D, \`e possibile derivare in modo esatto i valori di energia totale e magnetizzazione. Di pi\`u interesse \`e il caso di dimensionalit\`a 3D in cui per rappresentare in modo molto comodo i livelli energetici con il loro livello di occupazione, si usa il cos\`i detto \textit{metodo dei Tubi di Landau}, in cui i livelli energetici sono rappresentati nello spazio $k$ da superfici cilindriche simmetriche rispetto all'asse $z$. Le varie superfici cilinfriche, rappresentano appunto i livelli energetici consentiti. Il raggio quadratico di un tubo di Landau \`e proporzionale ai livelli nergetici trasversi (la parte longitudinale invece \`e un continuo).
+
+Come \`e stato discusso in precedenza, il numero degli stati contenuti in ogni sezione trasversa di un tubo (cio\`e la degenerazione di Landau) \`e sempre la stessa e corrisponde al numero di stati di elettrone libero contenuti in quel tubo. Dunque i livelli energetici occupati, che nel caso di campo nullo sono tutti i livelli contenuti nel volume della sfera di Fermi, in questo caso si ridistribuscono in questa struttura discreta che si viene a formare dalla porzione dei tubi di Landau intercettata dalla sfera di Fermi. In approssimazione semiclassica i tubi hanno raggio, dato da
+\newl{E_{n_L} = \frac{\hbar^2 k_{n_L}}{2m} \implicaa k_{n_L} = \left(n_L \frac{ 2\abs{e} H}{\hbar c} \right)^{1/2} }
 
 
 

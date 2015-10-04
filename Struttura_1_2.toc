@@ -30,17 +30,17 @@
 \contentsline {subsection}{\numberline {6.3}Teoria semiclassica per elettroni di Bloch in campo magnetico uniforme}{37}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Livelli energetici di Landau}{39}{subsection.6.4}
 \contentsline {subsection}{\numberline {6.5}Tubi di Landau e oscillazioni di De Haas-Van Alphen}{43}{subsection.6.5}
-\contentsline {section}{\numberline {7}Magnetismo nella Materia}{43}{section.7}
-\contentsline {subsection}{\numberline {7.1}Teorema di Bohr - Van Leeuwen}{47}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Hamiltoniana di Interazione Magnetica}{47}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Materiali Isolanti - Legge di Curie}{49}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Elementi con $J=0$ e $L = S \not =0$}{52}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Elementi con $J = L = S = 0$}{52}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}Riassunto sugli elementi di transizione}{53}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Gas di Elettroni Liberi - Paramagnetismo di Pauli}{53}{subsection.7.7}
-\contentsline {subsection}{\numberline {7.8}Gas di Elettroni Liberi - Diamagnetismo di Landau}{55}{subsection.7.8}
-\contentsline {subsection}{\numberline {7.9}Fenomeni di Ordinamento Magnetico - Ferromagnetico}{57}{subsection.7.9}
-\contentsline {subsection}{\numberline {7.10}Modello di Ordinamento Magnetico di Heisenberg}{58}{subsection.7.10}
+\contentsline {section}{\numberline {7}Magnetismo nella Materia}{45}{section.7}
+\contentsline {subsection}{\numberline {7.1}Teorema di Bohr - Van Leeuwen}{48}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Hamiltoniana di Interazione Magnetica}{48}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Materiali Isolanti - Legge di Curie}{50}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Elementi con $J=0$ e $L = S \not =0$}{53}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Elementi con $J = L = S = 0$}{53}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Riassunto sugli elementi di transizione}{54}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Gas di Elettroni Liberi - Paramagnetismo di Pauli}{54}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.8}Gas di Elettroni Liberi - Diamagnetismo di Landau}{56}{subsection.7.8}
+\contentsline {subsection}{\numberline {7.9}Fenomeni di Ordinamento Magnetico - Ferromagnetico}{58}{subsection.7.9}
+\contentsline {subsection}{\numberline {7.10}Modello di Ordinamento Magnetico di Heisenberg}{59}{subsection.7.10}
 \contentsline {subsection}{\numberline {7.11}Teoria di Campo Medio del Ferromagnetismo}{61}{subsection.7.11}
-\contentsline {subsection}{\numberline {7.12}Transizioni di Fase - Ferromagnetismo}{63}{subsection.7.12}
-\contentsline {subsection}{\numberline {7.13}Onde di Spin}{65}{subsection.7.13}
+\contentsline {subsection}{\numberline {7.12}Transizioni di Fase - Ferromagnetismo}{64}{subsection.7.12}
+\contentsline {subsection}{\numberline {7.13}Onde di Spin}{66}{subsection.7.13}
