@@ -220,8 +220,31 @@ Si consideri un sistema di elettroni. Nel caso di dimensionalit\`a 2D, \`e possi
 
 Come \`e stato discusso in precedenza, il numero degli stati contenuti in ogni sezione trasversa di un tubo (cio\`e la degenerazione di Landau) \`e sempre la stessa e corrisponde al numero di stati di elettrone libero contenuti in quel tubo. Dunque i livelli energetici occupati, che nel caso di campo nullo sono tutti i livelli contenuti nel volume della sfera di Fermi, in questo caso si ridistribuscono in questa struttura discreta che si viene a formare dalla porzione dei tubi di Landau intercettata dalla sfera di Fermi. In approssimazione semiclassica i tubi hanno raggio, dato da
 \newl{E_{n_L} = \frac{\hbar^2 k_{n_L}}{2m} \implicaa k_{n_L} = \left(n_L \frac{ 2\abs{e} H}{\hbar c} \right)^{1/2} }
+e sono occupati fino a $k_{n_L} \leq k_{F\perp}$, dove $k_{F\perp}$ \`e la proiezione trasverssa del vettor d'onda di Fermi (che corrisponde all'energia di Fermi), che a sua volta dipende da $k_z$ dalla relazione
+\newl{\boxed{k^2_F = k_{F\perp}^2 + k_z^2}.}
+Per di pi\`u dobbiamo considerare il fatto che ci sono migliaia tubi di Landau con un macroscopico numero di occupazione di elettroni a causa del grande valore assunto da $n_L$.
 
+Questo contesto pu\`o essere esteso al caso di elettroni di Bloch. A causa dei valori molto grandi assunti dai numero quantici in gioco, la dinamica degli elettroni pu\`o essere ben descritta da una teoria semiclassica vista nella sezione precedente, in cui la parte orbitale-planare nello spazio $k$, pu\`o essere disaccoppiata dalla parte di moto longitudinale e vive su una superficie ad energia costante.
 
+Introducendo la quantizzazione di Landau, si ha soltanto una semplice ridistribuzione dei livelli energetici contenuti all'interno della sfera di Fermi (che ora pu\`o avere una forma sferica ma moldo deformata in modo non banale) in porzioni di tubi di Landau deformati, che tagliano la superficie di Fermi. Le orbite degli elettroni semiclassici sono ora discrete, $N_d$ degeneri e coincidono con la sezione trasversa dei tubi. In particolare, l'orbita nello spazio $k$ che ha superficie trasversa maggiore, praticamente \`e l'orbita sul tubo di Landau tangente alla superficie della sfera di Fermi. Questa orbita \`e chiamata \textbf{Orbita Estremale} e la sua superficie $A_{ext}$ \`e appunto chiamata \textbf{Area Estremale}.
+
+\`E possibile ora spiegare la vera essenza dell'Effetto di De Haas-Van Alphen. In presenza di un campo magnetico $H$, l'energia totale del sistema \`e determinata da una somma sugli stati occupati, che sono distribuiti sopra i tubi di Landau. All'aumentare di $H$ anche il raggio dei tubi di Landau, aumenta ma non ci si aspetta altro che un graduale cambiamentonell'energia totale e quindi nella magnetizzazione, fino a quando i raggi si ingrandiscono fino a raggiungere $k_F$, al di l\`a del quale il tubo di Landau non intercetta pi\`u la superficie di Fermi.
+
+Quando un il raggio di un tubo di Landau, supera $k_F$, esce dal volume della sfera di Fermi, e l'orbita estremale, scompare costringendo un numero macroscopico di $N_d$ elettroni a ricombinarsi su livelli ad energia inferiore. L'energia totale $E_T$ subisce un drammatico cambiamento e lo stesso succede alle grandezze fisiche ad essa collegate, come la magnetizzazione. Questo fenomeno pu\`o essere ripetuto continuando a variare il valore del campo magnetico $H$, in questo modo si incrementano i raggi dei tubi di Landau, facendoli uscire dalla superficie di Fermi. In questo modo, \`e possibile instaurare nel mezzo un comportamento oscillatorio della magnetizzazione.
+
+\`E possibile anche mostrare che il periodo di queste oscillazioni \`e inversamente proporzionale all'intensit\`a del campo magnetico usato. \`E possibile trovare una relazione fondamentale tra il periodo delle oscillazioni e la massima area formata dall'intersezione della superficie di Fermi con un piano perpendicolare ad $H$, cio\`e \`e possibile detrminare $A_{ext}$. Richiamando quanto trovato sulla dinamica semiclassica dell'elettrone, una relazione molto utile in questo momento \`e
+\newl{T = \frac{\hbar^2c}{\abs{e} H} \frac{\Delta A}{\Delta E},}
+perch\`e mette in relazione il periodo di variazione dell'area trasversa dell'orbita. Quindi sapendo il periodo, dato dalle oscillazioni di magnetizzazione, sapendo $\Delta E$ che per il \textbf{principio di corrispondenza Bohr-Sommerfeld} posso scrivere come
+\newl{E_{n+1}-E_{n} = \frac{h}{T} = \hbar\omega_C}
+che sono esattamente le spaziature energetiche dei livelli di Landau, \`e possibile, in questo modo, arrivare facilmente alla variazione di area
+\newl{\boxed{\Delta A = \frac{2\pi\abs{e} H}{\hbar c}.}}
+Questo elegante risultato fu ottenuto per la prima volta da Onsager e pu\`o essere riespresso in termini della teoria di Landau che \`e stata appena sviluppata
+\newl{A_{n_L} = (n_L+\lambda)\Delta A = (n_L+\lambda)\frac{2\pi\abs{e} H}{\hbar c}}
+dove $\lambda$ \`e un numero reale indipendente da $n_L$, una sorta di condizione iniziale. Prendendo l'area estremale $A_{ext}$ che \`e un'area in cui valore \`e strattamente legato alla geometria della superficie di Fermi, si ha la relazione
+\newl{\frac{1}{H} = (n_L+\lambda)\frac{2\pi\abs{e} H}{\hbar c}\frac{1}{A_{ext}}. }
+\`E chiaro che la relazione appena trovata restituisce il valore del campo magnetico a cui avvengono drammatici cambiamenti delle propriet\`a fisiche del sistema. Dato che questi cambiamenti drammatici del sistema avvengono ogni volta che un tubo di Landau supera la superficie di Fermi, \`e pi\`u utile scrivere la relazione
+\newl{\boxed{\Delta\left(\frac{1}{H}\right) = \frac{2\pi\abs{e} H}{\hbar c}\frac{1}{A_{ext}},}}
+che vale ogni volta che si ha un passaggio da $n_L \to n_L-1$. In questo modo \`e possibile concludere che \textit{le oscillazioni osservate nelle quantit\`a fisiche, come la magnetizzazione, sono periodiche e il loro periodo \`e legato da una relazione inversa col campo magnetico.}
 
 
 
