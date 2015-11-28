@@ -45,3 +45,13 @@
 \contentsline {subsection}{\numberline {7.11}Teoria di Campo Medio del Ferromagnetismo}{64}{subsection.7.11}
 \contentsline {subsection}{\numberline {7.12}Transizioni di Fase - Ferromagnetismo}{67}{subsection.7.12}
 \contentsline {subsection}{\numberline {7.13}Onde di Spin}{69}{subsection.7.13}
+\contentsline {section}{\numberline {8}Superconduttivit\`a}{75}{section.8}
+\contentsline {subsection}{\numberline {8.1}Evidenze Fenomenologiche}{75}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Evidenza della superconduttivit\`a nel Mercurio raffreddato a 4.2K}{75}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Effetto Maissner-Ochsenfeld}{76}{subsubsection.8.1.2}
+\contentsline {subsubsection}{\numberline {8.1.3}Calore specifico}{76}{subsubsection.8.1.3}
+\contentsline {subsubsection}{\numberline {8.1.4}Principio isotopico}{77}{subsubsection.8.1.4}
+\contentsline {subsubsection}{\numberline {8.1.5}Esistenza di due tipi di superconduttori}{77}{subsubsection.8.1.5}
+\contentsline {subsubsection}{\numberline {8.1.6}Esistenza delle correnti persistenti - Intrappolamento di flusso di campo magnetico}{78}{subsubsection.8.1.6}
+\contentsline {subsection}{\numberline {8.2}Teoria Fenomenologica di London}{78}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Risultati della Teoria di London}{79}{subsubsection.8.2.1}
