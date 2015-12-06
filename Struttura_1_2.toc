@@ -53,6 +53,6 @@
 \contentsline {subsubsection}{\numberline {8.1.4}Principio isotopico}{77}{subsubsection.8.1.4}
 \contentsline {subsubsection}{\numberline {8.1.5}Esistenza di due tipi di superconduttori}{77}{subsubsection.8.1.5}
 \contentsline {subsubsection}{\numberline {8.1.6}Esistenza delle correnti persistenti - Intrappolamento di flusso di campo magnetico}{78}{subsubsection.8.1.6}
-\contentsline {subsection}{\numberline {8.2}Teoria Fenomenologica di London}{78}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Risultati della Teoria di London}{79}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Conclusioni sulla teoria di London}{81}{subsubsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2}Teoria Fenomenologica di London}{79}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Risultati della Teoria di London}{80}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Conclusioni sulla teoria di London}{82}{subsubsection.8.2.2}
