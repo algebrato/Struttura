@@ -164,22 +164,75 @@ Integrando sulla superficie attraversata dal campo magnetico si ottiene
 Si definisce \textit{FLUSSOIDE}, e lo si indica con la lettera $\Phi$, la quantit\`a
 \newl{\Phi=\int_{\Sigma} B \cdot d\Sigma -\frac{mc}{n_se^2}\oint_{\gamma} J \cdot dl. \label{FLUSSOIDE}}
 Ricordando l'Eq.~(\ref{ROT:MOM:NUL}) e usandola nell'Eq.~(\ref{FLUSSOIDE}) otteniamo uno dei risultati pi\`u importanti della teoria di London, cio\`e che il flusso di campo mangetico, in un superconduttore, \`e quantizzato. Facendo il conto si ottiene
-\newl{\Phi=\int_{\Sigma} B \cdot d\Sigma -\frac{mc}{n_se^2}\oint_{\gamma} J \cdot dl = \int_\Sigma \left(\nabla\times A\right)\cdot d\Sigma - \frac{mc}{e}\oint_{\gamma} v\cdot dl = 
+\newl{\Phi_L=\int_{\Sigma} B \cdot d\Sigma -\frac{mc}{n_se^2}\oint_{\gamma} J \cdot dl = \int_\Sigma \left(\nabla\times A\right)\cdot d\Sigma - \frac{mc}{e}\oint_{\gamma} v\cdot dl = 
 \\
 =\oint_{\gamma} A \cdot dl - \frac{mc}{e}\oint_{\gamma} v\cdot dl = \oint_{\gamma}\left(A - \frac{mc}{e} v\right)\cdot dl =
 \\
-=-\frac{c}{e}\oint_{\gamma} \left(mv - \frac{e}{c} A\right) dl = -\frac{c}{e}\int_\Sigma\left( \nabla \times P\right) d\Sigma =0.
+=-\frac{c}{e}\oint_{\gamma} \left(mv - \frac{e}{c} A\right) dl = -\frac{c}{e}\int_\Sigma\left( \nabla \times P\right) d\Sigma.
 }
-L'ultimo passaggio, applicando il teorema di Stokes, \`e esattamente l'equazione di Bohr-Sommerfeld per l'azione ridotta quantistica
-\newl{0=-\frac{e}{c}\int_\Sigma\left( \nabla \times P\right) d\Sigma= -\frac{c}{e} \oint_{\gamma}P\cdot dl}
+Dato che $\nabla\times P = 0$, l'ultimo passaggio ci indica che $\Phi$ \`e una costante. Applicando il teorema di Stokes, si ottiene esattamente l'equazione di Bohr-Sommerfeld per l'azione ridotta quantistica
+\newl{\Phi_L=-\frac{e}{c}\int_\Sigma\left( \nabla \times P\right) d\Sigma= -\frac{c}{e} \oint_{\gamma}P\cdot dl = \frac{c}{e}2\pi \hbar n}
 L'equazione di Bohr-Sommerfeld ha come autovalori multipli di $\hbar$, quindi risulter\`a che il flusso sar\`a multiplo di
-\newl{\boxed{\Phi = \frac{n 2\pi \hbar c}{e} = \frac{hc}{e}.}}
+\newl{\boxed{\Phi_L = \frac{hc}{e}.}}
 \subsubsection{Conclusioni sulla teoria di London}
 Come \`e stato possibile vedere, la teoria di London prevede bene l'esistenza dei superconduttori di tipo-I soggetti ad effetto Maissner. Prevede che la quantizzazione del flusso di campo magnetico intrappolato nel superconduttore, ma \`e sbagliato di un fattore due. Infatti, ricordando i risultati fenomenologici ottenuti con la misura del campo magnetico intrappolato in una anello superconduttore si ha che 
-\newl{\Phi_{sperimentale} = 2\Phi_L.}
+\newl{\boxed{\Phi_{sperimentale} = 2\Phi_L.}}
 In questa relazione \`e riassunto il grande limite della teoria. Non spiega chi sono i portatori di carica. Non sono elettroni, sono un qualcosa con carica doppia dell'elettrone. Nonostante siano gi\`a in questo modo evidenti alcuni aspetti della superconduttivit\`a, il fatto che non siano previsti superconduttori di tipo-II e il fatto che non si riesca a valutare la natura dei portatori di carica, suggerisce il fatto che l'approcio classico al problema \`e sbagliato. Nel prossimo paragrafo si vedr\`a come questa teoria fenomenologica, pu\`o essere corretta, e raffinata inserendo le correzioni di Ginzburg-Landau all'energia libera. Nonostante gli sforzi, rimane concettualmente sbagliato il punto di partenza semi-classico di queste teoria.
 
+\subsection{Teoria fenomenologica di Ginzburg-Landau}
+Come \`e stato possibile osservare nel paragrafo precedente, la teoria fenomenologica di London ha alcuni limiti come la mancata previsione dell'esistenza dei superconduttori di tipo-II e l'errata stima del flussoide di un fattore 2. Lo stesso London aveva notato questo limite ad esempio nelle giunzioni (sia tra due superconduttori che tra un superconduttore e un materiale normale). Quando lo strato di separazione tra i due layer della giunzione diventava molto piccolo sostanzialmente era impossibile da spiegare il fatto che la superficie di energia diventava positiva. London cerc\`o di valutarne l'entit\`a tramite degli studi fatti su giunzioni Sn-In, anche se una iniziale trattazione, sempre fenomenologica, fu fatta da Ginzburg-Landau.
+\subsubsection{Espanzione dell'energia libera}
+L'energia libera di un superconduttore $F_s(T,H)$ dipender\`a dalla temperatura e dal campo magnetico applicato. Il superconduttore \`e un perfetto diamagnete, quindi il contributo dato da $H$ sar\`a puramente diamagnetico, permettendo quindi di scrivere
+\newl{F_S(T,H) \sim F_S(T,0)+\frac{H^2}{8\pi}.}
+Si consideri ora l'energia libera di un materiale normale e la si identifichi con $F_N(T,H)$. Anche lei dipender\`a dalla temperatura e dal campo magnetico. Per $T > T_C$ il contributo magnetico \`e molto piccolo, quindi trascurabile permettendo di scrivere
+\newl{F_N(T,H)\sim F_N(T,0).}
+Per $T\sim T_C$ si ha che $F_N \sim F_S$ quindi
+\newl{
+	F_S(T,H) \sim F_N(T,0) + \frac{H^2}{8\pi}. 
+	\label{EN:LIB}	
+}
+La proposta di Ginzburg-Landau \`e quella di descrivere l'energia libera di un superconduttore in funzione ad un parametro complesso d'ordine che definiamo essere $\Psi(x)$. Il modulo di $\abs{\Psi} $ ha la propriet\`a di essere piccolo per $T\sim T_C$ quindi l'energia libera in Eq.~\ref{EN:LIB}, in assenza di campo magnetico, \`e possibile descriverla come sviluppo in funzione del parametro d'ordine
+\newl{
+	F_S(T,0) = F_N(T,0) + a \abs{\Psi} ^2 + \frac{b}{2} \abs{\Psi} ^4 +\cdots,
+	\label{SVILUPPO:GL}
+}
+in cui $a$ e $b$ sono due costanti fenomenologiche dipendenti dalla temperatura. Ginzburg e Landau, analogamente all'equazione di Schoedinger, aggiungono allo sviluppo un termine di ordine $\abs{\nabla \psi} ^2$ che ha appunto la forma
+\newl{(2m^*)^{-1}\abs{\left(-i\hbar\nabla+\frac{e^*}{c}A\right) \Psi } ^2.  }
+Riutilizzando tutti i risultati nell'Eq.~\ref{SVILUPPO:GL}, si ottiene
+\newl{F_S = F_{N,0} + a \abs{\Psi} ^2 + \frac{b}{2} \abs{\Psi} ^4 + (2m^*)^{-1}\abs{\left(-i\hbar\nabla+\frac{e^*}{c}A\right) \Psi } ^2 + \frac{H^2}{8\pi}}
+in cui, tutte le grandezze asteriscate sono delle grandezze efficaci definite come
+\newl{
+	m^* = 2m_e \nonumber\\
+	e^* = 2e   \nonumber\\
+	\abs{\Psi} = n_s^* = \frac{1}{2}n_s \nonumber
+}
+dove $n_s$ rappresenta la densit\`a di elettroni coinvolti nel fenomeno della superconduzione.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Teoria BCS }
 
 
 
