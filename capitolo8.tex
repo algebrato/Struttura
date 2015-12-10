@@ -178,6 +178,28 @@ L'equazione di Bohr-Sommerfeld ha come autovalori multipli di $\hbar$, quindi ri
 Come \`e stato possibile vedere, la teoria di London prevede bene l'esistenza dei superconduttori di tipo-I soggetti ad effetto Maissner. Prevede che la quantizzazione del flusso di campo magnetico intrappolato nel superconduttore, ma \`e sbagliato di un fattore due. Infatti, ricordando i risultati fenomenologici ottenuti con la misura del campo magnetico intrappolato in una anello superconduttore si ha che 
 \newl{\boxed{\Phi_{sperimentale} = 2\Phi_L.}}
 In questa relazione \`e riassunto il grande limite della teoria. Non spiega chi sono i portatori di carica. Non sono elettroni, sono un qualcosa con carica doppia dell'elettrone. Nonostante siano gi\`a in questo modo evidenti alcuni aspetti della superconduttivit\`a, il fatto che non siano previsti superconduttori di tipo-II e il fatto che non si riesca a valutare la natura dei portatori di carica, suggerisce il fatto che l'approcio classico al problema \`e sbagliato. Nel prossimo paragrafo si vedr\`a come questa teoria fenomenologica, pu\`o essere corretta, e raffinata inserendo le correzioni di Ginzburg-Landau all'energia libera. Nonostante gli sforzi, rimane concettualmente sbagliato il punto di partenza semi-classico di queste teoria.
+\subsection{Le equazioni di Pippard}
+Come visto nel precedente paragrafo, la teoria fenomenologica di London ha dei limiti abbastanza grossolani. Il risultato sul flussoide, scalato di un fattore due, dal punto di vista di una teoria fenomenologica, era un problema facilmente risolvibile attraverso l'introduzione di grandezze efficaci. Il limite pi\`u grande della teoria riguarda appunto la mancata previsione dei superconduttori di tipo-II. Si introdue il cos\`i detto gauge di London
+\newl{
+\nabla \cdot A = 0\nonumber\\
+A\cdot n = 0.
+\label{GAUGE:LOND}
+}
+In questo gauge, la prima equazione di London diventa
+\newl{
+	\int_{\Sigma}\left( \nabla \times J\right)\, d\Sigma = -\frac{n_s e^2}{mc}\int_{\Sigma}\left(\nabla \times A\right)\, d\Sigma \nonumber\\
+	\int_{\gamma} J \cdot dl = -\frac{n_s e^2}{mc} \int_{\gamma} A \cdot dl\nonumber\\
+	J(x) = - \frac{n_s e^2}{mc} A(x).
+	\label{SUPERCORRENTE}
+}
+Si ha quindi una realzione tra la densit\`a di corrente e il potenziale vettore nello stesso punto. Gli studi di Pippard lo portarono a concludere che la lunghezza di penetrazione del campo mangetico nel superconduttore non \`e una costante. Secondo la teoria di London, cambiare la penetrazione di campo magnetico voleva dire cambiare il numero di$ n_s$, quindi stravolgere in modo sensibile le propriet\`a termodinache dei superconduttori. Pippard propone una lettura della supercorrente in Eq.~\ref{SUPERCORRENTE} in modo locale, dove la $J(x)$ \`e in funzione ad un campo medio di $A(x)$ primo vicino di dimensione $r_0$. Per elementi adeguatamente dopati, $r_0$ \`e paragonabile al cammino medio di un elettrone libero $l$, nel caso dei metalli Pippard definisce una \textit{lunghezza di correlazione} identificata con $\xi_0$. La relazione di Pippard lega insieme $r_0$, $l$ e $\xi_0$
+\newl{\frac{1}{r_0}=\frac{1}{l}+\frac{1}{\xi_0} }
+la densit\`a di supercorrente \`e possibile considerarla come
+\newl{J(x) = -\frac{n_S e^2}{mc} \frac{3}{4\pi \xi_0} \int d^3x\, \frac{X[X\cdot A(x')]t}{\abs{X} ^4} e^{-x/r_0} }
+
+
+
+
 
 \subsection{Teoria fenomenologica di Ginzburg-Landau}
 Come \`e stato possibile osservare nel paragrafo precedente, la teoria fenomenologica di London ha alcuni limiti come la mancata previsione dell'esistenza dei superconduttori di tipo-II e l'errata stima del flussoide di un fattore 2. Lo stesso London aveva notato questo limite ad esempio nelle giunzioni (sia tra due superconduttori che tra un superconduttore e un materiale normale). Quando lo strato di separazione tra i due layer della giunzione diventava molto piccolo sostanzialmente era impossibile da spiegare il fatto che la superficie di energia diventava positiva. London cerc\`o di valutarne l'entit\`a tramite degli studi fatti su giunzioni Sn-In, anche se una iniziale trattazione, sempre fenomenologica, fu fatta da Ginzburg-Landau.

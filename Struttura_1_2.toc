@@ -56,6 +56,7 @@
 \contentsline {subsection}{\numberline {8.2}Teoria Fenomenologica di London}{79}{subsection.8.2}
 \contentsline {subsubsection}{\numberline {8.2.1}Risultati della Teoria di London}{80}{subsubsection.8.2.1}
 \contentsline {subsubsection}{\numberline {8.2.2}Conclusioni sulla teoria di London}{82}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Teoria fenomenologica di Ginzburg-Landau}{82}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Espanzione dell'energia libera}{82}{subsubsection.8.3.1}
-\contentsline {subsection}{\numberline {8.4}Teoria BCS }{83}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.3}Le equazioni di Pippard}{82}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Teoria fenomenologica di Ginzburg-Landau}{83}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Espanzione dell'energia libera}{83}{subsubsection.8.4.1}
+\contentsline {subsection}{\numberline {8.5}Teoria BCS }{84}{subsection.8.5}
