@@ -196,7 +196,7 @@ Si ha quindi una realzione tra la densit\`a di corrente e il potenziale vettore 
 \newl{\frac{1}{r_0}=\frac{1}{l}+\frac{1}{\xi_0} }
 la densit\`a di supercorrente \`e possibile considerarla come
 \newl{J(x) = -\frac{n_S e^2}{mc} \frac{3}{4\pi \xi_0} \int d^3x\, \frac{X[X\cdot A(x')]t}{\abs{X} ^4} e^{-x/r_0} }
-
+[continuare inserendo gli estremi per ottenere effetto Meissner...]
 
 
 
@@ -229,36 +229,50 @@ in cui, tutte le grandezze asteriscate sono delle grandezze efficaci definite co
 	\abs{\Psi} = n_s^* = \frac{1}{2}n_s \nonumber
 }
 dove $n_s$ rappresenta la densit\`a di elettroni coinvolti nel fenomeno della superconduzione.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[continuare riprendendo la densit\`a di corrente quantistica di Pippard...]
 
 \subsection{Teoria BCS }
-
-
-
-
+[Inserire discussione qualitativa sulle coppie di Cooper, funzione d'onda BCS e interazione attrattiva tra gli elettroni, mediata dal fonone, vista come perturbazione elastica in seconda quantizzazione...]
+\subsubsection{Calcolo del gap di energia}
+Come \`e stato gi\`a possibile notare In Fig.~\ref{SUPER:CAL:SP}, il calore specifico presenta una discontinuit\`a in $T_C$ questo implica che lo spettro delle energie dei super-portatori di carica presenta un gap di energie proibite. \`E possibile determinare lo spettro delle energie risolvendo il semplice problema agli autovalori
+\newl{
+	\left[-\frac{\hbar^2}{2m} \left(\nabla_{x1}^2 + \nabla_{x2}^2\right) + V(r_2-r_1)  \right]\Psi(r_2-r_1) = E\Psi(r_2-r_1)
+	\label{HAM:BCS}
+}
+dove le funzioni d'onda che si stanno considerando sono di tipo BCS
+\newl{
+	\Psi(r_2-r_1)=\int_{\Omega} \frac{d^3k}{(2\pi)^3} \chi(k) e^{ik(r_2-r_1)},
+	\label{WAW:BCS}
+}
+il potenziale che si sta considerando \`e di tipo attrattivo e periodico. Per semplicit\`a ci si riferisce al centro di massa della coppia di Cooper quindi $k_1=-k_2$. Sostituendo la funzione d'onda in Eq.~\ref{WAW:BCS} Eq.~\ref{HAM:BCS} \`e possibile identificare alcune forme note. Concentrandosi solo sulla parte di potenziale si ottiene proprio
+\newl{
+	V(r_2-r_1)\int_{\Omega} \frac{d^3k}{(2\pi)^3} \chi(k) e^{ik(r_2-r_1)} = \int_{\Omega} \frac{d^3k}{(2\pi)^3} \chi(k)V(r_2-r_1) e^{ik(r_2-r_1)}=\nonumber\\
+	=\left(\int_{\Omega} \frac{d^3k}{(2\pi)^3} \chi(k)V(r_2-r_1) e^{i(k-k')(r_2-r_1)}\right)e^{ik'(r_2-r_1)}=\nonumber\\
+	=\int_{\Omega}\frac{d^3k'}{(2\pi)^3}\left(\int_{\Omega} \frac{d^3k}{(2\pi)^3} \chi(k)V(r_2-r_1) e^{i(k-k')(r_2-r_1)}\right)e^{ik'(r_2-r_1)}=\nonumber\\
+	=\int_{\Omega}\frac{d^3k'}{(2\pi)^3}\chi(k') V(k,k')e^{ik'(r_2-r_1),}
+}
+dove $V(k,k')$ \`e  la trasformata di Fourier di $V(r_2-r_1)$. L'integrazione che \`e stata fatta su $k'$ non fa altro che ambientare tutta l'Hamiltoniana in Eq.~\ref{HAM:BCS} nello spazio $k$. Gli elettroni che sentono l'interazione attrattiva sono quelli pi\`u esterni alla sfera di Fermi. L'energia che possono scambiare con un fonone \`e nell'ordine di $\hbar\omega_D = 10^{-2} eV$ mentre l'energia di Fermi \`e nell'ordine $1\div5\,eV$, quindi solo gli elettroni che si trovano in una corona circolare spessa $\hbar\omega_D$ dalla sfera di fermi, possono risentire del potenziale attrattivo, gli altri elettroni interni non hanno modo di interagire coi fononi. Seguendo questo ragionamento, senza perdere di generalit\`a \`e possibile descrivere il potenziale $V(k,k')$ come
+\newl{
+	V(k,k') &=& -U\;\;\;  \forall k \in [k_F,k_F+k_D]\nonumber\\
+	V(k,k') &=& 0 \;\;\;\;\;  \text{ Altrimenti}.
+}
+Come detto in precedenza, l'Hamiltoniana nello spazio $k$, sostituendo banalmente la variabile di integrazione in $k' \to k$, \`e possibile scriverla come
+\newl{ 
+	\frac{\hbar^2}{2m} k'^2\chi(k') + \int_{\Omega}\frac{d^3k}{(2\pi)^3}\chi(k) V(k,k')e^{ik(r_2-r_1)}=E\chi(k')\nonumber\\
+	\left[\frac{\hbar^2}{2m}k'^2 -E\right]\chi(k') = U\int_{k_F}^{k_F+\Delta k}\frac{d^3k}{(2\pi)^3}\chi(k) e^{ik(r_2-r_1)}\nonumber
+}
+Integrando in $k'$ su tutto lo spazio, sostituendo ancora $k'\to k$ e passando in cordinate sferiche si ottiene
+\newl{
+	1 = \frac{4\pi U}{(2\pi)^3}\int_{k_F}^{k_F+\Delta k}d^3k\frac{k^2}{\frac{\hbar^2}{2m}k^2 -E}.
+}
+Passando alle energie tramite la sostituzione $k\to\sqrt{\xi}(\sqrt{2k}/\hbar)$ , $\xi \to (\hbar^2/2m) k^2$ e quindi $d\xi = (\hbar^2/m) k dk$. Chiamando $\Delta = 2E_F - E$ si ottiene
+\newl{
+	1=\frac{U}{2\pi^2}\int_{E_F}^{E_F+\hbar\omega_D} \left(\frac{2m}{\hbar^2}\right)^{\frac{3}{2}} \sqrt{\xi} (2\xi-E)^{-1}\,d\xi \sim\nonumber\\
+	\sim\frac{U}{2\pi^2} g_{3D}(E_F)\int_{E_F}^{E_F+\hbar\omega_D} (2\xi -E)^{-1}\,d\xi =\nonumber\\ 
+	=\frac{U}{2\pi^2}g_{3D}(E_F)\ln{\abs{\frac{\Delta + 2\hbar\omega_D}{\Delta}} }
+}
+da cui si ricava direttamente un'espressione del gap di energie
+\newl{\boxed{\Delta(U) = \frac{2\hbar\omega_D}{\exp{\left[\frac{2}{Ug_{3D}(E_F)}\right] }-1}. }}
 
 
 

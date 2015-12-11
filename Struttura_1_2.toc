@@ -60,3 +60,4 @@
 \contentsline {subsection}{\numberline {8.4}Teoria fenomenologica di Ginzburg-Landau}{83}{subsection.8.4}
 \contentsline {subsubsection}{\numberline {8.4.1}Espanzione dell'energia libera}{83}{subsubsection.8.4.1}
 \contentsline {subsection}{\numberline {8.5}Teoria BCS }{84}{subsection.8.5}
+\contentsline {subsubsection}{\numberline {8.5.1}Calcolo del gap di energia}{85}{subsubsection.8.5.1}
