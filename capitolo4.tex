@@ -1,41 +1,30 @@
 \section{Elettroni nel potenziale periodico}
-La maggior parte dei solidi \`e possibile rappresentarli come un reticolo, di una sua certa complessit\`a, che si ripete nello spazio in modo periodico. Il fatto che il reticolo di un cristallo, per definizione, sia dotato di una periodicit\`a spaziale permette di associarci in modo naturale la sua rappresentazione di Fourier nello spazio dei vettori $\xv{k} $. In un metallo ecc ecc ecc tight binding ....gas elettroni.... necessit\`a di studiare la dinamica del gas di elettroni ecc ecc ecc...
+Un materiale solido \`e possibile rappresentarlo come un reticolo, di una sua certa complessit\`a, che si ripete nello spazio in modo periodico. Il fatto che il reticolo di un cristallo, per definizione, sia dotato di una periodicit\`a spaziale permette di associarci in modo naturale la sua rappresentazione di Fourier nello spazio dei vettori d'onda $\xv{k} $. I metalli sono caratterizzati dall'avere orbitali atomici fortemente interagenti creando forti legami ti di tipo \textit{Tight Binding}. Questa caratteristica, unita al fatto che la temperatura di Fermi di un metallo \`e solitamente molto alta rispetto alla temperatura ambiente, permette di pensare la dinamica degli elettroni, in un metallo, come la dinamica di un gas libero di elettroni, all'interno di un potenziale periodico.
 
-
-
-
-
-
-
-
-
-
-Il problema agli autovalori che bisogna risolvere per trattare eletroni liberi in un potenziale periodico è il tipico
-\newl{\left[-\frac{\hbar^2}{2m}\nabla^2 +U_e({\vet r})\right]\psi_n({\vet r}) = E_n \psi_n({\vet r}),}
-dove si stanno facendo le seguenti approssimazioni:
+Il problema degli elettroni liberi in un potenziale periodico si riduce al seguente problema agli autovalori
+\newl{\left[-\frac{\hbar^2}{2m}\nabla^2_r +U_e(\xv{r} )\right]\psi_n(\xv{r} ) = E_n \psi_n(\xv{r} ),}
+con le seguenti assunzioni:
 \begin{itemize}
-	\item Elettroni \textbf{indipendenti};
+	\item Elettroni \textbf{indipendenti}: In questo modo la funzoine d'onda che descrive il problema è possibile fattorizzarla;
+	\item Il potenziale è \textbf{periodico}: Questo vuol dire che $U(\xv{r}  + \xv{R} )  = U(\xv{r}  )$.
 \end{itemize}
-In questo modo la funzoine d'onda che descrive il problema è possibile fattorizzarla.
-\begin{itemize}
-	\item Il potenziale è periodico, quindi $U({\vet r}  + {\vet R} )  = U({\vet r}  )$
-\end{itemize}
-Il teorema di Bloch mi dice che per un potenziale periodico la funzoine d'onda è possibile fattorizzarla come una parte di onda piana e una parte periodica
-\newl{\boxed{\psi_{n,\vet{k}}(\vet{r})=\overbrace{e^{i\vet{k}\cdot\vet{r}}}^{\text{Onda Piana}} \overbrace{u_{n,\vet{k}}(\vet{r}) }^{\text{Periodica}}}}
+Il teorema di Bloch afferma che per un potenziale periodico la funzoine d'onda è possibile fattorizzarla in una parte di onda piana e in una parte periodica
+\newl{\boxed{\psi_{n,\xv{k} }(\xv{r} )=\overbracket{e^{i\xv{k} \cdot\xv{r} }}^{\text{Onda Piana}} \overbracket{u_{n,\xv{k} }(\xv{r} ) }^{\text{Periodica}}}}
+
 \subsection{Giustificazione fisica del teorema di Bloch}
-La giustificazione del teorema di Bloch e quindi della forma delle funzioni d'onda dell'elettrone libero all'interno di un cristallo, trova la sua base sulle ipotesi fatte appunto sul reticolo del cristallo stesso. E' tutto periodico quindi mi aspetto che i moduli quadri della funzione d'onda siano periodici con passo quello del reticolo cristallino
-\newl{\abs{\psi(r)} ^2 = \abs{\psi(r+R)} ^2,}
-in questo modo, la funzione d'onda avrà una sua certa parte radiale con un certo coefficiente $C_{\vet k}$ per cui deve valere il fatto che $\abs{C_k} =1$. Un modo molto conveniente che ho di vedere questa cosa è quella di pensare appunto il coefficiente $C_{\vet k}$ dato da un'onda piana, infatti, cercando l'ugualianza tra le parti radiali di $\psi_k(r)$ r $\psi_k(r+R)$, notiamo che:
-\newl{e^{ikr}\left[e^{-ikr} u_{n,k}(r)\right] = e^{ikr}e^{ikR} \left[ e^{-ikr}e^{-ikR}u_{n,k}(r+R)\right]}
+La giustificazione del teorema di Bloch e quindi della forma delle funzioni d'onda dell'elettrone libero all'interno di un cristallo, trova la sua base sulle ipotesi fatte appunto sul reticolo cristallino stesso. Il reticolo cristallino gode di periodicit\`a spaziale quindi ci si aspetta che i moduli quadri della funzione d'onda siano periodici con periodo uguale al passo del reticolo cristallino
+\newl{\abs{\psi(\xv{r} )} ^2 = \abs{\psi(\xv{r} +\xv{R} )} ^2.}
+La funzione d'onda avrà una sua parte radiale con un certo coefficiente $C_{\vet k}$, per il quale deve valere che $\abs{C_k} =1$. Un modo diretto per visualizzare questa condizione consiste nel pensare il coefficiente $C_{\vet k}$ come un'onda piana e successivamente cercare l'ugualianza tra le parti radiali di $\psi_k(\xv{r} )$ r $\psi_k(\xv{r} +\xv{R} )$, notiamo che:
+\newl{e^{i\xv{k} \cdot \xv{r} }\left[e^{-i\xv{k} \cdot \xv{r} } u_{n,\xv{k} }(\xv{r} )\right] = e^{i\xv{k} \cdot \xv{r} }e^{i\xv{k} \cdot \xv{R} } \left[ e^{-i\xv{k} \cdot \xv{r} }e^{-i\xv{k} \cdot \xv{R} }u_{n,\xv{k} }(\xv{r} +\xv{R} )\right]}
 da cui
-\newl{\boxed{u_{n,k}(r) = u_{n,k}(r+R) }.}
-In questo modo si vuole dare una giustificazione molto intuitiva del perchè le funzioni d'onda del teorema di Bloch sono funzioni d'onda sensate che seguono bene le condizioni di periodicità del nostro problema. Le soluzioni dell'hamiltoniana sono in funzione alle condizioni al bordo che scegliamo. In questo caso ha perfettamente senso scegliere delle condizioni al bordo periodiche. La restrizione sui valori di $\vet k$ sarà data da una serie di considerazioni. Partendo dalla periodicità $\psi(r) = \psi(r+L)$ sul reticolo, quindi se $a$ è un vettore del reticolo diretto si ha che $L = Na$. uguagliando le funzioni d'onda
-\newl{e^{ikx} = e^{ik(x+L)} u_k(x+L)} 
-ho come condizione
-\newl{\boxed{kL = n 2\pi\implicaa k=\frac{2\pi}{L}n\,\,\, \text{ dove } \,\,\,n\in\Z }}
-questa appena scritta è la famosa condizione periodica di \textit{\textbf{Born - Von Karman}}. Dal punto di vista dello spazio dei vettori $\vet k$ questo vuol dire che tutto quello che succede nello spazio può essere rimappato nell'intervallo di $k\in\left[-\frac{\pi}{a},\frac{\pi}{a}\right]$ che è appunto la prima zona di Brillouin. Nello spazio $k$ posso verificare facilmente che $k = k'-G$ dove $G$ è un vettore di base del reticolo reciproco
-\newl{\psi_{k'}(x)e^{ik'x}u_{k'}(x) = e^{i(k+G)x}u_{k+G}(x)= e^{ikx}\overbrace{e^{iGx}u_{k+G}(x)}^{\text{Sono periodiche}}= e^{ikx}\op{u_k} (x).} 
-In questo modo abbiamo confermato quanto detto prima. Ongi vettore $k'$ può essere rimappato all'interno della prima zona di Brillouin.
+\newl{\boxed{u_{n,\xv{k} }(\xv{r} ) = u_{n,\xv{k} }(\xv{r} + \xv{R} ) }.}
+In questo modo si vuole dare una giustificazione molto intuitiva del perchè le funzioni d'onda del teorema di Bloch sono funzioni d'onda sensate che seguono bene le condizioni di periodicità del nostro problema. Le soluzioni dell'Hamiltoniana sono in funzione alle condizioni al bordo che scegliamo. In questo caso, data la simmetria del problema, \`e opportuno scegliere delle condizioni al bordo periodiche. La restrizione sui valori di $\xv{k} $ sarà data da una serie di considerazioni. Partendo dalla periodicità della funzione d'onda $\psi(\xv{r} ) = \psi(\xv{r} +\xv{L} )$ sul reticolo, se $\xv{a} $ è un vettore del reticolo diretto si ha che $L = Na$. Uguagliando le funzioni d'onda
+\newl{e^{i\xv{k} \cdot \xv{x} } = e^{i\xv{k} \cdot (\xv{x} + \xv{L} )} u_{\xv{k} }(\xv{x} +\xv{L} )} 
+prendendo in considerazione solo i moduli, si giunge alla nota condizione
+\newl{\boxed{kL = n 2\pi\implicaa k=\frac{2\pi}{L}n\,\,\, \text{ dove } \,\,\,n\in\Z .}}
+Questa appena scritta è la famosa condizione periodica di \textit{\textbf{Born - Von Karman}}. Dal punto di vista dello spazio dei vettori $\vet k$, questo ci dice che le funzioni d'onda possono essere tutte rimappate nell'intervallo di $k\in\left[-\frac{\pi}{a},\frac{\pi}{a}\right]$. Zona nota come \textit{Prima Zona di Brillouin}. Nello spazio $\xv{k} $ posso verificare facilmente che $\xv{k}  = \xv{k} '-\xv{G} $ dove $\xv{G} $ è un vettore di base del reticolo reciproco
+\newl{\psi_{\xv{k} '}(\xv{x} )e^{i\xv{k} ' \cdot \xv{x} }u_{\xv{k} '}(\xv{x} ) = e^{i(\xv{k} + \xv{G} )\cdot \xv{x} }u_{\xv{k} +\xv{G} }(\xv{x} )= e^{i\xv{k} \cdot\xv{x} }\overbracket{e^{i\xv{G} \cdot \xv{x} }u_{\xv{k} +\xv{G} }(\xv{x} )}^{\text{Sono periodiche}}= e^{i\xv{k} \cdot \xv{x} }\op{u_{\xv{k} } } (\xv{x} ).} 
+In questo modo \`e stato confermato quanto detto prima. Ongi vettore $\xv{k} '$ può essere rimappato all'interno della prima zona di Brillouin.
 \subsection{Formazione delle bande}
 Supponiamo di essere in condizione di potenziale debole a media nulla e che valgano le condizioni al bordo elencate precedentemente. Possiamo quindi trattare il problema agli autovalori come particella libera a cui viene successivamente inserito il contributo del potenziale debole in modo perturbativo. Il punto di partenza è banalmente la particella libera
 \newl{\left(-\frac{\hbar^2}{2m}\nabla^2\right)  \psi_k(r) = E \psi_k(r).}

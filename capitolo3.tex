@@ -116,7 +116,7 @@ Ovviamente $\xv{r} $ identifica un punto della nuvola elettronica dei vari $\alp
 = \sum_{n1,n2,n3} e^{-i\xv{q} \cdot \xv{R} _n } \sum_\alpha e^{-i \xv{q} \cdot \xv{r} _\alpha} \int_{V_{cella}} d^3 r' \rho_\alpha(\xv{r} ') e^{-i \xv{q} \cdot \xv{r} '}
 }
 in questo modo tutto si riduce all'integrale sul volume della $\rho(\xv{r} ')$ elettronica del singolo atomo. L'intensità è data sempre dal modulo quadro quindi
-\newl{\boxed{I(\xv{q} )=\overbrace{ \abs{\sum_{n1,n2,n3} e^{-i\xv{q} \cdot\xv{R} _n}} ^2 }^{\text{Fattore di Interferenza}} \overbrace{\abs{\sum_\alpha e^{-i\xv{q} \xv{r} _\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha(\xv{r} ')e^{-i\xv{q} \cdot\xv{r} ' } } ^2 }^{\text{Fattore di Struttura}} }.}
+\newl{\boxed{I(\xv{q} )=\overbracket{ \abs{\sum_{n1,n2,n3} e^{-i\xv{q} \cdot\xv{R} _n}} ^2 }^{\text{Fattore di Interferenza}} \overbracket{\abs{\sum_\alpha e^{-i\xv{q} \xv{r} _\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha(\xv{r} ')e^{-i\xv{q} \cdot\xv{r} ' } } ^2 }^{\text{Fattore di Struttura}} }.}
 Il Fattore di interferenza è diverso da zero solo per $\xv{q} = \xv{G} $ quindi, questa condizione determina la posizione dei picchi. Il fattore di struttura è quella parte che contribuisce all'allargamento del picco e rappresenta la trasformata di Fourier della densità elettronica dell'atomo $\alpha$ sulla cella. Questa parte è nota come \textit{Fattore di Forma Atomico}.
 \begin{figure}
 	\centering
@@ -155,7 +155,7 @@ Il Fattore di interferenza è diverso da zero solo per $\xv{q} = \xv{G} $ quindi
 In Fig.\ref{str:int} sono rappresentati i contributi dei fattori di interferenza e struttura. Come è possibile osservare il fattore di interferenza è rappresentato da dei picchi situati in prossimità dei vettori $ {\vet G_n}$ e identificano le $N$ celle del reticolo cristallino.
 \subsection{Un Liquido}
 Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un $\xv{R} _n$ e sommo su tutti i restanti $\xv{R} _m$. \`E necessario costruire una funzione di correlazione spaziale che permetta di sapere in che posizione sono i vari ${\vet R} _m$ ripetto al mio punto fisso ${\vet R} _n$. Il fattore di interferenza diventa 
-\newl{T(\xv{q} ) = \abs{\sum_{n_1,n_2,n_3} e^{-i\xv{q} \cdot\xv{R} _n } }^2 = \sum_{\xv{R} _m = \xv{R} _n} e^{-i\xv{q} \cdot(\xv{R} _n -\xv{R} _m)}+ \sum_{\xv{R} _n \neq \xv{R} _m } e^{-i\xv{q} \cdot(\xv{R} _n- \xv{R} _m)} = \nonumber\\ 
+\newl{T(\xv{q} ) = \abs{\sum_{n_1,n_2,n_3} e^{-i\xv{q} \cdot\xv{R} _n } } ^2 = \sum_{\xv{R} _m = \xv{R} _n} e^{-i\xv{q} \cdot(\xv{R} _n -\xv{R} _m)}+ \sum_{\xv{R} _n \neq \xv{R} _m } e^{-i\xv{q} \cdot(\xv{R} _n- \xv{R} _m)} = \nonumber\\ 
 = N + \sum_{\xv{R} _n} \left(\sum_{\xv{R} _n \neq \xv{R} _m}e^{-i\xv{q} (\xv{R} _n - \xv{R} _m)} \right) }
 Estendo al continuo
 \newl{T(\xv{q} ) = N + N\int d^3r\, e^{-i\xv{q} \cdot(\xv{R} _n-\xv{R} _m)}P(\xv{R} _n-\xv{R} _m) = \nonumber\\
