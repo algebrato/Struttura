@@ -63,9 +63,9 @@ considerando diffrazione per due piani paralleli:
 \newl{\abs{G} = n\cdot \frac{2\pi}{d_{piani}}.}
 Da Fig.\ref{bragg} si nota che a causa dello scattering completamente elastico si ha che $\theta_1 = \theta_2 = \theta$ quindi  $\abs{\xv{q} } = 2\abs{\xv{k} } \sin\theta$. Unendo le due precedenti riscritture del vettore $\xv{G} $ otteniamo la legge di Bragg
 \newl{\boxed{\frac{4\pi\sin\theta}{\lambda} = n\frac{2\pi}{d_{piani}} \implicaa n\lambda = 2d\sin\theta . }}
-Rimane ancora il fatto che se $\xv{q} =\xv{G} $ allora l'integrale ha dimensione di un $\rho_G \cdot V \delta_{{\vet q},{\vet G}} $ quindi l'intesità dell'immagine che vediamo sullo schermo risulta proporzionale a $I({\vet q}) \sim |\rho_G|^2 V^2 \delta_{{\vet q},{\vet G}}$. Non può essere proporzionale a $V^2$ è fisicamente impossibile in quanto la scrittura non torna dimensionalmente. La questione si risolve capendo che la funzione $\rho_G$ non è una funzione puntuale, ma ha una forma a spot di tipo campana gaussiana con piccole code. Effettuando l'integrale
-\newl{\op{\rho} (\vet{q}) = \sum_G \int_V d^3r \rho_G e^{i(\vet{G}-\vet{q})\vet{r}}} 
-è possibile arrivare ad un risultato che vede $I(\vet{q})\sim V$ che è fisicamente coerente.
+Rimane ancora il fatto che se $\xv{q} =\xv{G} $ allora l'integrale ha dimensione di un $\rho_{\xv{G} } \cdot V \delta_{ \xv{q} ,\xv{G} } $ quindi l'intesità dell'immagine che vediamo sullo schermo risulta proporzionale a $I(\xv{q} )  \sim |\rho_{\xv{G} } |^2 V^2 \delta_{\xv{q} ,\xv{G} }$. Non può essere proporzionale a $V^2$ è fisicamente impossibile in quanto la scrittura non torna dimensionalmente. La questione si risolve capendo che la funzione $\rho_{\xv{G} } $ non è una funzione puntuale ma ha una forma a spot di tipo campana gaussiana con piccole code. Effettuando l'integrale
+\newl{\op{\rho} (\xv{q} ) = \sum_{\xv{G} } \int_V d^3r \rho_{\xv{G} } e^{i(\xv{G} -\xv{q} )\xv{r} }} 
+è possibile arrivare ad un risultato che vede $I(\xv{q} )\sim V$ che è fisicamente coerente.
 \subsection{Un esempio più complesso: reticolo con base}
 Un esempio più complesso può essere rappresentato dalla caratterizzazione dell'immagine di diffrazione da parte di un cristallo più complesso in cui abbiamo la sua rappresentazione tramite un reticolo e una base atomica. Il modo migliore per separare il problema è rappresentato in Fig.\ref{base:laue}.
 \begin{figure}
@@ -74,14 +74,14 @@ Un esempio più complesso può essere rappresentato dalla caratterizzazione dell
 		\begin{tikzpicture}[scale=1,auto=center]
 			\draw [black] plot [smooth cycle] coordinates {(-1.5,-2.5) (-1,6) (5,6) (7,6) (7.5,4) (7,3) (6,-2)};
 			\draw [->] (-1.5,-2.5) -- (0,0);
-			\node (n1) at (-1,-1) {$\vet{R_n} $};
-			\node (n2) at (0.25,0.45) {$\vet{r_\alpha} $};
+			\node (n1) at (-1,-1) {$\xv{R} _n $};
+			\node (n2) at (0.25,0.45) {$\xv{r} _\alpha $};
 			\draw [->] (0,0) -- (0.7,0.3);
 			\draw (1,0.3) arc (0:360:0.3);
 			\draw [->] (0.7,0.3) -- (0.7,0.6);
-			\node (n3) at (0.9,0.65) {$\vet{r'} $};
+			\node (n3) at (0.9,0.65) {$\xv{r} ' $};
 			\draw [->] (-1.5,-2.5) -- (0.7,0.6);
-			\node (n4) at (0,-1) {$\vet{r}$};
+			\node (n4) at (0,-1) {$\xv{r} $};
 
 
 			\node[]  at (-1.7,-2.7) {O};
@@ -109,28 +109,29 @@ Un esempio più complesso può essere rappresentato dalla caratterizzazione dell
 	\caption{Sistema di riferimento di un cristallo complesso rappresentato da reticolo e base atomica.}
 	\label{base:laue}
 \end{figure}
-Si prenda come origine un punto sul bordo dell'oggetto di forma generica. Il vettore $\vet{R}_n$ identifica la cella cristallina, il vettore $\vet{r}_\alpha$ identifica l'atomo $\alpha-esimo$ della base nella cella ed infine il vettore $\vet{r'}$ identifica la nuvola elettronica intorno all'$\alpha-esimo$ atomo. \`E  quindi possibile scrivere che
-\newl{\boxed{\vet{r}=\vet{R}_n + \vet{r}_\alpha + \vet{r'}}.} Ovviamente $\vet{r}$ identifica un punto della nuvola elettronica dei vari $\alpha$ atomi che costituiscono la base della cella cristallina. Nell'integrale entra appunto solo il contributo delle nuvole elettroniche in quanto noi stiamo usando raggi $X$ che interagiscono con le nuvole elettroniche degli atomi. Calcoliamo in questo caso come è fatta l'immagine di diffrazione del cristallo passando sempre per la trasformata di Fourier della distribuzione di carica
-\newl{\op{\rho} (\vet{q}) &=& \int_V d^3r\, \rho({\vet r})e^{-i{\vet q}\cdot {\vet r}} = \sum_{n_1,n_2,n_3}\sum_{\alpha} \int_Vd^3r'\,\rho_\alpha e^{-i{\vet q}\cdot({\vet R}_n + {\vet r}_\alpha + {\vet r'})}= \nonumber\\
-			&=&\sum_{n1,n2,n3} e^{-i{\vet q}\cdot{\vet R}_n} \sum_\alpha e^{-i{\vet q}{\vet r}_\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha({\vet r}')e^{-i{\vet q}\cdot{\vet r'} }
+Si prenda come origine un punto sul bordo dell'oggetto di forma generica. Il vettore $\xv{R} _n$ identifica la cella cristallina, il vettore $\xv{r} _\alpha$ identifica l'atomo $\alpha-esimo$ della base nella cella ed infine il vettore $\xv{r} '$ identifica la nuvola elettronica intorno all'$\alpha-esimo$ atomo. Si ha quindi
+\newl{\xv{r} =\xv{R} _n + \xv{r} _\alpha + \xv{r} '.} 
+Ovviamente $\xv{r} $ identifica un punto della nuvola elettronica dei vari $\alpha$ atomi che costituiscono la base della cella cristallina. Nell'integrale entra solo il contributo delle nuvole elettroniche in quanto noi stiamo usando raggi $X$ che interagiscono gli elettroni. In questo caso \`e possibile calcolare il pattern dell'immagine di diffrazione, utilizzando ancora la trasformata di Fourier della distribuzione di carica
+\newl{\op{\rho} (\xv{q} ) = \int_V d^3r\, \rho( \xv{r} )e^{-i\xv{q} \cdot \xv{r} } = \sum_{n_1,n_2,n_3}\sum_{\alpha} \int_Vd^3r'\,\rho_\alpha e^{-i\xv{q} \cdot(\xv{R} _n + \xv{r} _\alpha + \xv{r} ')}= \nonumber\\
+= \sum_{n1,n2,n3} e^{-i\xv{q} \cdot \xv{R} _n } \sum_\alpha e^{-i \xv{q} \cdot \xv{r} _\alpha} \int_{V_{cella}} d^3 r' \rho_\alpha(\xv{r} ') e^{-i \xv{q} \cdot \xv{r} '}
 }
-in questo modo tutto si riduce all'integrale sul volume della $\rho(r')$ elettronica del singolo atomo. L'intensità è data sempre dal modulo quadro quindi è possibile scrivere
-\newl{\boxed{I(\vet{q})=\overbrace{ \abs{\sum_{n1,n2,n3} e^{-i{\vet q}\cdot{\vet R}_n}} ^2 }^{\text{Fattore di Interferenza}} \overbrace{\abs{\sum_\alpha e^{-i{\vet q}{\vet r}_\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha({\vet r}')e^{-i{\vet q}\cdot{\vet r'} } } ^2 }^{\text{Fattore di Struttura}} }.}
-Il Fattore di interferenza è diverso da zero solo per ${\vet q} = {\vet G}$ quindi, questa condizione, determina in che posizione avvengono i picchi. Il fattore di struttura, è quella parte che contribuisce all'allargamento del picco e rappresenta la trasformata di Fourier della densità elettronica dell'atomo $\alpha$ sulla cella. Questa parte è nota come \textit{Fattore di Forma Atomico}.
+in questo modo tutto si riduce all'integrale sul volume della $\rho(\xv{r} ')$ elettronica del singolo atomo. L'intensità è data sempre dal modulo quadro quindi
+\newl{\boxed{I(\xv{q} )=\overbrace{ \abs{\sum_{n1,n2,n3} e^{-i\xv{q} \cdot\xv{R} _n}} ^2 }^{\text{Fattore di Interferenza}} \overbrace{\abs{\sum_\alpha e^{-i\xv{q} \xv{r} _\alpha} \int_{V_{cella}} d^3r'\,\rho_\alpha(\xv{r} ')e^{-i\xv{q} \cdot\xv{r} ' } } ^2 }^{\text{Fattore di Struttura}} }.}
+Il Fattore di interferenza è diverso da zero solo per $\xv{q} = \xv{G} $ quindi, questa condizione determina la posizione dei picchi. Il fattore di struttura è quella parte che contribuisce all'allargamento del picco e rappresenta la trasformata di Fourier della densità elettronica dell'atomo $\alpha$ sulla cella. Questa parte è nota come \textit{Fattore di Forma Atomico}.
 \begin{figure}
 	\centering
 	\fbox{
 		\begin{tikzpicture}[scale=1,auto=center]
 			\draw [->] (-1,0) -- (7,0);
 			\draw [->] (0,-1) -- (0,7);
-			\node (n1) at (7,-0.25) {${\vet q}$};
-			\node (n2) at (-0.5,7) {$I({\vet q})$};
-			\node (n3) at (1,-0.25) {${\vet G_1}$};
-			\node (n4) at (2,-0.25) {${\vet G_2}$};
-			\node (n5) at (3,-0.25) {${\vet G_3}$};
-			\node (n6) at (4,-0.25) {${\vet G_4}$};
-			\node (n7) at (5,-0.25) {${\vet G_5}$};
-			\node (n8) at (6,-0.25) {${\vet G_6}$};
+			\node (n1) at (7,-0.25) {$\xv{q} $};
+			\node (n2) at (-0.5,7) {$I(\xv{q} )$};
+			\node (n3) at (1,-0.25) {$\xv{G} _1 $};
+			\node (n4) at (2,-0.25) {$\xv{G} _2 $};
+			\node (n5) at (3,-0.25) {$\xv{G} _3 $};
+			\node (n6) at (4,-0.25) {$\xv{G} _4 $};
+			\node (n7) at (5,-0.25) {$\xv{G} _5 $};
+			\node (n8) at (6,-0.25) {$\xv{G} _6 $};
 
 			\draw [red] plot [smooth, tension=0.2] coordinates {(0.5,0) (0.7,0.25) (1,4) (1.3,0.25) (1.5,0)};
 			\draw [red] plot [smooth, tension=0.2] coordinates {(1.5,0) (1.7,0.25) (2,4) (2.3,0.25) (2.5,0)};
@@ -153,8 +154,8 @@ Il Fattore di interferenza è diverso da zero solo per ${\vet q} = {\vet G}$ qui
 \end{figure}
 In Fig.\ref{str:int} sono rappresentati i contributi dei fattori di interferenza e struttura. Come è possibile osservare il fattore di interferenza è rappresentato da dei picchi situati in prossimità dei vettori $ {\vet G_n}$ e identificano le $N$ celle del reticolo cristallino.
 \subsection{Un Liquido}
-Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un ${\vet R} _n$ e sommo su tutti i vari ${\vet R} _m$. Devo quindi avere una funzione di correlazione spaziale che mi permetta di sapere in che posizione sono i vari ${\vet R} _m$ ripetto al mio punto fisso ${\vet R} _n$. Il fattore di interferenza diventa quindi 
-\newl{T({\vet q}) &=& \abs{\sum_{n_1,n_2,n_3} e^{-i{\vet q} \cdot{\vet R}_n } }^2 = \sum_{{\vet R}_m = {\vet R}_n} e^{-i{\vet q}\cdot({\vet R}_n -{\vet R}_m)}+ \sum_{{\vet R} _n \neq {\vet R} _m } e^{-i{\vet q} \cdot({\vet R} _n- {\vet R} _m)} = \nonumber\\ &=& N + \sum_{{\vet R_n}} \left(\sum_{{\vet R} _n \neq {\vet R} _m}e^{-i{\vet q}(\vet{R} _n - {\vet R} _m)} \right) }
+Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un $\xv{R} _n$ e sommo su tutti i restanti $\xv{R} _m$. \`E necessario costruire una funzione di correlazione spaziale che permetta di sapere in che posizione sono i vari ${\vet R} _m$ ripetto al mio punto fisso ${\vet R} _n$. Il fattore di interferenza diventa 
+\newl{T(\xv{q} ) = \abs{\sum_{n_1,n_2,n_3} e^{-i\xv{q} \cdot\xv{R} _n } }^2 = \sum_{\xv{R} _m = \xv{R} _n} e^{-i\xv{q} \cdot(\xv{R} _n -\xv{R} _m)}+ \sum_{\xv{R} _n \neq {\vet R} _m } e^{-i{\vet q} \cdot({\vet R} _n- {\vet R} _m)} = \nonumber\\ &=& N + \sum_{{\vet R_n}} \left(\sum_{{\vet R} _n \neq {\vet R} _m}e^{-i{\vet q}(\vet{R} _n - {\vet R} _m)} \right) }
 Estendo al continuo
 \newl{T(\vet{q}) &=& N + N\int d^3r\, e^{-i{\vet q}\cdot(R_n-R_m)}P(R_n-R_m) = \nonumber\\
 			       &=& N\left(1+\int d^3r\, e^{-i{\vet q}\cdot(R_n-R_m)}P(R_n-R_m)\right) 
