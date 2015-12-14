@@ -155,10 +155,11 @@ Il Fattore di interferenza è diverso da zero solo per $\xv{q} = \xv{G} $ quindi
 In Fig.\ref{str:int} sono rappresentati i contributi dei fattori di interferenza e struttura. Come è possibile osservare il fattore di interferenza è rappresentato da dei picchi situati in prossimità dei vettori $ {\vet G_n}$ e identificano le $N$ celle del reticolo cristallino.
 \subsection{Un Liquido}
 Supponiamo di indebolire il fatto che il reticolo sia cristallino. Supponiamo di avere a che fare con un oggetto che abbia le caratteristiche di un fluido. In questo caso fisso un $\xv{R} _n$ e sommo su tutti i restanti $\xv{R} _m$. \`E necessario costruire una funzione di correlazione spaziale che permetta di sapere in che posizione sono i vari ${\vet R} _m$ ripetto al mio punto fisso ${\vet R} _n$. Il fattore di interferenza diventa 
-\newl{T(\xv{q} ) = \abs{\sum_{n_1,n_2,n_3} e^{-i\xv{q} \cdot\xv{R} _n } }^2 = \sum_{\xv{R} _m = \xv{R} _n} e^{-i\xv{q} \cdot(\xv{R} _n -\xv{R} _m)}+ \sum_{\xv{R} _n \neq {\vet R} _m } e^{-i{\vet q} \cdot({\vet R} _n- {\vet R} _m)} = \nonumber\\ &=& N + \sum_{{\vet R_n}} \left(\sum_{{\vet R} _n \neq {\vet R} _m}e^{-i{\vet q}(\vet{R} _n - {\vet R} _m)} \right) }
+\newl{T(\xv{q} ) = \abs{\sum_{n_1,n_2,n_3} e^{-i\xv{q} \cdot\xv{R} _n } }^2 = \sum_{\xv{R} _m = \xv{R} _n} e^{-i\xv{q} \cdot(\xv{R} _n -\xv{R} _m)}+ \sum_{\xv{R} _n \neq \xv{R} _m } e^{-i\xv{q} \cdot(\xv{R} _n- \xv{R} _m)} = \nonumber\\ 
+= N + \sum_{\xv{R} _n} \left(\sum_{\xv{R} _n \neq \xv{R} _m}e^{-i\xv{q} (\xv{R} _n - \xv{R} _m)} \right) }
 Estendo al continuo
-\newl{T(\vet{q}) &=& N + N\int d^3r\, e^{-i{\vet q}\cdot(R_n-R_m)}P(R_n-R_m) = \nonumber\\
-			       &=& N\left(1+\int d^3r\, e^{-i{\vet q}\cdot(R_n-R_m)}P(R_n-R_m)\right) 
+\newl{T(\xv{q} ) = N + N\int d^3r\, e^{-i\xv{q} \cdot(\xv{R} _n-\xv{R} _m)}P(\xv{R} _n-\xv{R} _m) = \nonumber\\
+= N\left(1+\int d^3r\, e^{-i\xv{q} \cdot(\xv{R} _n-\xv{R} _m)}P(\xv{R} _n-\xv{R} _m)\right) 
 }
-Dove $P(R_n-R_m)$ è la funzione di correlazione spaziale che permette di studiare strutture non perfettamente regolari.
+Dove $P(\xv{R} _n-\xv{R} _m)$ è la funzione di correlazione spaziale che permette di studiare strutture non regolari.
 

@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {4}Elettroni nel potenziale periodico}{13}{section.4}
 \contentsline {subsection}{\numberline {4.1}Giustificazione fisica del teorema di Bloch}{14}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Formazione delle bande}{15}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Soluzione elettrone libero in un potenziale periodico}{18}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Metodo delle onde piane}{19}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.3}Soluzione elettrone libero in un potenziale periodico}{19}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Metodo delle onde piane}{20}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Legame Forte - Tight Binding}{20}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Alcune considerazioni di carattere generale}{20}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.6}Alcune considerazioni di carattere generale}{21}{subsection.4.6}
 \contentsline {subsection}{\numberline {4.7}Propriet\IeC {\`a} vibrazionali dei solidi}{21}{subsection.4.7}
 \contentsline {subsection}{\numberline {4.8}Reticolo monodimensionale a due atomi}{24}{subsection.4.8}
 \contentsline {section}{\numberline {5}Degenerazione degli stati}{26}{section.5}
