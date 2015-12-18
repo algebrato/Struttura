@@ -152,32 +152,32 @@ che è nulla in
 Questi valori di $k$ sono quelli che delimitano la Prima zona di Brillouin, quindi le superfici ad energia costante raggiungono la prima zona di brillouin con $\nabla E =0$ cioè sono normali alla superficie della zona.
 \subsection{Proprietà vibrazionali dei solidi}
 Nella sezione precedente ci si è concentrati sulla dinamica degli elettroni, visti come pacchetti d'onda che si muovono in un potenziale periodico. L'attenzione ora verrà spostata alle proprietà vibrazionali del reticolo. Il sistema cristallino viene sempre considerato con la solita approssimazione adiabatica. Elettroni e nuclei hanno scale di tempo di evoluzioni molto diverse quindi possiamo sempre separare lo studio delle due componenti, appunto moto degli elettroni e moto dei nuclei. L'Hamiltoniana del sistema da studiare è
-\newl{-\frac{\hbar^2}{2}\left(\sum_i\frac{\nabla^2_{R_i}}{M_i}\right)\psi(R) + U_{\text{ad.}}(R) \psi(R) - E\psi(R) = 0.}
-Dove con $i, j$ si identifica l'indice di particella, mentre con le lettere greche $\alpha, \beta$ si indentifica l'indice di direzione.
-Supponiamo che $\vet R_0$ sia il punto di equilibrio di sistema, in questo caso posso sviluppare il potenziale adiabiatico in un intorno di $\vet R_0$ 
-\newl{U_{\text{ad.}} =U_0 +  \sum_{i,\alpha,j,\beta} \left(\frac{\partial^2 U_{\text{ad.}}}{\partial u_{i,\alpha} \partial u_{j,\beta}}\right)_{R_0} u_{i,\alpha} u_{j,\beta} = U_0 + \Phi_{i,\alpha, j, \beta} u_{i,\alpha} u_{ j,\beta}  }
-La $\vet \Phi$ è chiamata \textit{Matrice delle costanti di Forza} e rappresenta l'approssimazione parabolica del potenziale adiabatico lungo le varie direzioni, quindi le forze di richiamo, in approssimazione quadrata, lungo i vari assi. Per scrivere l'equazione del moto dei nuclei si passa dalla lagrangiana del sistema in cui i vari nuclei sono legati da una forza di richiamo, lungo le varie direzioni, indicata dalla matrice delle costanti di forza $\vet \Phi$. Se il numero di particelle è $N$ avrò $3N$ equazioni 
-\newl{\mathcal{L}= \frac{1}{2}M_i(\dersf{u} _{i,\alpha})^2 - \frac{1}{2}  \Phi_{i,\alpha, j, \beta} u_{i,\alpha} u_{ j,\beta} }
-per comodità di notazione sostituisco $q_{i,\alpha} = u_{i,\alpha}$ in questo modo posso scrivere le equazioni di Lagrange nella solita forma
+\newl{-\frac{\hbar^2}{2}\left(\sum_i\frac{\nabla^2_{\xv{R} _i}}{M_i}\right)\psi(\xv{R} ) + U_{\text{ad.}}(\xv{R} ) \psi(\xv{R} ) - E\psi(\xv{R} ) = 0.}
+Dove $i, j$ identificano l'indice di particella, mentre $\alpha$ e $\beta$ identificano l'indice di direzione.
+Si consideri $\xv{R} _0$ come il punto di equilibrio di sistema, in questo caso \`e possibile sviluppare il potenziale adiabiatico in un intorno di $\xv{R} _0$ 
+\newl{U_{\text{ad.}} =U_0 +  \sum_{i,\alpha,j,\beta} \left(\frac{\partial^2 U_{\text{ad.}}}{\partial u_{i,\alpha} \partial u_{j,\beta}}\right)_{\xv{R} _0} u_{i,\alpha} u_{j,\beta} = U_0 + \mathbf{\Phi} _{i,\alpha, j, \beta} u_{i,\alpha} u_{ j,\beta},  }
+dove $\mathbf{\Phi}$ rappresenta la \textit{Matrice delle Costanti di Forza} ed \`e quindi un'approssimazione parabolica delle forze di richiamo lungo i vari assi. Per scrivere l'equazione del moto dei nuclei si pu\`o usare il formalismo Lagrangiano. I vari nuclei sono legati da una forza di richiamo, lungo le varie direzioni, indicata dalla matrice delle costanti di forza $\mathbf{\Phi}$. Se il numero di particelle del sistema è $N$ si avranno quindi $3N$ equazioni del tipo 
+\newl{\mathcal{L}= \frac{1}{2}\mathbf{M}_i(\dersf{u} _{i,\alpha})^2 - \frac{1}{2}  \mathbf{\Phi} _{i,\alpha, j, \beta} u_{i,\alpha} u_{ j,\beta}. }
+per comodità di notazione  $q_{i,\alpha} = u_{i,\alpha}$. In questo modo \`e possibile scrivere le equazioni di Lagrange nella solita forma
 \newl{\frac{d}{dt}\frac{\partial \mathcal{L}}{\partial \dersf{q} } - \frac{\partial \mathcal{L}}{\partial q}=0 }
 derivando si ottengono le equazioni del moto
-\newl{M_i \derrsf{u} _{i,\alpha}  + \Phi_{i,\alpha, j,\beta}u_{j,\beta} =0 .}
-Nella prima parte, la ripetizione dell'indice $i$ nella matrice delle masse e nella parte di velocità non è da intendersi come somma covariante, in realtà $i$ è un indice libero che non si somma. Risolvo l'equazione differenziale nello spazio $\vet k$, passo quindi alla trasformata di Fourier 
-\newl{k^2 {\vet M} u(k)  - {\vet \Phi} u(k) = 0.}
-Definisco per semplicità $w = \sqrt{{\vet M}} u$, ottenendo
-\newl{k^2 w - \left(\sqrt{{\vet M}}\right)^{-1} {\vet \Phi} \left(\sqrt{{\vet M}}\right) w =0 .}
-La matrice ${\vet D} = \left(\sqrt{{\vet M}}\right)^{-1} {\vet \Phi} \left(\sqrt{{\vet M}}\right)$ è comunemente conosciuta col nome \textit{Matrice Dinamica}. Non è necessariamente diagonale quindi si trova un  operatore che sia in grado di diagonalizzarla. Si supponga che esista un operatore identificato dalla matrice $\vet S$ che goda delle seguenti proprietà
-\newl{{\vet S}^\dagger {\vet S} = {\vet 1}, \text{e renda diagonale: }  {\vet S}^\dagger {\vet D} {\vet S} = 
+\newl{\mathbf{M}_i \derrsf{u} _{i,\alpha}  + \mathbf{\Phi} _{i,\alpha, j,\beta}u_{j,\beta} =0 .}
+Nella prima parte, la ripetizione dell'indice $i$ nella matrice delle masse e nella parte di velocità non è da intendersi come somma covariante, in realtà $i$ è un indice libero che non si somma. Applicando la trasformata di Fourier si risolve l'equazione differenziale nello spazio $k$ 
+\newl{\xv{k} ^2 \mathbf{M} u(\xv{k} )  - \mathbf{\Phi} u(\xv{k} ) = 0.}
+Per semplicità si consideri $w = \sqrt{\mathbf{M}} u$, ottenendo
+\newl{k^2 w - \left(\sqrt{\mathbf{M}}\right)^{-1} \mathbf{\Phi} \left(\sqrt{\mathbf{M}}\right) w =0 .}
+La matrice $\mathbf{D} = \left(\sqrt{\mathbf{M}}\right)^{-1} \mathbf{\Phi} \left(\sqrt{\mathbf{M}}\right)$ è comunemente conosciuta col nome di \textit{Matrice Dinamica}. Non è necessariamente diagonale quindi \`e necessario trovare un  operatore che sia in grado di diagonalizzarla. Si supponga che esista un operatore identificato dalla matrice $\mathbf{S}$ che goda delle seguenti proprietà
+\newl{\op{S} ^\dagger \op{S} = \mathds{1}, \text{e renda diagonale: }  \op{S} ^\dagger \op{D} \op{S} = 
 	\left(\begin{array}{c c c}
 		w_1^2&  &  \\
 		 & \ddots &  \\
 		 &  & w_N^2 \end{array}\right)
 .}
-Le coordinate degli autovettori di ${\vet D}$ sono
-\newl{q={\vet S}^\dagger w \implicaa q = {\vet S}^\dagger {\vet M} ^{\frac{1}{2}} u \implicaa u = {\vet M}^{-\frac{1}{2}} {\vet S} q.}
+Le coordinate degli autovettori di $\op{D} $ sono
+\newl{q=\op{S} ^\dagger w \implicaa q = \op{S} ^\dagger \mathbf{M}^{\frac{1}{2}} u \implicaa u = \mathbf{M}^{-\frac{1}{2}} \op{S} q.}
 Riscrivo la lagrangiana nella nuova base diagnonale
-\newl{\mathcal{L} = \frac{1}{2} \dersf{w} ^\dagger \dersf{w} -\frac{1}{2} w^\dagger {\vet D} w = \frac{1}{2} \dersf{q} {\vet S^\dagger} {\vet S}\dersf{q} -\frac{1}{2} q {\vet S}^\dagger {\vet D}  {\vet S} q  ,}
-essendo tutto diagonale posso scrivere la Lagrangiana in funzione di un singono indice
+\newl{\mathcal{L} = \frac{1}{2} \dersf{w} ^\dagger \dersf{w} -\frac{1}{2} w^\dagger \op{D} w = \frac{1}{2} \dersf{q} \op{S} ^\dagger \op{S} \dersf{q} -\frac{1}{2} q \op{S} ^\dagger \op{D}  \op{S} q  ,}
+essendo diagonale \`e scrivere la Lagrangiana in funzione di un singono indice
 \newl{\sum_\gamma \mathcal{L}_\gamma = \frac{1}{2} \sum_\gamma \left[ \left(\dersf{q} _\gamma\right)^2 -k^2_\gamma q_\gamma\right].}
 Effettuando il cambio di variabili $Q_\gamma = \sqrt{w_\gamma} q_\gamma$ ottengo
 \newl{\mathcal{L} = \frac{1}{2}\sum_i \left[\frac{\dersf{Q} _i^2}{w_i}-w_iQ_i^2\right],}
@@ -186,8 +186,8 @@ che è praticamente la lagrangiana di un oscillatore armonico, infatti tramaite 
 che, per come è stato impostato il problema,  è un risultato abbastanza aspettato. Usando gli operatori di salita e discesa\footnote{che sono definiti come: $\op{a} _i^\dagger =\frac{1}{\sqrt{2\hbar}} \left(\op{Q} _i - i\op{P} _i\right)$ e $\op{a} _i = \frac{1}{\sqrt{2\hbar}} \left(\op{Q} _i + i \op{P} _i\right)  $. }  arrivo esattamente all'Hamiltoniana di un oscillatore
 \newl{H=\sum_i\hbar w_i \left(\op{a} _i^\dagger \op{a} _i +\frac{1}{2}\right).}
 Quanto scritto vale per un sistema di $N$ atomi senza tener conto della periodicità del reticolo. Introducendo il fatto che il sistema è periodico con periodicità quella del reticolo, per la matrice delle costanti di forza vale la seguente scrittura
-\newl{\phi_{i,n\alpha, j,n'\beta} = \phi_{i,(n'+n")\alpha, j,(n'+n")\beta} .}
-Data la periodicità del sistema posso scrivere gli stati come stati di Bloch costituiti quindi da una parte periodica, con periodicità del reticolo, e da una parte di onda piana. Nello spazio di Fourier lo stato di block è
+\newl{\mathbf{\Phi}_{i,n\alpha, j,n'\beta} = \mathbf{\Phi}_{i,(n'+n")\alpha, j,(n'+n")\beta} .}
+Data la periodicità del sistema \`e possibile scrivere gli stati come stati di Bloch costituiti quindi da una parte periodica, con periodicità del reticolo e da una parte di onda piana. Nello spazio di Fourier lo stato di Bloch viene rappresentato come
 \newl{
 	&&\tildato{W} _{i,n\alpha} = \sqrt{M_i} u_{i,n\alpha}\nonumber\\
 	&&u_{i,n\alpha} = \frac{\tildato{W} _{i,n\alpha}}{\sqrt{M_i}} =  \frac{W_{i,n\alpha}}{\sqrt{M_i}} e^{ikR}
@@ -199,6 +199,8 @@ Sostituendo gli stati di Bloch nella Lagrangiana, tramite le equazioni di E-L ar
 }
 che usando la periodicità può essere riarrangiata in una forma più evidente
 \newl{ \left(k^2W_{i,\alpha}({\vet k})  - \Phi_{i,\alpha,j,(n'-n)\beta} \frac{W_{j,(n'-n)\beta}({\vet k})}{\sqrt{M_j M_i}}\right) e^{ikR_n}=0  }
+
+
 \subsection{Reticolo monodimensionale a due atomi}
 Un esempio applicativo di quanto detto fin'ora è rappresentato dal reticolo monodimensionale con due specie atomiche.
 
